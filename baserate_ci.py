@@ -1,0 +1,119 @@
+"""Paired bootstrap CIs for "Telling Jev the base rate" (no API calls).
+
+Per-case predictions are rebuilt from the caches exactly as baserate_check.py and gemini_baserate.py compute them:
+Jev via jev.py with JEV_OFFLINE=1 (a cache miss raises), Gemini told by reading data/gemini_cache.sqlite with
+gemini_study's prompt/hash, Gemini zero-shot from results/gem_<task>.csv. The base-rate shift is baserate_check.py's
+(platt_sweep.shift fitted on the zero-shot pool scores of draw 0's first 100 cases). Point estimates are checked
+against results/baserate_check.csv and results/gemini_baserate.csv.
+
+One run, no draws: the bootstrap resamples the 300 test cases only (B=2000, rng seed 0 per task, as compare_ci.py),
+with the same resamples for every comparison, so differences are paired.
+Outputs: results/baserate_ci.csv, results/baserate_ci.md
+"""
+import os
+
+import numpy as np
+import pandas as pd
+
+import platt_sweep as ps  # sets JEV_OFFLINE=1 before importing jev
+import jev
+from analyze import auroc, brier
+from study import draw_order
+from tasks import ROOT, TASKS, load
+
+assert jev.OFFLINE
+OUT = os.path.join(ROOT, "results")
+B = 2000
+TASK_ORDER = ["nyc311", "crimes", "github_prs", "hn", "stackoverflow", "inspections", "flights", "shelter"]
+COMPARISONS = [  # (id, metric, a, b): difference a - b
+    ("jev_brier_told_minus_zs", "brier", "jev_told", "jev_zs"),
+    ("jev_brier_told_minus_shift100", "brier", "jev_told", "jev_shift100"),
+    ("told_brier_gemini_minus_jev", "brier", "gem_told", "jev_told"),
+    ("told_auroc_gemini_minus_jev", "auroc", "gem_told", "jev_told"),
+    ("jev_auroc_told_minus_zs", "auroc", "jev_told", "jev_zs"),
+]
+METRICS = {"brier": brier, "auroc": auroc}
+
+
+def note_for(t, pool):
+    return (f"Base rate: across all cases like these, the answer to \"{t['question']}\" is yes about "
+            f"{round(100 * pool.label.mean())}% of the time.")
+
+
+def predictions(name):
+    t = TASKS[name]
+    pool, test, _ = load(name)
+    cases = list(test.text)
+    state = f"{t['context']}\n\n{note_for(t, pool)}"
+    zs = np.array(jev.noul_batch(t["context"], cases, t["question"]))
+    br = np.array(jev.noul_batch(state, cases, t["question"]))
+    zp = np.array(jev.noul_batch(t["context"], list(pool.text), t["question"]))
+    idx = draw_order(name, 0, len(pool))[:100]
+    shifted, _ = ps.shift(zp[idx], pool.label.values[idx], zs)
+    gt = np.array([v for i in range(0, len(cases), ps.GEM_BATCH)
+                   for v in ps.gem_cached(ps.gem_prompt(state, t["question"], cases[i:i + ps.GEM_BATCH]))])
+    G = pd.read_csv(f"{OUT}/gem_{name}.csv")
+    gz = G[G.arm == "zero_shot"].sort_values("i").p.values
+    y = test.label.values.astype(int)
+    return y, {"jev_zs": zs, "jev_told": br, "jev_shift100": shifted, "gem_zs": gz, "gem_told": gt}
+
+
+def check(name, y, P):
+    J = pd.read_csv(f"{OUT}/baserate_check.csv").query("task == @name").set_index("arm")
+    G = pd.read_csv(f"{OUT}/gemini_baserate.csv").query("task == @name").set_index("arm")
+    for key, df, arm in [("jev_zs", J, "zero_shot"), ("jev_told", J, "told_base_rate"),
+                         ("jev_shift100", J, "shift_100_labels"), ("gem_zs", G, "zero_shot"),
+                         ("gem_told", G, "told_base_rate")]:
+        for m, f in METRICS.items():
+            assert abs(f(P[key], y) - df.loc[arm, m]) < 1e-9, (name, key, m, f(P[key], y), df.loc[arm, m])
+
+
+def main():
+    rows = []
+    for task in TASK_ORDER:
+        y, P = predictions(task)
+        check(task, y, P)
+        n = len(y)
+        rng = np.random.default_rng(0)
+        I = rng.integers(0, n, (B, n))
+        yb = y[I]
+        boot = {(k, m): f(p[I], yb) for k, p in P.items() for m, f in METRICS.items()}
+        point = {(k, m): f(p, y) for k, p in P.items() for m, f in METRICS.items()}
+        for cid, m, a, b in COMPARISONS:
+            d = boot[(a, m)] - boot[(b, m)]
+            rows.append(dict(task=task, comparison=cid, metric=m, a=a, b=b, a_value=point[(a, m)],
+                             b_value=point[(b, m)], est=point[(a, m)] - point[(b, m)],
+                             lo=np.percentile(d, 2.5), hi=np.percentile(d, 97.5)))
+    R = pd.DataFrame(rows)
+    R["sig"] = (R.lo > 0) | (R.hi < 0)
+    R["B"] = B
+    R.to_csv(f"{OUT}/baserate_ci.csv", index=False)
+    return R
+
+
+def write_md(R):
+    heads = ["Jev Brier: told − zero-shot", "Jev Brier: told − shift (100 labels)", "Brier, both told: Gemini − Jev",
+             "AUROC, both told: Gemini − Jev", "Jev AUROC: told − zero-shot"]
+    L = ["# Telling Jev the base rate: paired bootstrap 95% CIs", "",
+         f"One run, no repeat draws. The bootstrap resamples the 300 test cases only (B={B}, same resamples for every "
+         "comparison). **Bold** = 95% CI excludes 0. Brier: negative = first-named is better. AUROC: positive = "
+         "first-named is better. Shift = base-rate shift fitted on 100 labels (draw 0), as in the README table.", "",
+         "Generated by `baserate_ci.py` (full numbers: `results/baserate_ci.csv`).", "",
+         "| Task | " + " | ".join(heads) + " |", "|---|" + "---|" * len(heads)]
+    for task in TASK_ORDER:
+        cells = []
+        for cid, m, _, _ in COMPARISONS:
+            r = R[(R.task == task) & (R.comparison == cid)].iloc[0]
+            nd = 3 if m == "brier" else 2
+            s = f"{r.est:+.{nd}f} [{r.lo:+.{nd}f}, {r.hi:+.{nd}f}]"
+            cells.append(f"**{s}**" if r.sig else s)
+        L.append(f"| {task} | " + " | ".join(cells) + " |")
+    L.append("")
+    open(f"{OUT}/baserate_ci.md", "w").write("\n".join(L))
+
+
+if __name__ == "__main__":
+    R = main()
+    write_md(R)
+    print(R.to_string())
+    print("wrote results/baserate_ci.csv, results/baserate_ci.md")

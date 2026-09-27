@@ -1,0 +1,186 @@
+=== context ensembling (mean over draw pairs)
+                                         auroc  brier
+task          m   variant                            
+crimes        50  one context            0.777  0.117
+                  single context         0.768  0.127
+                  two contexts of k=50   0.793  0.116
+              100 one context            0.770  0.107
+                  single context         0.777  0.117
+                  two contexts of k=100  0.801  0.110
+              200 one context            0.779  0.103
+                  single context         0.770  0.107
+                  two contexts of k=200  0.801  0.103
+flights       50  one context            0.640  0.169
+                  single context         0.616  0.167
+                  two contexts of k=50   0.633  0.165
+              100 one context            0.656  0.165
+                  single context         0.640  0.169
+                  two contexts of k=100  0.659  0.162
+              200 one context            0.684  0.154
+                  single context         0.656  0.165
+                  two contexts of k=200  0.685  0.156
+github_prs    50  one context            0.744  0.183
+                  single context         0.713  0.193
+                  two contexts of k=50   0.753  0.181
+              100 one context            0.768  0.174
+                  single context         0.744  0.183
+                  two contexts of k=100  0.794  0.173
+hn            50  one context            0.580  0.157
+                  single context         0.583  0.156
+                  two contexts of k=50   0.629  0.154
+              100 one context            0.602  0.157
+                  single context         0.580  0.157
+                  two contexts of k=100  0.622  0.155
+              200 one context            0.625  0.159
+                  single context         0.602  0.157
+                  two contexts of k=200  0.632  0.155
+inspections   50  one context            0.553  0.174
+                  single context         0.540  0.171
+                  two contexts of k=50   0.551  0.163
+              100 one context            0.542  0.166
+                  single context         0.553  0.174
+                  two contexts of k=100  0.565  0.163
+              200 one context            0.527  0.167
+                  single context         0.542  0.166
+                  two contexts of k=200  0.554  0.164
+nyc311        50  one context            0.880  0.119
+                  single context         0.866  0.122
+                  two contexts of k=50   0.877  0.122
+              100 one context            0.880  0.118
+                  single context         0.880  0.119
+                  two contexts of k=100  0.890  0.115
+              200 one context            0.905  0.105
+                  single context         0.880  0.118
+                  two contexts of k=200  0.901  0.109
+shelter       50  one context            0.789  0.183
+                  single context         0.766  0.195
+                  two contexts of k=50   0.792  0.184
+              100 one context            0.808  0.171
+                  single context         0.789  0.183
+                  two contexts of k=100  0.817  0.173
+              200 one context            0.837  0.157
+                  single context         0.808  0.171
+                  two contexts of k=200  0.842  0.160
+stackoverflow 50  one context            0.721  0.161
+                  single context         0.701  0.172
+                  two contexts of k=50   0.734  0.158
+              100 one context            0.729  0.172
+                  single context         0.721  0.161
+                  two contexts of k=100  0.748  0.155
+
+=== mechanism: logit(Jev in-context) ~ w_prior*logit(zero-shot) + w_group*logit(group rate in context)
+         task            key  key_auroc   k        arm  r2_both  r2_prior_only  r2_group_only  w_prior  w_group
+      flights       dep_time      0.677  20 in_context    0.465          0.239          0.370    0.875    0.275
+      flights       dep_time      0.677  20   shuffled    0.313          0.124          0.212    0.916    0.321
+      flights       dep_time      0.677  20      noisy    0.203          0.147          0.091    0.899    0.178
+      flights       dep_time      0.677  50 in_context    0.416          0.207          0.347    0.772    0.269
+      flights       dep_time      0.677  50   shuffled    0.228          0.083          0.129    0.768    0.248
+      flights       dep_time      0.677  50      noisy    0.285          0.149          0.207    0.749    0.291
+      flights       dep_time      0.677 100 in_context    0.468          0.313          0.339    1.170    0.272
+      flights       dep_time      0.677 100   shuffled    0.185          0.108          0.082    0.839    0.298
+      flights       dep_time      0.677 100      noisy    0.273          0.179          0.192    0.848    0.314
+      flights       dep_time      0.677 200 in_context    0.420          0.282          0.322    1.163    0.285
+      flights       dep_time      0.677 200   shuffled    0.069          0.046          0.025    0.613    0.254
+      flights       dep_time      0.677 200      noisy    0.265          0.166          0.196    0.911    0.446
+      flights       dep_time      0.677 400 in_context    0.288          0.201          0.221    1.071    0.291
+      flights       dep_time      0.677 400   shuffled    0.060          0.038          0.018    0.662    0.431
+      flights       dep_time      0.677 400      noisy    0.124          0.076          0.090    0.702    0.432
+  inspections            zip      0.591  20 in_context    0.263          0.043          0.212    0.259    0.439
+  inspections            zip      0.591  20   shuffled    0.152          0.001          0.152   -0.026    0.392
+  inspections            zip      0.591  20      noisy    0.522          0.025          0.492    0.244    0.601
+  inspections            zip      0.591  50 in_context    0.176          0.031          0.134    0.200    0.271
+  inspections            zip      0.591  50   shuffled    0.226          0.036          0.194    0.170    0.291
+  inspections            zip      0.591  50      noisy    0.182          0.148          0.028    0.353    0.141
+  inspections            zip      0.591 100 in_context    0.095          0.031          0.058    0.182    0.155
+  inspections            zip      0.591 100   shuffled    0.072          0.000          0.071   -0.029    0.172
+  inspections            zip      0.591 100      noisy    0.178          0.135          0.037    0.328    0.134
+  inspections            zip      0.591 200 in_context    0.098          0.056          0.036    0.217    0.109
+  inspections            zip      0.591 200   shuffled    0.071          0.032          0.039    0.165    0.109
+  inspections            zip      0.591 200      noisy    0.135          0.076          0.058    0.240    0.140
+  inspections            zip      0.591 400 in_context    0.103          0.068          0.031    0.237    0.088
+  inspections            zip      0.591 400   shuffled    0.031          0.010          0.021    0.089    0.083
+  inspections            zip      0.591 400      noisy    0.138          0.119          0.019    0.299    0.089
+      shelter            sex      0.782  20 in_context    0.530          0.476          0.120    0.819    0.245
+      shelter            sex      0.782  20   shuffled    0.336          0.284          0.043    0.582    0.212
+      shelter            sex      0.782  20      noisy    0.471          0.368          0.150    0.692    0.301
+      shelter            sex      0.782  50 in_context    0.479          0.429          0.159    0.769    0.244
+      shelter            sex      0.782  50   shuffled    0.267          0.247          0.040    0.428    0.190
+      shelter            sex      0.782  50      noisy    0.396          0.345          0.116    0.592    0.233
+      shelter            sex      0.782 100 in_context    0.446          0.391          0.159    0.769    0.227
+      shelter            sex      0.782 100   shuffled    0.188          0.171          0.031    0.404    0.232
+      shelter            sex      0.782 100      noisy    0.344          0.322          0.068    0.605    0.179
+      shelter            sex      0.782 200 in_context    0.451          0.369          0.202    0.757    0.265
+      shelter            sex      0.782 200   shuffled    0.079          0.066          0.014    0.238    0.345
+      shelter            sex      0.782 200      noisy    0.365          0.322          0.122    0.622    0.267
+      shelter            sex      0.782 400 in_context    0.401          0.283          0.235    0.663    0.345
+      shelter            sex      0.782 400   shuffled    0.030          0.019          0.012    0.135    0.400
+      shelter            sex      0.782 400      noisy    0.224          0.184          0.096    0.464    0.304
+       nyc311 complaint_type      0.911  20 in_context    0.725          0.555          0.516    0.779    0.433
+       nyc311 complaint_type      0.911  20   shuffled    0.501          0.181          0.333    0.408    0.351
+       nyc311 complaint_type      0.911  20      noisy    0.635          0.343          0.416    0.635    0.531
+       nyc311 complaint_type      0.911  50 in_context    0.762          0.575          0.641    0.735    0.410
+       nyc311 complaint_type      0.911  50   shuffled    0.492          0.163          0.377    0.376    0.334
+       nyc311 complaint_type      0.911  50      noisy    0.512          0.351          0.278    0.575    0.402
+       nyc311 complaint_type      0.911 100 in_context    0.775          0.582          0.712    0.663    0.425
+       nyc311 complaint_type      0.911 100   shuffled    0.389          0.115          0.259    0.398    0.351
+       nyc311 complaint_type      0.911 100      noisy    0.575          0.363          0.448    0.575    0.461
+       nyc311 complaint_type      0.911 200 in_context    0.762          0.556          0.728    0.560    0.402
+       nyc311 complaint_type      0.911 200   shuffled    0.340          0.083          0.250    0.370    0.379
+       nyc311 complaint_type      0.911 200      noisy    0.537          0.311          0.464    0.477    0.490
+       nyc311 complaint_type      0.911 400 in_context    0.730          0.513          0.712    0.455    0.380
+       nyc311 complaint_type      0.911 400   shuffled    0.172          0.021          0.142    0.227    0.356
+       nyc311 complaint_type      0.911 400      noisy    0.364          0.193          0.326    0.343    0.484
+           hn           time      0.570  20 in_context    0.374          0.263          0.088    0.610    0.264
+           hn           time      0.570  20   shuffled    0.503          0.265          0.239    0.660    0.293
+           hn           time      0.570  20      noisy    0.386          0.212          0.163    0.566    0.331
+           hn           time      0.570  50 in_context    0.355          0.262          0.100    0.574    0.189
+           hn           time      0.570  50   shuffled    0.416          0.225          0.184    0.518    0.194
+           hn           time      0.570  50      noisy    0.315          0.164          0.111    0.534    0.355
+           hn           time      0.570 100 in_context    0.368          0.308          0.067    0.601    0.181
+           hn           time      0.570 100   shuffled    0.312          0.227          0.089    0.504    0.199
+           hn           time      0.570 100      noisy    0.289          0.248          0.038    0.568    0.189
+           hn           time      0.570 200 in_context    0.350          0.324          0.032    0.616    0.120
+           hn           time      0.570 200   shuffled    0.346          0.296          0.047    0.553    0.271
+           hn           time      0.570 200      noisy    0.340          0.316          0.031    0.613    0.233
+           hn           time      0.570 400 in_context    0.379          0.337          0.054    0.660    0.230
+           hn           time      0.570 400   shuffled    0.356          0.319          0.033    0.594    0.272
+           hn           time      0.570 400      noisy    0.355          0.341          0.017    0.640    0.218
+   github_prs           repo      0.722  20 in_context    0.459          0.237          0.239    0.818    0.428
+   github_prs           repo      0.722  20   shuffled    0.607          0.279          0.360    0.889    0.484
+   github_prs           repo      0.722  20      noisy    0.409          0.202          0.209    0.753    0.470
+   github_prs           repo      0.722  50 in_context    0.508          0.178          0.354    0.764    0.494
+   github_prs           repo      0.722  50   shuffled    0.435          0.223          0.194    0.776    0.375
+   github_prs           repo      0.722  50      noisy    0.492          0.179          0.329    0.751    0.496
+   github_prs           repo      0.722 100 in_context    0.463          0.162          0.314    0.799    0.441
+   github_prs           repo      0.722 100   shuffled    0.418          0.243          0.163    0.826    0.344
+   github_prs           repo      0.722 100      noisy    0.377          0.195          0.171    0.799    0.455
+   github_prs           repo      0.722 200 in_context    0.469          0.126          0.354    0.776    0.448
+   github_prs           repo      0.722 200   shuffled    0.272          0.174          0.088    0.704    0.369
+   github_prs           repo      0.722 200      noisy    0.429          0.183          0.276    0.774    0.543
+stackoverflow       has_code      0.580  20 in_context    0.594          0.341          0.396    0.796    0.488
+stackoverflow       has_code      0.580  20   shuffled    0.425          0.210          0.225    0.598    0.302
+stackoverflow       has_code      0.580  20      noisy    0.403          0.321          0.086    0.893    0.281
+stackoverflow       has_code      0.580  50 in_context    0.561          0.339          0.384    0.703    0.292
+stackoverflow       has_code      0.580  50   shuffled    0.519          0.355          0.237    0.703    0.241
+stackoverflow       has_code      0.580  50      noisy    0.490          0.402          0.154    0.897    0.332
+stackoverflow       has_code      0.580 100 in_context    0.596          0.384          0.394    0.724    0.223
+stackoverflow       has_code      0.580 100   shuffled    0.415          0.365          0.018    0.837    0.309
+stackoverflow       has_code      0.580 100      noisy    0.576          0.428          0.277    0.814    0.610
+stackoverflow       has_code      0.580 200 in_context    0.590          0.378          0.378    0.782    0.294
+stackoverflow       has_code      0.580 200   shuffled    0.474          0.445          0.026    0.824    0.259
+stackoverflow       has_code      0.580 200      noisy    0.627          0.478          0.327    0.913    0.465
+       crimes    description      0.831  20 in_context    0.602          0.447          0.263    1.121    0.500
+       crimes    description      0.831  20   shuffled    0.495          0.127          0.327    0.679    0.655
+       crimes    description      0.831  20      noisy    0.679          0.288          0.439    0.903    0.637
+       crimes    description      0.831  50 in_context    0.585          0.420          0.329    0.992    0.434
+       crimes    description      0.831  50   shuffled    0.520          0.283          0.328    0.788    0.495
+       crimes    description      0.831  50      noisy    0.549          0.257          0.398    0.732    0.589
+       crimes    description      0.831 100 in_context    0.611          0.436          0.431    0.947    0.405
+       crimes    description      0.831 100   shuffled    0.349          0.086          0.231    0.533    0.431
+       crimes    description      0.831 100      noisy    0.404          0.135          0.316    0.537    0.600
+       crimes    description      0.831 200 in_context    0.573          0.440          0.434    0.911    0.339
+       crimes    description      0.831 200   shuffled    0.248          0.022          0.183    0.383    0.389
+       crimes    description      0.831 200      noisy    0.448          0.235          0.341    0.661    0.532
+       crimes    description      0.831 400 in_context    0.498          0.340          0.415    0.704    0.323
+       crimes    description      0.831 400   shuffled    0.161          0.034          0.117    0.338    0.350
+       crimes    description      0.831 400      noisy    0.264          0.146          0.206    0.486    0.442

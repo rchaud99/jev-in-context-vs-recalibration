@@ -1,0 +1,335 @@
+nyc311 draw 0 k=5 done  (spent $0.000)
+nyc311 draw 0 k=10 done  (spent $0.000)
+nyc311 draw 0 k=20 done  (spent $0.000)
+nyc311 draw 0 k=50 done  (spent $0.000)
+nyc311 draw 0 k=100 done  (spent $0.000)
+nyc311 draw 0 k=200 done  (spent $0.000)
+nyc311 draw 0 k=400 done  (spent $0.000)
+nyc311 draw 1 k=5 done  (spent $0.000)
+nyc311 draw 1 k=10 done  (spent $0.000)
+nyc311 draw 1 k=20 done  (spent $0.000)
+nyc311 draw 1 k=50 done  (spent $0.000)
+nyc311 draw 1 k=100 done  (spent $0.000)
+nyc311 draw 1 k=200 done  (spent $0.000)
+nyc311 draw 1 k=400 done  (spent $0.000)
+nyc311 draw 2 k=5 done  (spent $0.000)
+nyc311 draw 2 k=10 done  (spent $0.000)
+nyc311 draw 2 k=20 done  (spent $0.000)
+nyc311 draw 2 k=50 done  (spent $0.000)
+nyc311 draw 2 k=100 done  (spent $0.000)
+nyc311 draw 2 k=200 done  (spent $0.000)
+nyc311 draw 2 k=400 done  (spent $0.000)
+nyc311 draw 3 k=5 done  (spent $0.000)
+nyc311 draw 3 k=10 done  (spent $0.000)
+nyc311 draw 3 k=20 done  (spent $0.002)
+nyc311 draw 3 k=50 done  (spent $0.008)
+nyc311 draw 3 k=100 done  (spent $0.019)
+nyc311 draw 3 k=200 done  (spent $0.064)
+nyc311 draw 3 k=400 done  (spent $0.167)
+nyc311 draw 4 k=5 done  (spent $0.170)
+nyc311 draw 4 k=10 done  (spent $0.174)
+nyc311 draw 4 k=20 done  (spent $0.178)
+nyc311 draw 4 k=50 done  (spent $0.185)
+nyc311 draw 4 k=100 done  (spent $0.196)
+nyc311 draw 4 k=200 done  (spent $0.241)
+nyc311 draw 4 k=400 done  (spent $0.341)
+nyc311 draw 5 k=5 done  (spent $0.347)
+nyc311 draw 5 k=10 done  (spent $0.354)
+nyc311 draw 5 k=20 done  (spent $0.364)
+nyc311 draw 5 k=50 done  (spent $0.385)
+nyc311 draw 5 k=100 done  (spent $0.434)
+nyc311 draw 5 k=200 done  (spent $0.479)
+nyc311 draw 5 k=400 done  (spent $0.577)
+nyc311 draw 6 k=5 done  (spent $0.584)
+nyc311 draw 6 k=10 done  (spent $0.592)
+nyc311 draw 6 k=20 done  (spent $0.603)
+nyc311 draw 6 k=50 done  (spent $0.624)
+nyc311 draw 6 k=100 done  (spent $0.672)
+nyc311 draw 6 k=200 done  (spent $0.718)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d6 k=400: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d6 k=400: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d6 k=400: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d6 k=400: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d6 k=400: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d6 k=400: fmt_json does not fit in context, skipped
+nyc311 draw 6 k=400 done  (spent $0.738)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=5: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=5: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=5: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=5: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=5: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=5: fmt_json does not fit in context, skipped
+nyc311 draw 7 k=5 done  (spent $0.739)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=10: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=10: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=10: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=10: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=10: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=10: fmt_json does not fit in context, skipped
+nyc311 draw 7 k=10 done  (spent $0.741)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=20: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=20: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=20: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=20: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=20: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=20: fmt_json does not fit in context, skipped
+nyc311 draw 7 k=20 done  (spent $0.743)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=50: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=50: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=50: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=50: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=50: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=50: fmt_json does not fit in context, skipped
+nyc311 draw 7 k=50 done  (spent $0.745)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=100: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=100: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=100: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=100: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=100: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=100: fmt_json does not fit in context, skipped
+nyc311 draw 7 k=100 done  (spent $0.749)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=200: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=200: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=200: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=200: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=200: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=200: fmt_json does not fit in context, skipped
+nyc311 draw 7 k=200 done  (spent $0.756)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=400: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=400: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=400: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=400: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=400: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d7 k=400: fmt_json does not fit in context, skipped
+nyc311 draw 7 k=400 done  (spent $0.768)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=5: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=5: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=5: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=5: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=5: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=5: fmt_json does not fit in context, skipped
+nyc311 draw 8 k=5 done  (spent $0.769)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=10: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=10: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=10: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=10: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=10: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=10: fmt_json does not fit in context, skipped
+nyc311 draw 8 k=10 done  (spent $0.770)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=20: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=20: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=20: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=20: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=20: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=20: fmt_json does not fit in context, skipped
+nyc311 draw 8 k=20 done  (spent $0.772)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=50: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=50: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=50: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=50: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=50: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=50: fmt_json does not fit in context, skipped
+nyc311 draw 8 k=50 done  (spent $0.774)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=100: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=100: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=100: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=100: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=100: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=100: fmt_json does not fit in context, skipped
+nyc311 draw 8 k=100 done  (spent $0.774)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=200: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=200: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=200: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=200: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=200: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=200: fmt_json does not fit in context, skipped
+nyc311 draw 8 k=200 done  (spent $0.774)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=400: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=400: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=400: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=400: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=400: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d8 k=400: fmt_json does not fit in context, skipped
+nyc311 draw 8 k=400 done  (spent $0.774)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=5: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=5: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=5: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=5: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=5: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=5: fmt_json does not fit in context, skipped
+nyc311 draw 9 k=5 done  (spent $0.774)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=10: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=10: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=10: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=10: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=10: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=10: fmt_json does not fit in context, skipped
+nyc311 draw 9 k=10 done  (spent $0.774)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=20: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=20: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=20: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=20: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=20: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=20: fmt_json does not fit in context, skipped
+nyc311 draw 9 k=20 done  (spent $0.774)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=50: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=50: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=50: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=50: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=50: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=50: fmt_json does not fit in context, skipped
+nyc311 draw 9 k=50 done  (spent $0.774)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=100: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=100: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=100: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=100: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=100: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=100: fmt_json does not fit in context, skipped
+nyc311 draw 9 k=100 done  (spent $0.774)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=200: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=200: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=200: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=200: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=200: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=200: fmt_json does not fit in context, skipped
+nyc311 draw 9 k=200 done  (spent $0.774)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=400: in_context does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=400: shuffled does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=400: noisy does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=400: self_feedback does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=400: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+nyc311 d9 k=400: fmt_json does not fit in context, skipped
+nyc311 draw 9 k=400 done  (spent $0.774)
+total spent: {'usd': 0.7739105640000024, 'calls': 2111}

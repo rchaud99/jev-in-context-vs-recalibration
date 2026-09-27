@@ -1,0 +1,392 @@
+# Teaching Jev your workflow: examples in context vs recalibration
+
+**In short.** Jev learns from labeled examples, including wrong ones. Its zero-shot probabilities start far from real base rates, and one sentence stating the base rate fixes most of that (a significant Brier gain on all 6 tasks where Jev was off, though a correction fitted on 100 labels still does significantly better on 4 of them, 3 after Holm). Frontier LLMs stating plain percentages (Gemini 3.8 Flash, Claude Opus 5.5) have significantly lower Brier than Jev on most real tasks (zero-shot: Gemini 6 of 8, Opus 7 of 8), at about 18–120× Jev's cost per decision. Telling Jev the base rate closes roughly 50–90% of its Brier gap to Gemini; the gap that remains is mostly ranking, which we attribute (untested) to domain knowledge. On fictional tasks with known true probabilities, Jev and Gemini never beat a base-rate-only predictor, even with 400 examples, while logistic regression gets 7–8× closer to the truth. Opus does significantly beat base-rate-only on 4 of 6 fictional tasks at 100 labels, but on the main additive task 100 examples didn't significantly change its error from zero-shot. We read that as its prior doing the work: made-up names in a familiar medical frame still carry meaning. Where that meaning misleads (a counter-intuitive effect, an interaction, pure noise), it falls short.
+
+**Question.** Jev (TypeSafe's "System One" decision model, `typesafe/jev-1.13`) returns probabilities for
+yes/no questions but never text. Suppose you have *k* labeled examples from your own workflow. Should you:
+
+- put the examples in Jev's context,
+- leave Jev alone and fit a 2-parameter correction (Platt) to its probabilities,
+- do both, or
+- skip Jev and train a small model on the *k* labels?
+
+**Setup.**
+- **Tasks:** 8 real, binary prediction tasks built from public records dated 2026. Some may fall before the models' training cutoffs; the contamination check (Caveats) found no sign of memorization by Jev.
+- **Data per task:** 300 fixed test cases, plus a pool the *k* examples are drawn from.
+- **Labels:** *k* from 5 to 400, with several random draws per *k*.
+- **Metrics:** Brier score and calibration (ECE) for probability quality, AUROC for ranking. Every comparison is a paired bootstrap over test cases and, where there are repeat draws, draws.
+- **Cost:** about $34 of API calls so far, summed from the per-call costs logged in the caches:
+  - Jev: $10.63 ($10.45 real tasks, $0.18 synthetic)
+  - Gemini 3.8 Flash, real tasks: $5.88
+  - Gemini, checks and base rate: $0.58 (one-case-per-request check $0.40, base-rate sentence $0.17)
+  - Gemini, synthetic: $3.59
+  - Opus 5.5, real tasks: $9.39
+  - Opus 5.5, synthetic: $3.36
+  - DeepSeek V4 Flash (early pilot arm, not reported here): $0.14
+  - **Total: $33.56.** Qwen ran locally at no API cost.
+
+| Task | Source (2026) | Predict | Base rate | Jev zero-shot AUROC |
+|---|---|---|---|---|
+| nyc311 | NYC 311 complaints, June | closed within 7 days | 0.83 | 0.80 |
+| crimes | Chicago Police reports | an arrest was made | 0.14 | 0.78 |
+| flights | BTS on-time data, Pittsburgh departures, June | arrives >15 min late | 0.19 | 0.65 |
+| shelter | Sonoma County animal shelter | adopted or returned to owner | 0.56 | 0.64 |
+| stackoverflow | Stack Overflow questions, June | gets an accepted answer | 0.19 | 0.61 |
+| hn | Hacker News stories, June 1–10 | reaches 10+ points | 0.19 | 0.59 |
+| github_prs | closed PRs in 15 popular repos, June | merged | 0.68 | 0.53 (chance) |
+| inspections | Chicago food inspections | fails | 0.19 | 0.38 (inverted) |
+
+## Findings
+
+![Jev learns from labels and unlearns its prior under shuffled labels](results/fig_hero.png)
+
+**1. Jev really learns from examples, including tasks it knows nothing about.**
+- **GitHub PR merges:** Jev ranks at chance zero-shot (AUROC 0.53). With 200 labeled PRs in context it reaches 0.79.
+- **Other tasks with examples** (largest k: 400, or 200 for Stack Overflow):
+  - Shelter: 0.64 → 0.84
+  - NYC 311: 0.80 → 0.90
+  - Stack Overflow: 0.61 → 0.74
+- **The control:** on GitHub, the same examples with shuffled labels give no significant gain over zero-shot (0.53 at k=200; shuffled − zero-shot +0.006 [−0.078, +0.095]), while correct labels give +0.26 [+0.19, +0.34]. So the gain comes from the labels, not from seeing example cases. Inspections is the exception: there, seeing cases alone helps (shuffled 0.52 vs zero-shot 0.38, +0.14 [+0.04, +0.24]).
+- **Scale:** by k=200, correct vs shuffled labels differs significantly on 7 of 8 tasks (6 after Holm; HN drops; inspections is not significant), by up to +0.28 AUROC (+0.33 on NYC 311 at k=400).
+
+**2. Jev trusts your labels over its own knowledge.** With shuffled labels Jev doesn't fall back to its prior; it unlearns it (at k=200, shuffled AUROC is significantly below zero-shot on all three; shelter not after Holm).
+- Crimes: 0.78 → 0.55
+- NYC 311: 0.80 → 0.58
+- Shelter: 0.64 → 0.53
+
+- **Label noise:** flipping 20% of the labels (the same flips for every method) costs Jev about as much ranking as it costs logistic regression and TabPFN (point estimates):
+  - NYC 311, AUROC change: Jev −0.09, LR −0.13, TabPFN −0.11.
+  - Ranking damage is similar across methods, so Jev is not uniquely fragile there.
+- **Calibration is where it is more fragile:** on 5 of 8 tasks, noisy labels cost Jev-in-context about 1.5–2× more Brier than the other methods. On crimes it's +0.061 vs +0.029 to +0.041.
+- **Takeaway:** examples teach Jev faithfully, including your mistakes, and a Platt step afterwards is worth more when labels are noisy.
+
+**3. Examples or recalibration? It depends on whether the labels know something Jev doesn't.**
+- **Examples win** where the labels carry local, idiosyncratic signal. On GitHub, each repo has its own merge culture (LangChain merges 17%, VS Code 92%). Shelter outcomes and 311 closure times also depend on local practice.
+  - Brier, examples vs Platt, at k=100:
+
+    | Task | Examples | Platt |
+    |---|---|---|
+    | GitHub | 0.179 | 0.217 |
+    | Shelter | 0.179 | 0.225 |
+- **Platt wins** where Jev already ranks well from general knowledge and only needs its probabilities rescaled. Which crimes lead to arrests is general knowledge.
+  - Crimes, k=10–20: Platt is 0.02–0.03 better.
+  - Flights, k=100: Platt is 0.014 better.
+- **From about 50 labels, doing both is a safe default.** From k=50 on, examples plus Platt is never significantly worse than Platt alone. At k=100 it is significantly better on 4 of 8 tasks (3 after Holm), by up to 0.046 Brier (up to 0.068 at k=400). At k≤20 the leave-one-out Platt fit is noisy and can hurt: crimes at k=5 and 20, HN at k=20 (only HN survives Holm).
+
+**4. Jev's zero-shot probabilities are plausibility scores, not frequencies.**
+- Across the 8 tasks, Jev's average zero-shot probability stays between 0.24 and 0.57 while the true base rates range from 0.14 to 0.83. The correlation is 0.21.
+- It is systematically wrong about base rates (mean prediction − test rate, 95% CI over test cases; significant on 7 of 8 tasks, 6 after Holm):
+  - GitHub: 0.32 predicted vs 0.68 actual, −0.36 [−0.42, −0.31]
+  - NYC 311: 0.54 vs 0.83, −0.29 [−0.32, −0.24]
+  - HN: 0.57 vs 0.19, +0.38 [+0.33, +0.42]
+- On 6 of 8 tasks, zero-shot Jev scores worse than simply predicting the base rate. Any use of Jev probabilities as probabilities needs some labels.
+
+**5. When the labels win, Jev's advantage is small k, and on free text it lasts.**
+- **Structured records:** with 5–20 labels, Jev with examples is not significantly different from TabPFN on most tasks. It wins on shelter (0.04–0.045 Brier); on inspections it is behind, significantly only at k=10. By about k=100, TabPFN trained on the same labels is not significantly worse, or wins (nyc311, shelter, inspections).
+- **Free text:** Jev with examples has a higher AUROC than every trained baseline (TabPFN, embeddings + LR, LR) at every k (point estimates; significance below). With examples in context, the frontier LLMs (see below) are never significantly worse than it in AUROC on either text task.
+  - Stack Overflow: significant at every k. AUROC 0.74 at k=200 vs 0.69 or lower for the baselines even at k=400.
+  - HN: significant only up to k=20. At k=400 it's 0.63 vs 0.60 or lower, with CIs that include 0.
+
+- **"Stack, don't stuff."** An alternative to putting the examples in Jev's context: ask Jev zero-shot, then use its score as one extra feature in a small model trained on the *k* labels. That uses about 77 input tokens per prediction, against about 304 for Jev with 100 examples and 965 with 400 (medians over the cached calls, 25 cases per request).
+  - **Larger k:** TabPFN on the features plus Jev's score has significantly lower Brier than Jev-in-context on 3 of 8 tasks at k=100 (0 after Holm), 4 of 7 at k=200 (2 after Holm: crimes, shelter) and 4 of 6 at k=400 (3 after Holm: NYC 311, crimes, shelter), and is never significantly worse from k=100. Against Jev-in-context + Platt it is mostly not significantly different: lower Brier on crimes and shelter at k=200 and shelter at k=400 (only the last after Holm), higher on GitHub at k=50 and HN at k=200 (only GitHub after Holm).
+  - **Where it loses:** free text. On Stack Overflow, stacking ranks significantly worse than Jev-in-context at every k (AUROC −0.07 [−0.12, −0.01] at k=200 to −0.15 at k=10; all 6 after Holm).
+  - **What Jev's score adds to TabPFN:** the most where Jev's prior is good and labels are scarce. On crimes: +0.15 AUROC at k=20, +0.12 at k=100.
+
+**6. More examples keep helping, and the context limit isn't a ceiling.**
+- Up to 400 examples (about 25k tokens) we see no long-context degradation. AUROC keeps rising on 5 of the 6 tasks run to k=400; inspections plateaus from k=100.
+- Splitting the labels into two half-size contexts and averaging Jev's two answers is never significantly worse than one big context. At 2×100 vs 200 it's +0.018 AUROC averaged over 8 tasks [+0.007, +0.029]. At 2×50 and 2×200 the average gain (+0.010) has a CI that includes 0. You can use more labels than fit in Jev's 32k context.
+
+**7. What Jev does with examples looks like "prior + per-group label rates".**
+- A two-term regression explains a large share of the variance in Jev's in-context predictions. The R² values are optimistic: the grouping feature was chosen on the same data. The real-vs-shuffled weight comparison below is the robust part. The terms are its own zero-shot logit plus the smoothed label rate, among the shown examples, for the test case's group (one data-chosen feature per task, such as complaint type or repo).
+  - R² is up to 0.77 on NYC 311 and 0.46–0.61 on GitHub, crimes and Stack Overflow.
+- The weight on its prior falls as *k* grows on NYC 311, crimes and shelter (for example 0.78 → 0.45 on NYC 311).
+- **Jev puts similar weight on the group rates whether the labels are real or shuffled:** 0.20–0.45 vs 0.21–0.46 across tasks (point estimates). It has no way to tell that a set of examples is noise, so it learns spurious patterns as confidently as real ones.
+
+**8. What didn't matter, or didn't work.**
+- **Prompt format:** prose, one-line "case => YES/NO" and JSON: AUROC differs significantly in only 4 of about 100 task × k cells, all within 0.05. Prose has the lowest Brier; compact is +0.01–0.03 Brier worse on 7 of 8 tasks.
+- **Self-feedback:** showing Jev its own earlier estimate next to each outcome ("you said 82%, it was NO") makes Brier significantly *worse* than plain examples on 5 of 8 tasks. It helps slightly only on the two tasks where examples add least (crimes, flights).
+- **Isotonic regression** is significantly worse than Platt at k=10 on all 8 tasks, and still on 5 of 8 at k=50.
+
+
+## Jev vs frontier LLMs (Gemini 3.8 Flash, Claude Opus 5.5)
+
+All 8 tasks, same 300 test cases, same example draws (0–1), same prose examples, k = 0, 5, 20, 100. The LLMs can't
+return token probabilities (Gemini 3.8 Flash: "Logprobs is not enabled"; Claude exposes none), so they state a
+probability per case, 25 cases per request. Part of the Opus run went through OpenRouter (same model, same list
+price). Platt here is the constrained version (see Checks). Tables: `results/compare_3models.md` (mean prediction and
+AUROC per k; Brier with paired bootstrap CIs for Opus − Jev and Opus − Gemini, full numbers in
+`results/compare_opus_ci.csv`) and `results/compare_ci.md` (Jev vs Gemini at every k up to 400).
+
+- **Base rates are Jev's main weakness; the LLMs mostly don't share it.** With no examples, the average gap between
+  mean prediction and true rate is 0.24 for Jev, 0.10 for Gemini and 0.06 for Opus. Jev's misses are those in
+  finding 4, plus Stack Overflow (0.52 vs 0.19). Gemini misses most on shelter (0.76 vs 0.56) and Stack Overflow
+  (0.44); Opus's largest misses are GitHub (0.55) and NYC 311 (0.74).
+- **Examples move Jev's base rate only partway** (average gap 0.10 at k=100): still 0.69 on NYC 311, 0.24 on crimes
+  and 0.33 on Stack Overflow, where Platt on the same labels reaches 0.74, 0.14 and 0.18. The LLMs update when far
+  off (Gemini shelter 0.76 → 0.59; Opus Stack Overflow 0.26 → 0.19) and otherwise stay put.
+- **Brier, Opus vs the others** (tasks out of 8 where the 95% CI excludes 0; after Holm where that changes the count):
+
+  | Cell | Opus better than Jev | Opus better than Gemini | Opus worse |
+  |---|---|---|---|
+  | k=0 | 7 (all but flights) | 3 (shelter, Stack Overflow, HN) | none |
+  | k=100, in-context | 8 | 3 (Stack Overflow, HN, GitHub); 0 after Holm | shelter, vs Gemini (0.154 vs 0.142); not after Holm |
+  | k=100, Platt | 6 (not crimes, flights) | 3 (shelter, HN, GitHub); 2 after Holm (HN drops) | none |
+
+  Gemini is never significantly worse than Jev on Brier in any cell (zero-shot, in-context or unconstrained Platt,
+  any k; `results/compare_ci.md`). It has significantly lower Brier on 6 of 8 tasks zero-shot and in-context at
+  k=5, 20, 100 and the largest k (k=100: 4 after Holm), and with Platt on 1, 5, 5, 5 of 8 at those k (0, 5, 5, 5
+  after Holm). Lower Brier is not the same as better calibration; ECE is not compared here.
+- **Ranking (AUROC):** zero-shot, Opus ranks better than Jev on 6 of 8 tasks (e.g. GitHub 0.87 vs 0.53, inspections
+  0.60 vs 0.38) and better than Gemini on 3 (shelter, HN, GitHub 0.87 vs 0.70), never worse. Examples narrow the gap
+  more against Gemini than against Opus: at k=100, Opus still ranks better than Jev on 5 tasks (NYC 311, flights,
+  shelter, HN, GitHub; 4 after Holm, flights drops), while Jev vs Gemini differs significantly only on NYC 311 and shelter (and at the largest k
+  only on shelter).
+- **Examples vs the best post-hoc correction** (Platt with C in {0.1, 1, 10, 100} or a 1-parameter base-rate shift,
+  chosen on the test set, so optimistic for the correction; Jev and Gemini, `results/platt_sweep.csv`): examples still win on GitHub and shelter at
+  k=100 for both. "Platt beats examples" (crimes, flights) is almost entirely Jev's: for Gemini the best correction
+  beats in-context probabilities only on Stack Overflow at k=5.
+- **Checks:**
+  - *Batching:* asking Gemini one case per request (100 cases × 4 conditions) gave nearly the same means (NYC 311
+    0.74 vs 0.75; Stack Overflow 0.48 vs 0.44 at k=0), correlation 0.87–0.97 and AUROC within ±0.04. Batching doesn't
+    explain the LLMs' base-rate advantage (`results/batch_check.csv`).
+  - *Degenerate Platt fits:* some fits come out flat or inverted (Jev 13, Gemini 8, Opus 9 of 48 fits per model:
+    8 tasks × k 5/20/100 × 2 draws; all at k ≤ 20 except Opus inspections at k=100). The constrained version falls
+    back to a base-rate shift there (`platt_constrained.py`, `results/platt_constrained.csv`).
+  - *Platt means below the true rate on NYC 311* (0.74–0.77 vs 0.83): not regularisation; the first 100 examples in
+    draws 0–1 have rates 0.75 and 0.79, and Platt reproduces the examples' rate.
+  - *Jev's flights overshoot*: those examples are 25–30% late (test 19%); Jev goes past even that (0.33–0.35) while
+    the LLMs barely move (0.21–0.23).
+- **Cost per 1,000 decisions** (logged per-call cost of the 300 test cases, batched as above, averaged over the 8
+  tasks and draws 0–1): Jev ≈ $0.004 zero-shot and ≈ $0.015 with 100 examples; Gemini 3.8 Flash ≈ $0.07 and
+  ≈ $0.27; Opus 5.5 ≈ $0.44 and ≈ $0.70. So Gemini costs about 20× Jev zero-shot and 18× with 100 examples, and
+  Opus about 121× and 47×. Latency: Gemini ≈ 1 s per single-case request (median); Jev and Opus latency weren't measured.
+- **Takeaway:** a calibration-specialised decision model starts with worse base rates and worse ranking than general
+  LLMs stating plain percentages. Examples close much of the ranking gap to Gemini but not to Opus, and Opus's Brier
+  stays below Jev's on most tasks with or without examples. Jev's case is cost, not accuracy.
+
+## Telling Jev the base rate (one sentence, no labels)
+
+One added sentence in the context, stating the population base rate (the pool's rate, the kind of number a team has
+on a dashboard): "Base rate: across all cases like these, the answer to "…" is yes about N% of the time." Zero-shot
+otherwise; 300 test cases; one run, no draws. The same sentence was given to Gemini 3.8 Flash (`baserate_check.py`,
+`gemini_baserate.py`; `results/baserate_check.csv`, `results/gemini_baserate.csv`). Paired bootstrap 95% CIs over the
+300 test cases (B=2000, same resamples for every comparison, rebuilt from the caches with no API calls):
+`baserate_ci.py`, `results/baserate_ci.md`, `results/baserate_ci.csv`. "Significant" below means the 95% CI of the
+difference excludes 0.
+
+| Task (true rate) | Jev mean: zero-shot → told | Jev Brier: zero-shot → told | Jev Brier, base-rate shift fitted on 100 labels | Gemini Brier: zero-shot → told | AUROC, both told: Jev / Gemini |
+|---|---|---|---|---|---|
+| NYC 311 (0.83) | 0.54 → 0.71 | 0.202 → 0.146 | 0.132 | 0.095 → 0.094 | 0.77 / 0.90 |
+| crimes (0.14) | 0.34 → 0.15 | 0.144 → 0.111 | 0.107 | 0.088 → 0.088 | 0.76 / 0.81 |
+| GitHub (0.68) | 0.32 → 0.68 | 0.350 → 0.214 | 0.215 | 0.189 → 0.196 | 0.50 / 0.71 |
+| HN (0.19) | 0.57 → 0.27 | 0.297 → 0.162 | 0.156 | 0.173 → 0.151 | 0.61 / 0.64 |
+| Stack Overflow (0.19) | 0.52 → 0.31 | 0.258 → 0.163 | 0.150 | 0.201 → 0.138 | 0.64 / 0.75 |
+| inspections (0.19) | 0.46 → 0.36 | 0.252 → 0.203 | 0.170 | 0.151 → 0.154 | 0.40 / 0.57 |
+| flights (0.19) | 0.24 → 0.22 | 0.153 → 0.155 | 0.155 | 0.150 → 0.150 | 0.62 / 0.65 |
+| shelter (0.56) | 0.54 → 0.57 | 0.222 → 0.222 | 0.223 | 0.243 → 0.200 | 0.64 / 0.75 |
+
+- **Jev uses a stated base rate.** Its mean moves to or toward the stated rate on every task where it was off, and
+  its Brier improves significantly on all 6 of those tasks (by 0.033 on crimes up to 0.136 on GitHub). On flights and
+  shelter, where it was already close, the Brier change is not significant. Ranking barely changes: AUROC is within
+  ±0.04 of zero-shot and no change is significant, though the CIs (bounds from −0.08 to +0.07) can't rule out
+  modest shifts.
+- **One sentence gets most of the way to 100 labels, but not all of it.** On the 6 tasks where Jev was off, the
+  sentence closes about 60–100% of the Brier gap between zero-shot and a base-rate shift fitted on 100 labels, from
+  60% [54%, 67%] on inspections to 101% [97%, 105%] on GitHub. Told and shift are not significantly different on
+  GitHub (−0.001 [−0.006, +0.004]) and HN (+0.006 [−0.008, +0.020]); the shift is significantly better on the other
+  4 (3 after Holm): NYC 311 (+0.014), crimes (+0.004), inspections (+0.033, 0.203 vs 0.170) and Stack Overflow
+  (+0.013 [+0.001, +0.023], which drops after Holm).
+- **With both told, Gemini still wins, mostly on ranking.** Told Gemini has significantly lower Brier than told Jev on
+  all 8 tasks (4 after Holm: NYC 311, Stack Overflow, inspections, shelter), by 0.005 on flights up to 0.052 on
+  NYC 311; these CIs cover test-case sampling in one run, not run-to-run variation. Its AUROC is higher on all 8,
+  significantly on 6 (5 after Holm; crimes drops): NYC 311 (0.90 vs 0.77), GitHub (0.71 vs 0.50), inspections
+  (0.57 vs 0.40), Stack Overflow (0.75 vs 0.64), shelter (0.75 vs 0.64) and crimes (0.81 vs 0.76). On HN (+0.03) and
+  flights (+0.03) the AUROC gap is not significant. Gemini itself gains noticeably from the sentence only where its
+  own base rate was off (shelter, Stack Overflow, HN; point estimates, not tested).
+- **So stating the base rate closes roughly 50–90% of Jev's zero-shot Brier gap to Gemini** (51% [41%, 60%] on
+  NYC 311 up to 91% [84%, 100%] on HN, over the 6 tasks where Jev was off). A significant gap remains (told Gemini
+  beats told Jev on 8 of 8, 4 after Holm), mostly in ranking, which we attribute (untested) to domain knowledge.
+- Limits: one wording; one run with no repeat draws (the CIs resample test cases only, so they don't include
+  run-to-run variation); the pool rate as the stated number (within about 0.03 of the test rate).
+
+## Synthetic tasks (fictional content, known true probabilities)
+
+To separate learning from knowledge: fictional tasks (a made-up "Kellan fever" with fictional treatments) where
+every case has a known true probability, so learning can be measured as MSE to the true probabilities. 300 test
+cases, draws 0–1. Jev and Gemini 3.8 Flash run at k = 0–400. Claude Opus 5.5 runs at k = 0–100 only (k=400 was too
+expensive), with no Platt arm. Baselines: logistic regression, TabPFN and a base-rate-only predictor (the mean of the
+k labels).
+Variants: additive effects (base rate 0.3, also shifted to 0.1 and 0.9), an interaction, pure noise, and neutral
+codes ("attribute A = level 3") instead of names.
+Full tables and CIs: `results/synth_summary.md`, `results/synth_ci.csv` (Jev and Gemini: $3.77; Opus: $3.36).
+
+**Jev and Gemini (k up to 400)**
+- **Ranking:** the Jev − Gemini AUROC difference is not significant in 28 of 30 task × k cells.
+- **Neither beats base-rate-only, even with 400 examples** (MSE to truth, LLM − base-rate-only, k=400). On the
+  additive 0.3 task they are not significantly different from it: Jev 0.039, −0.004 [−0.013, +0.006]; Gemini 0.043,
+  −0.000 [−0.010, +0.010]; base-rate-only 0.043. They are significantly worse than it on 5 of 6 tasks (Jev) and 4 of
+  6 (Gemini), all surviving Holm; at k=100 they never beat it either. Logistic regression (0.005) is 7–8× closer to
+  the truth on the additive task (LR − Jev −0.034 [−0.042, −0.026], LR − Gemini −0.037 [−0.045, −0.030]) and
+  significantly closer than both LLMs on all 6 tasks at k=400; TabPFN reaches 0.016. The additive tasks were
+  generated by a logistic model, so logistic regression is the correctly specified model there. On the interaction
+  task it is no better than base-rate-only (0.033 vs 0.032 at k=400); only TabPFN learns that one.
+- **They learn effect directions, not accurate per-case numbers.** With 400 examples both learn the group-level
+  effects, including the counter-intuitive one (the fictional drug "tellin" *raises* risk: true 0.44 vs 0.29
+  untreated; Jev 0.44, Gemini 0.39), but their per-case spread keeps MSE no better than base-rate-only.
+- **Gemini learns base rates from examples; Jev doesn't.** At k=400, with a true rate of 0.095 Jev's mean is 0.19
+  (Gemini 0.12); with 0.89 it is 0.74 (Gemini 0.88). Jev's MSE is significantly worse than Gemini's in both at k=100
+  and 400.
+- **Both learn spurious patterns from pure noise** (every case p = 0.3): their predictions keep a spread of SD ≈ 0.20
+  at k=400 where TabPFN collapses to 0.005, and both stay significantly worse than base-rate-only (MSE +0.044 [+0.037, +0.052] Jev, +0.039 [+0.034, +0.046]
+  Gemini).
+- **Interactions** (a drug that works only for a deep red rash): both are significantly worse than base-rate-only at
+  k=100 and 400 (k=400: MSE +0.025 [+0.015, +0.037] Jev, +0.028 [+0.017, +0.039] Gemini); TabPFN reaches 0.013 vs
+  0.032 for base-rate-only.
+
+**Claude Opus 5.5 (k up to 100).** MSE to the true probabilities at k=100. * = the paired 95% CI for Opus minus that
+column excludes 0 (uncorrected; every base-rate-only and logistic-regression star survives Holm across the 6 tasks).
+
+| Task | Opus | Gemini | Jev | Logistic regression | Base-rate-only |
+|---|---|---|---|---|---|
+| Additive, base rate 0.3 | 0.0224 | 0.0424* | 0.0432* | 0.0240 | 0.0434* |
+| Additive, base rate 0.1 | 0.0087 | 0.0171* | 0.0228* | 0.0105 | 0.0111* |
+| Additive, base rate 0.9 | 0.0085 | 0.0139* | 0.0482* | 0.0078 | 0.0109* |
+| Neutral codes | 0.0346 | 0.0411 | 0.0612* | 0.0240* | 0.0434* |
+| Pure noise | 0.0114 | 0.0375* | 0.0480* | 0.0177* | 0.0004* |
+| Interaction | 0.0440 | 0.0619* | 0.0653* | 0.0556* | 0.0344* |
+
+- **Additive tasks: Opus is the closest LLM, but 100 examples didn't significantly change it on the main one.** At
+  k=100 it is significantly closer to the truth than Jev and Gemini on all three, significantly beats base-rate-only
+  (0.3 task: −0.021 [−0.027, −0.016]), and is not significantly different from logistic regression (0.3 task:
+  −0.002 [−0.005, +0.002]). But on the 0.3 task, k=100 minus zero-shot is −0.0008 [−0.0055, +0.0040], and k=5 and
+  k=20 are significantly worse than zero-shot (+0.008 [+0.003, +0.013] and +0.008 [+0.004, +0.012]). On the 0.1 and
+  0.9 variants, neutral codes and noise (not interaction), the examples cut its MSE significantly (the 0.1/0.9 gains come from moving its
+  mean to the right base rate); its ranking doesn't improve (zero-shot → k=100 AUROC 0.72 → 0.74, 0.76 → 0.70,
+  0.69 → 0.62 across the three additive tasks). Our interpretation: on the 0.3 task its accuracy comes from its prior,
+  not the examples.
+- **Why: "fictional" still carries meaning.** Zero-shot, Opus reads older age, a more severe rash and sudden onset
+  as riskier (mean prediction 0.45 over 65 vs 0.24 under 18; 0.45 violet rash vs 0.23 no rash). The generator's
+  effects mostly run the same way, so what Opus knows about how illnesses usually behave carries over.
+- **Where the prior is wrong, the examples only partly fix it.** Tellin truly raises risk. At k=100, Opus's mean
+  prediction over the 91 tellin-treated test cases is 0.34, against their mean true probability of 0.44 (Jev 0.43,
+  Gemini 0.40): an under-prediction of −0.094 [−0.171, −0.019], significant (Jev −0.004 [−0.061, +0.048] and
+  Gemini −0.035 [−0.140, +0.073] are not). Zero-shot it ranked tellin below no treatment (0.32 vs 0.35). By k=100 it
+  ranks tellin above, by 0.09 where the true gap is 0.14; that shortfall is not significant (−0.05 [−0.19, +0.09]).
+- **Neutral codes:** significantly better than Jev, not significantly better than Gemini, and significantly worse
+  than logistic regression.
+- **Noise:** better than the other LLMs and logistic regression, but significantly worse than base-rate-only
+  (0.0114 vs 0.0004, +0.011 [+0.007, +0.015], survives Holm). Its predictions vary across cases (SD 0.09 at k=100) when every case should get 0.3.
+- **Interaction:** significantly worse than base-rate-only (+0.010 [+0.002, +0.017], survives Holm). AUROC 0.56, like Jev (0.57) and Gemini (0.56), against a best possible
+  0.73.
+- **Base rate:** Opus learns it from examples, unlike Jev (mean 0.09 and 0.87 at k=100, true 0.10 and 0.89). It
+  learns more slowly than just averaging the labels: at k=5 it is at 0.29 and 0.60, the label average at 0.20 and 0.90.
+
+**So:** the LLMs differ. At k=100 Opus significantly beats base-rate-only on 4 of 6 tasks (all 4 survive Holm: the
+three additive variants and neutral codes); Jev and Gemini never do, at k=100 or k=400. But Opus is significantly
+better than every fitted model on none of the six: logistic regression is not significantly different on the additive
+variants and better on neutral codes, and base-rate-only and TabPFN are better on noise and interaction. Logistic
+regression keeps improving with more labels (additive task: 0.024 at k=100, 0.005 at k=400). The best LLM does well
+where the task's meaning matches its prior and falls short where it doesn't: a counter-intuitive effect, an
+interaction, pure noise. We read this as consistent with the real-task picture that knowledge, more than learning
+from examples, is the bottleneck (an interpretation, not a test). It also shows that "fictional" doesn't remove
+semantic priors: made-up names in a familiar frame still carry them.
+
+- Limits: 2 draws; Opus only up to k=100, so the k=400 comparisons are Jev and Gemini only. The neutral codes were
+  numbered in listing order, which for age and rash is also low → high risk. So Gemini's and Opus's above-chance
+  neutral zero-shot AUROC (0.59, 0.62) is a "higher level = more likely" heuristic, not a neutral baseline. Labels use
+  common random numbers, so some small-k example sets, and hence prompts, are identical across tasks (e.g. noise and
+  Kellan at k=5, draw 0).
+
+## Label sensitivity: Jev vs a small open LLM (Qwen2.5-7B)
+
+Does relying on the labels (finding 2) set Jev apart from a general LLM? Earlier work (Min et al. 2022) found LLM
+in-context learning largely insensitive to label correctness. Qwen2.5-7B-Instruct (4-bit, run locally with MLX, no API
+cost) gets the same prose examples, label shuffles and 20% flips as Jev. Its probability is read from the first-token
+logits, P(Yes) vs P(No), not stated as text. Setup: k = 20 and 100, draws 0–2, 300 test cases, NYC 311 and GitHub only
+(a shelter run was started and not finished). Label sensitivity = AUROC with correct labels − AUROC with shuffled
+labels. CIs resample test cases; the 3 draws are averaged, not resampled. Jev − Qwen is paired on the same resamples
+(`local_llm_study.py`, `qwen_compare.py`; `results/qwen_vs_jev.csv`, `results/fig_qwen_vs_jev.png`).
+
+| Task, k | AUROC Jev: zero-shot → correct / shuffled | AUROC Qwen: zero-shot → correct / shuffled | Label sensitivity, Jev / Qwen | Jev − Qwen [95% CI] |
+|---|---|---|---|---|
+| NYC 311, 20 | 0.80 → 0.84 / 0.53 | 0.53 → 0.72 / 0.45 | 0.31 / 0.27 | +0.04 [+0.00, +0.07] |
+| NYC 311, 100 | 0.80 → 0.88 / 0.61 | 0.53 → 0.79 / 0.45 | 0.26 / 0.34 | −0.07 [−0.14, −0.02] |
+| GitHub, 20 | 0.53 → 0.61 / 0.55 | 0.42 → 0.52 / 0.51 | 0.06 / 0.02 | +0.05 [+0.02, +0.08] |
+| GitHub, 100 | 0.53 → 0.74 / 0.55 | 0.42 → 0.58 / 0.50 | 0.19 / 0.08 | +0.11 [+0.07, +0.14] |
+
+- **On NYC 311, label use isn't unique to Jev.** Qwen's gain from examples disappears with shuffled labels
+  (0.79 → 0.45, below its zero-shot 0.53). Its label sensitivity is close to Jev's at k=20 (Jev − Qwen +0.04 [+0.00, +0.07]) and significantly larger at k=100.
+- **On GitHub, Jev gets more out of the labels:** 0.19 vs 0.08 at k=100, significant at both k. Qwen reaches only
+  0.58, and half of its gain over zero-shot survives shuffling (0.42 → 0.50).
+- **20% flipped labels** cost both models about 0.14–0.15 AUROC on NYC 311 at k=100. On GitHub they cost Jev 0.06 and
+  Qwen 0.01 (no CIs for the noisy arm).
+- Limits: 2 tasks, one small quantized model, 3 draws.
+
+## Related work
+- TypeSafe's launch blog calls Jev "Calibrated: higher confidence means higher accuracy" but publishes no ECE, Brier score or reliability plots, and its workflow evals score Jev against other LLMs' probabilities, not against outcomes.
+- Two independent evaluations found good calibration on public benchmarks, worse calibration out of distribution, and large gains from a 2-parameter refit: [github.com/scienthoon/jev-ood-calibration](https://github.com/scienthoon/jev-ood-calibration) and [a dev.to (AWS Builders) write-up](https://dev.to/aws-builders/jev-after-eight-days-of-independent-tests-level-with-mid-price-llms-behind-the-frontier-1c60) (both accessed 2026-09-27).
+- What this study adds: in-context examples vs recalibration as ways to use your own labels, the one-sentence base-rate fix, a paired comparison with frontier LLMs, and fictional tasks that separate knowledge from learning.
+
+## Figures
+
+| File | What it shows |
+|---|---|
+| `results/fig_auroc.png` | Ranking vs k |
+| `results/fig_brier.png` | Probability quality vs k |
+| `results/fig_when.png` | When examples beat Platt |
+| `results/fig_zero_shot.png` | Zero-shot base rates and reliability |
+| `results/fig_noise_damage.png` | Label-noise damage by method |
+| `results/fig_stack_brier.png` | Stack vs stuff |
+| `results/fig_formats.png` | Prompt formats |
+| `results/fig_mechanism.png` | Prior and group-rate weights |
+| `results/fig_qwen_vs_jev.png` | Label sensitivity, Jev vs Qwen |
+
+## Practical recipe
+0. State your base rate in Jev's context (one sentence, no labels). It closed about 60–100% of the Brier gap to a 100-label base-rate shift on the tasks where Jev was off.
+1. Label 20–50 cases and put them in Jev's context in plain prose. Examples are for the local signal Jev can't know (per-repo merge culture, per-agency practice), not for the base rate.
+2. Check label quality before relying on it. Jev will faithfully learn your mistakes.
+3. If your labels exceed the context, split them across several contexts and average.
+4. With about 200+ labels on structured data, consider a small trained model instead, at 4–13× lower cost per prediction. TabPFN with Jev's zero-shot score as a feature had significantly lower Brier than Jev-in-context on 4 of 7 tasks at k=200 (2 after Holm) and 4 of 6 at k=400 (3 after Holm), but only 3 of 8 at k=100 (0 after Holm). On the fictional tasks, logistic regression was not significantly different from the best LLM (Opus) on the additive tasks at 100 labels and was 7–8× closer than Jev or Gemini at 400. On free text, keep the examples in Jev's context: stacking ranked significantly worse on Stack Overflow at every k.
+5. Recalibrate last. From about 50 labels, fit Platt on the final outputs (examples + Platt beat Platt alone on 4 of 8 tasks at k=100, 3 after Holm, and was never significantly worse from k=50). At k≤20, or when the fit comes out flat or inverted, use a base-rate shift instead: there Platt can hurt (crimes, HN at k=20). It matters most when labels are noisy.
+
+## Caveats
+- **Statistics:** the results files hold about 6,300 difference CIs (counted by `verify_claims.py`), none corrected for multiple comparisons, so a few significant cells are expected by chance. Headline counts are given with Holm-corrected counts alongside (Holm across tasks within a claim, p = 2 × the smaller bootstrap tail share, B=2000; `verify_claims.py`, `results/verify_claims.md`). The base-rate CIs and the Qwen CIs don't resample draws (one run; Qwen's 3 draws are averaged). `platt_sweep.py` picks the best correction on the test set, so its comparisons are optimistic for the correction. The Jev-vs-LLM tables use B=2000 with analyze2.py's two-level scheme; analyze2.py itself uses B=1000.
+- **Draws:** API credits ran out mid-run, so the Jev arms have 4–7 of the 10 planned draws per *k*. Every comparison is paired on the draws actually completed.
+- **LLM comparisons:** Gemini's and Opus's probabilities are verbalised (stated as numbers in text), while Jev's are native. Every frontier-LLM comparison uses 2 draws (0–1), and the base-rate checks are a single run. (Qwen's probabilities come from token logits, over 3 draws.)
+- **Scope:** 8 tasks, Jev 1.13 only, and one wording per prompt style.
+- **Synthetic baselines:** the additive synthetic tasks come from a logistic model, so logistic regression is correctly specified there; on the interaction task it is no better than base-rate-only (0.033 vs 0.032 at k=400), and only TabPFN learns it.
+- **Noise:** Jev's outputs are rounded to 2 decimals. Identical requests differ by about 0.01, and repeat noise is included in the intervals.
+- **Inspections:** the inverted zero-shot ranking reflects Chicago's 2026 inspection mix. Re-inspections are common and almost always pass. A post-release sample with fewer re-inspections ranked normally (0.62).
+- **Contamination:** zero-shot AUROC on records whose outcomes came *after* Jev's release (inspections, shelter, 311) is similar or higher than on the study records. There's no sign of memorization (`results_contamination.txt`). This was checked for Jev only, not for the LLMs.
+- **Label leaks caught and removed:**
+  - GitHub's `author_association` is reported as of today, so authors of merged PRs become "contributors".
+  - Stack Overflow reputation is current, and accepting an answer gives the asker +2.
+
+## Not in this repo
+Excluded by `.gitignore` to keep the repo small and free of secrets:
+- **API caches** (`data/*.sqlite`, `data/synthetic/*.sqlite`: Jev, Gemini, Opus and LLM responses, about 1 GB in
+  all). Without them, re-running the studies makes fresh paid API calls, and `JEV_OFFLINE=1` has nothing to read.
+  They can be shared on request or attached to a GitHub Release.
+- **Raw downloads** (`data/raw/`: the ~275 MB BTS on-time CSV for June 2026 and its zip). To rebuild, download
+  "Reporting Carrier On-Time Performance (1987-present)", 2026 month 6, from the BTS TranStats site and unzip it
+  into `data/raw/`; `python prepare_data.py` fetches the other tasks from their public APIs and rebuilds the
+  processed task CSVs in `data/` (those CSVs are small and are included).
+- **`.env`** (API keys), the `.venv*` environments, `__pycache__/` and `.DS_Store`.
+
+## Reproduce
+- **Data:** `python prepare_data.py` builds `data/*.csv`.
+- **Jev arms:** `python study.py <task>`. All API calls are cached in `data/jev_cache.sqlite`, and `JEV_OFFLINE=1` rebuilds from the cache.
+- **Local baselines** (run with `.venv_tabpfn2/bin/python`, TabPFN 2.0.9):
+  - `baselines_tabpfn.py`: TabPFN and embeddings + LR.
+  - `baselines_noisy.py`: every method on the same noisy labels.
+  - `baselines_stack.py`: Jev's zero-shot score as a feature.
+- **Analyses:**
+  - `mechanism.py`: context ensembling and the prior + group-rate regression.
+  - `local_llm_study.py` (run with `.venv_mlx/bin/python`) and `qwen_compare.py`: Qwen2.5-7B label sensitivity.
+  - `analyze2.py`: the other tables and figures in `results/`.
+  - `verify_claims.py`: cache-only re-check of the headline claims with Holm-corrected counts (`results/verify_claims.csv`, `results/verify_claims.md`).
+- **Frontier LLMs** (calls cached in `data/gemini_cache.sqlite`, `data/opus_cache.sqlite`):
+  - `gemini_study.py`, `opus_study.py` (`OPUS_VIA=openrouter` for the OpenRouter route): zero-shot, in-context and Platt arms.
+  - `platt_constrained.py`, `compare_ci.py`, `compare_opus.py`: constrained Platt and the comparison tables with CIs.
+  - `batch_check.py`, `baserate_check.py`, `gemini_baserate.py`: batching and base-rate checks.
+- **Synthetic tasks:** `synthetic_tasks.py` (generator), `synthetic_study.py` (Jev, Gemini), `synthetic_opus.py` (Opus), `synthetic_tabpfn.py` (TabPFN, LR), `synthetic_analyze.py` (tables).

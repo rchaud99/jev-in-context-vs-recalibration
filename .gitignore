@@ -1,0 +1,24 @@
+# Secrets
+.env
+.env.*
+
+# Virtual environments
+.venv*/
+venv/
+
+# API response caches (large; available on request or as a GitHub Release)
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# Bulk raw downloads (rebuilt by prepare_data.py)
+data/raw/
+*.zip
+
+# Python / OS cruft
+__pycache__/
+*.pyc
+.DS_Store
+
+# Files over ~20 MB are kept out of the repo; none remain after the rules above.

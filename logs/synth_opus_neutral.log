@@ -1,0 +1,8 @@
+neutral zero_shot k=0 d=0  total $2.72 (12 new calls)
+neutral in_context k=5 d=0  total $2.81 (24 new calls)
+neutral in_context k=20 d=0  total $2.90 (36 new calls)
+neutral in_context k=100 d=0  total $3.04 (48 new calls)
+neutral in_context k=5 d=1  total $3.13 (60 new calls)
+neutral in_context k=20 d=1  total $3.22 (72 new calls)
+neutral in_context k=100 d=1  total $3.36 (84 new calls)
+done. this run $0.732; all synthetic Opus calls ever $3.357

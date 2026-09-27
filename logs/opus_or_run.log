@@ -1,0 +1,36 @@
+hn k=5 d=0  $0.00 (0 calls)
+hn k=20 d=0  $0.00 (0 calls)
+hn k=100 d=0  $0.00 (0 calls)
+hn k=5 d=1  $0.00 (0 calls)
+hn k=20 d=1  $0.12 (12 calls)
+hn k=100 d=1  $0.29 (24 calls)
+hn done  $0.29
+Traceback (most recent call last):
+  File "/Users/raghavchaudhary/Desktop/jev_npc/opus_study.py", line 203, in <module>
+    main()
+  File "/Users/raghavchaudhary/Desktop/jev_npc/opus_study.py", line 183, in main
+    zp = dict(zip(need, run_all(client, t["context"], t["question"], list(pool.text.iloc[need]), args.workers)))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/jev_npc/opus_study.py", line 148, in run_all
+    rest = list(ex.map(lambda c: ask(client, state, question, c), chunks[1:]))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/jev_npc/opus_study.py", line 148, in <lambda>
+    rest = list(ex.map(lambda c: ask(client, state, question, c), chunks[1:]))
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/jev_npc/opus_study.py", line 140, in ask
+    raise RuntimeError(f"failed after retries: {last}")
+RuntimeError: failed after retries: openrouter: {'message': 'Rate limit exceeded: new-account-rpm/anthropic/claude-opus-5.5-20260921. Rate limit reached: new accounts are limited to 20 requests per minute for this model. Please retry shortly.', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '20', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1790519040000'}, 'limit_source': 'openrouter_new_account', 'remedy_hint': 'New accounts are temporarily limited for this model. Please retry shortly.', 'provider_name': None, 'previous_errors': [{'code': 429, 'message': 'Rate limit exceeded: new-account-rpm/anthropic/claude-opus-5.5-20260921. Rate limit reached: new accounts are limited to 20 requests per minute for this model. Please retry shortly.'}, {'code': 429, 'message': 'Rate limit exceeded: new-account-rpm/anthropic/claude-opus-5.5-20260921. Rate limit reached: new accounts are limited to 20 requests per minute for this model. Please retry shortly.'}, {'code': 429, 'message': 'Rate limit exceeded: new-account-rpm/anthropic/claude-opus-5.5-20260921. Rate limit reached: new accounts are limited to 20 requests per minute for this model. Please retry shortly.'}]}}

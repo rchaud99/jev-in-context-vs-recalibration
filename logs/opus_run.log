@@ -1,0 +1,53 @@
+nyc311 k=5 d=0  $0.31 (32 calls)
+nyc311 k=20 d=0  $0.44 (44 calls)
+nyc311 k=100 d=0  $0.64 (56 calls)
+nyc311 k=5 d=1  $0.75 (68 calls)
+nyc311 k=20 d=1  $0.88 (80 calls)
+nyc311 k=100 d=1  $1.07 (92 calls)
+nyc311 done  $1.07
+crimes k=5 d=0  $1.32 (124 calls)
+crimes k=20 d=0  $1.42 (136 calls)
+crimes k=100 d=0  $1.57 (148 calls)
+crimes k=5 d=1  $1.65 (160 calls)
+crimes k=20 d=1  $1.75 (172 calls)
+crimes k=100 d=1  $1.90 (184 calls)
+crimes done  $1.90
+shelter k=5 d=0  $2.15 (216 calls)
+shelter k=20 d=0  $2.25 (228 calls)
+shelter k=100 d=0  $2.41 (240 calls)
+shelter k=5 d=1  $2.51 (252 calls)
+shelter k=20 d=1  $2.61 (264 calls)
+shelter k=100 d=1  $2.77 (276 calls)
+shelter done  $2.77
+stackoverflow k=5 d=0  $3.33 (308 calls)
+stackoverflow k=20 d=0  $3.57 (320 calls)
+stackoverflow k=100 d=0  $3.93 (332 calls)
+stackoverflow k=5 d=1  $4.14 (344 calls)
+stackoverflow k=20 d=1  $4.38 (356 calls)
+stackoverflow k=100 d=1  $4.75 (368 calls)
+stackoverflow done  $4.75
+hn k=5 d=0  $5.05 (400 calls)
+hn k=20 d=0  $5.17 (412 calls)
+hn k=100 d=0  $5.36 (424 calls)
+hn k=5 d=1  $5.48 (436 calls)
+Traceback (most recent call last):
+  File "/Users/raghavchaudhary/Desktop/jev_npc/opus_study.py", line 168, in <module>
+    main()
+  File "/Users/raghavchaudhary/Desktop/jev_npc/opus_study.py", line 153, in main
+    p = run_all(client, state_examples(t, list(ex.text), ex.label.values), t["question"], cases, args.workers)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/jev_npc/opus_study.py", line 111, in run_all
+    first = ask(client, state, question, chunks[0])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/jev_npc/opus_study.py", line 71, in ask
+    with client.messages.stream(
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/how_much_is_a_look_worth/.venv/lib/python3.12/site-packages/anthropic/lib/streaming/_messages.py", line 172, in __enter__
+    raw_stream = self.__api_request()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/how_much_is_a_look_worth/.venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/how_much_is_a_look_worth/.venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfU4BLLCGhigcj1pzSb3q'}

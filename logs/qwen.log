@@ -1,0 +1,16 @@
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 4354.45it/s]
+nyc311 draw 0 k=20 done
+nyc311 draw 0 k=100 done
+nyc311 draw 1 k=20 done
+nyc311 draw 1 k=100 done
+nyc311 draw 2 k=20 done
+nyc311 draw 2 k=100 done
+github_prs draw 0 k=20 done
+github_prs draw 0 k=100 done
+github_prs draw 1 k=20 done
+github_prs draw 1 k=100 done
+github_prs draw 2 k=20 done
+github_prs draw 2 k=100 done
+shelter draw 0 k=20 done
+shelter draw 0 k=100 done
+shelter draw 1 k=20 done

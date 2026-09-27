@@ -1,0 +1,15 @@
+github_prs k=5 d=0  $0.00 (0 calls)
+github_prs k=20 d=0  $0.00 (0 calls)
+github_prs k=100 d=0  $0.00 (0 calls)
+github_prs k=5 d=1  $0.00 (0 calls)
+github_prs k=20 d=1  $0.18 (11 calls)
+github_prs k=100 d=1  $0.48 (23 calls)
+github_prs done  $0.48
+inspections k=5 d=0  $0.73 (55 calls)
+inspections k=20 d=0  $0.83 (67 calls)
+inspections k=100 d=0  $0.97 (79 calls)
+inspections k=5 d=1  $1.06 (91 calls)
+inspections k=20 d=1  $1.15 (103 calls)
+inspections k=100 d=1  $1.29 (115 calls)
+inspections done  $1.29
+all done  $1.29

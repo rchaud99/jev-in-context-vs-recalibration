@@ -1,0 +1,7 @@
+inspections  study test set (pre-release)   n=300 base 0.19  mean p 0.46  AUROC 0.381 [0.300, 0.463]
+inspections  post-release                   n=161 base 0.25  mean p 0.43  AUROC 0.620 [0.520, 0.719]
+shelter      study test set (pre-release)   n=300 base 0.56  mean p 0.54  AUROC 0.638 [0.573, 0.699]
+shelter      post-release                   n= 94 base 0.50  mean p 0.56  AUROC 0.722 [0.615, 0.811]
+nyc311       study test set (pre-release)   n=300 base 0.83  mean p 0.54  AUROC 0.799 [0.741, 0.852]
+nyc311       post-release                   n=300 base 0.81  mean p 0.53  AUROC 0.741 [0.680, 0.798]
+spent: {'usd': 0.0016708439999999999, 'calls': 23}

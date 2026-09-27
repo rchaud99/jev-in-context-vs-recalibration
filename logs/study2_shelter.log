@@ -1,0 +1,98 @@
+shelter draw 0 k=5 done  (spent $0.000)
+shelter draw 0 k=10 done  (spent $0.000)
+shelter draw 0 k=20 done  (spent $0.000)
+shelter draw 0 k=50 done  (spent $0.000)
+shelter draw 0 k=100 done  (spent $0.000)
+shelter draw 0 k=200 done  (spent $0.000)
+shelter draw 0 k=400 done  (spent $0.000)
+shelter draw 1 k=5 done  (spent $0.000)
+shelter draw 1 k=10 done  (spent $0.000)
+shelter draw 1 k=20 done  (spent $0.000)
+shelter draw 1 k=50 done  (spent $0.000)
+shelter draw 1 k=100 done  (spent $0.000)
+shelter draw 1 k=200 done  (spent $0.000)
+shelter draw 1 k=400 done  (spent $0.000)
+shelter draw 2 k=5 done  (spent $0.000)
+shelter draw 2 k=10 done  (spent $0.000)
+shelter draw 2 k=20 done  (spent $0.000)
+shelter draw 2 k=50 done  (spent $0.000)
+shelter draw 2 k=100 done  (spent $0.000)
+shelter draw 2 k=200 done  (spent $0.030)
+shelter draw 2 k=400 done  (spent $0.116)
+shelter draw 3 k=5 done  (spent $0.119)
+shelter draw 3 k=10 done  (spent $0.122)
+shelter draw 3 k=20 done  (spent $0.126)
+shelter draw 3 k=50 done  (spent $0.132)
+shelter draw 3 k=100 done  (spent $0.142)
+shelter draw 3 k=200 done  (spent $0.184)
+shelter draw 3 k=400 done  (spent $0.270)
+shelter draw 4 k=5 done  (spent $0.273)
+shelter draw 4 k=10 done  (spent $0.276)
+shelter draw 4 k=20 done  (spent $0.280)
+shelter draw 4 k=50 done  (spent $0.286)
+shelter draw 4 k=100 done  (spent $0.296)
+shelter draw 4 k=200 done  (spent $0.338)
+shelter draw 4 k=400 done  (spent $0.424)
+shelter draw 5 k=5 done  (spent $0.430)
+shelter draw 5 k=10 done  (spent $0.438)
+shelter draw 5 k=20 done  (spent $0.447)
+shelter draw 5 k=50 done  (spent $0.467)
+shelter draw 5 k=100 done  (spent $0.513)
+shelter draw 5 k=200 done  (spent $0.555)
+shelter draw 5 k=400 done  (spent $0.642)
+shelter draw 6 k=5 done  (spent $0.648)
+shelter draw 6 k=10 done  (spent $0.655)
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+shelter d6 k=20: fmt_compact does not fit in context, skipped
+  request failed: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits a
+shelter d6 k=20: fmt_json does not fit in context, skipped
+Traceback (most recent call last):
+  File "/Users/raghavchaudhary/Desktop/jev_npc/study.py", line 223, in <module>
+    rows, y = run_task(name)
+              ^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/jev_npc/study.py", line 210, in run_task
+    cf = loo_in_context(t, texts, y)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/jev_npc/study.py", line 158, in loo_in_context
+    return np.array(list(ex.map(one, range(len(texts)))))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/jev_npc/study.py", line 156, in one
+    return jev.noul_batch(st, [texts[i]], t["question"], batch_size=1, workers=1)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/jev_npc/jev.py", line 100, in noul_batch
+    for res in ex.map(run, chunks):
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/raghavchaudhary/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/jev_npc/jev.py", line 95, in run
+    ans = decide(state, qs, rep=rep)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raghavchaudhary/Desktop/jev_npc/jev.py", line 70, in decide
+    raise RuntimeError(f"Jev error {r.status_code}: {r.text[:500]}")
+RuntimeError: Jev error 402: {"error":{"message":"Insufficient credits. Add more using https://openrouter.ai/settings/credits","code":402,"metadata":{"limit_source":"openrouter_credits","remedy_hint":"Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance."}}}

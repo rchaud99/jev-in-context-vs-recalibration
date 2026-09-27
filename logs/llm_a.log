@@ -1,0 +1,3 @@
+crimes draw 0 k=5 done  {'usd': 0.0045031109760000085, 'calls': 866, 'no_yes_no': 0}
+crimes draw 0 k=20 done  {'usd': 0.010350201792000021, 'calls': 1166, 'no_yes_no': 0}
+crimes draw 0 k=100 done  {'usd': 0.04331361350400024, 'calls': 1766, 'no_yes_no': 0}

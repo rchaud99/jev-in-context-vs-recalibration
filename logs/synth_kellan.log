@@ -1,0 +1,14 @@
+Installed 16 packages in 115ms
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+kellan zero_shot k=0 d=0  session: Jev $0.001, Gemini $0.019 (12 calls)
+kellan in_context k=5 d=0  session: Jev $0.002, Gemini $0.043 (24 calls)
+kellan in_context k=20 d=0  session: Jev $0.003, Gemini $0.077 (36 calls)
+kellan in_context k=100 d=0  session: Jev $0.006, Gemini $0.132 (48 calls)
+kellan in_context k=400 d=0  session: Jev $0.015, Gemini $0.304 (60 calls)
+kellan in_context k=5 d=1  session: Jev $0.016, Gemini $0.330 (72 calls)
+kellan in_context k=20 d=1  session: Jev $0.018, Gemini $0.362 (84 calls)
+kellan in_context k=100 d=1  session: Jev $0.020, Gemini $0.425 (96 calls)
+kellan in_context k=400 d=1  session: Jev $0.030, Gemini $0.598 (108 calls)
+done. session: Jev $0.030, Gemini $0.598; all synthetic calls ever: Jev $0.030, Gemini $0.598, total $0.628
+EXIT 0
