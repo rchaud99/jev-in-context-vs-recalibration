@@ -273,7 +273,7 @@ def chat_verbalized(model, state, cases, question, experiment, batch=25, workers
         if resp is None:
             if OFFLINE:
                 raise CacheMiss()
-            for attempt in range(4):
+            for attempt in range(10):
                 resp = _post("https://openrouter.ai/api/v1/chat/completions", body, timeout=300)
                 _charge(experiment, model, float((resp.get("usage") or {}).get("cost") or 0), len(ch))
                 try:
@@ -283,7 +283,7 @@ def chat_verbalized(model, state, cases, question, experiment, batch=25, workers
                 except Exception:  # noqa: BLE001 - malformed reply: retry
                     pass
             else:
-                raise RuntimeError("verbalized: no valid reply after 4 attempts")
+                raise RuntimeError("verbalized: no valid reply after 10 attempts")
             _store(h, model, body, resp)
         p = json.loads(resp["choices"][0]["message"]["content"])["probabilities"]
         return [min(max(float(v) / 100.0, 0.0), 1.0) for v in p]

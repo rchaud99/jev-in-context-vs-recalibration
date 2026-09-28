@@ -167,7 +167,7 @@ def main(models):
                 bb = np.array([f(A[b][s][I], Yb) for s in range(A[b].shape[0])])
                 d = ba.mean(0) - bb.mean(0)
                 per_seed = pa - pb
-                seed_sig = [(np.percentile(ba[s] - bb[s], 2.5) > 0) - (np.percentile(ba[s] - bb[s], 97.5) < 0)
+                seed_sig = [int(np.percentile(ba[s] - bb[s], 2.5) > 0) - int(np.percentile(ba[s] - bb[s], 97.5) < 0)
                             for s in range(len(per_seed))] if len(per_seed) > 1 else []
                 tests.append(dict(model=model, provider=PROVIDER.get(model, "?"), cheap=model in CHEAP, task=task,
                                   family=fam, a=a, b=b, metric=met, a_value=pa.mean(), b_value=pb.mean(),

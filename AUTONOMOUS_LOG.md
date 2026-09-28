@@ -49,3 +49,16 @@ Exploratory check on the v1 Gemini cache: told ≈ shift (|Δ| ≤ 0.008). So th
 ## 18:57 — preregistration
 - Wrote RESEARCH_AGENDA.md (ranked agenda + PREREGISTRATION for E1), `v2/baserate_exp.py` and `v2/baserate_analyze.py`. All were committed before any E1 data was collected.
 - Estimated E1 cost for all 9 configurations: about $4.
+
+## 19:05–19:40 — E1 data collection (running)
+- Order: jev → qwen → deepseek (chained), then gpt-4o-mini, llama, and the verbalising configurations in parallel background processes. Each model uses a different provider. Logs are in `logs/v2/`.
+- **Bug fix 1 (analysis, no effect on the statistics):** `baserate_analyze.py` subtracted numpy booleans in the per-seed significance flag, which raised a TypeError. Cast to int.
+- **Bug fix 2 (collection):** GPT-4o-mini-verbal sometimes returns 24 or 26 probabilities for 25 cases, and 4 retries were not enough on crimes. Raised to 10 retries. Replies are only ever accepted when the count matches, so this adds no selection on content. One debug call ($0.0003) is logged in the ledger under `debug`.
+- **First look, Jev (all 8 tasks):** shift beats told significantly after Holm on 3/8 (NYC 311, flights, inspections), told never significantly better; mean Δ +0.0097.
+  - **P1 fails for Jev** (the preregistered criterion needs ≥5/8).
+  - The repaired data lowers Jev's zero-shot AUROC:
+    - shelter 0.64 → 0.53: the leak also inflated zero-shot ranking;
+    - crimes 0.78 → 0.68;
+    - GitHub 0.53 → 0.49.
+  - Differences between arms shrink where the model can't rank.
+- **Qwen (7/8 so far):** 3/7 significant, including HN +0.20 Brier (telling makes Qwen's HN scores much worse).
