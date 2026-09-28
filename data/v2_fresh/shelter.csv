@@ -1,0 +1,226 @@
+type,breed,color,size,age,intake_type,intake_subtype,intake_jurisdiction,text,label
+dog,alaskan husky,white/brown,med,adult (3-7 years),stray,field,county,"A med dog, alaskan husky, white/brown, adult (3-7 years). Intake: stray (field), from county.",1
+dog,pit bull,tan/white,med,older adult (7-10 years),confiscate,fld_arrest,county,"A med dog, pit bull, tan/white, older adult (7-10 years). Intake: confiscate (fld_arrest), from county.",1
+dog,doberman pinsch,brown,med,adult (3-7 years),stray,over the counter,santa rosa,"A med dog, doberman pinsch, brown, adult (3-7 years). Intake: stray (over the counter), from santa rosa.",1
+cat,domestic mh,blk tabby,small,senior (over 10 years),stray,field,santa rosa,"A small cat, domestic mh, blk tabby, senior (over 10 years). Intake: stray (field), from santa rosa.",1
+dog,french bulldog/mix,bl brindle/white,puppy,baby (under 6 months),quarantine,over the counter,santa rosa,"A puppy dog, french bulldog/mix, bl brindle/white, baby (under 6 months). Intake: quarantine (over the counter), from santa rosa.",0
+dog,pug,tan/black,toy,adult (3-7 years),stray,field,santa rosa,"A toy dog, pug, tan/black, adult (3-7 years). Intake: stray (field), from santa rosa.",1
+dog,chihuahua sh,brown/tan,puppy,baby (under 6 months),born here,mom stray,santa rosa,"A puppy dog, chihuahua sh, brown/tan, baby (under 6 months). Intake: born here (mom stray), from santa rosa.",1
+cat,domestic sh,gray,kittn,baby (under 6 months),stray,over the counter,santa rosa,"A kittn cat, domestic sh, gray, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",1
+dog,poodle toy,brown,small,unknown age,stray,field,santa rosa,"A small dog, poodle toy, brown, unknown age. Intake: stray (field), from santa rosa.",0
+dog,alaskan husky,black/white,med,unknown age,confiscate,fld_cruel,*rohnert park,"A med dog, alaskan husky, black/white, unknown age. Intake: confiscate (fld_cruel), from *rohnert park.",0
+dog,germ shepherd,black/brown,med,unknown age,stray,field,santa rosa,"A med dog, germ shepherd, black/brown, unknown age. Intake: stray (field), from santa rosa.",1
+dog,siberian husky,white,med,older adult (7-10 years),confiscate,fld_arrest,*rohnert park,"A med dog, siberian husky, white, older adult (7-10 years). Intake: confiscate (fld_arrest), from *rohnert park.",0
+other,bat,brown,small,unknown age,quarantine,field,santa rosa,"A small other, bat, brown, unknown age. Intake: quarantine (field), from santa rosa.",0
+dog,chihuahua lh/mix,tan/white,small,older adult (7-10 years),stray,field,county,"A small dog, chihuahua lh/mix, tan/white, older adult (7-10 years). Intake: stray (field), from county.",0
+dog,min pinscher/mix,tricolor,puppy,baby (under 6 months),confiscate,fld_invest,*sonoma,"A puppy dog, min pinscher/mix, tricolor, baby (under 6 months). Intake: confiscate (fld_invest), from *sonoma.",1
+dog,norfolk terrier/mix,white/black,small,adult (3-7 years),confiscate,fld_invest,*sonoma,"A small dog, norfolk terrier/mix, white/black, adult (3-7 years). Intake: confiscate (fld_invest), from *sonoma.",1
+cat,domestic sh,gray,kittn,baby (under 6 months),quarantine,field,*rohnert park,"A kittn cat, domestic sh, gray, baby (under 6 months). Intake: quarantine (field), from *rohnert park.",0
+cat,domestic sh,black,small,adult (3-7 years),stray,over the counter,santa rosa,"A small cat, domestic sh, black, adult (3-7 years). Intake: stray (over the counter), from santa rosa.",0
+dog,doberman pinsch,brown,large,young adult (1-3 years),adoption return,over the counter,county,"A large dog, doberman pinsch, brown, young adult (1-3 years). Intake: adoption return (over the counter), from county.",1
+cat,domestic sh,agouti,small,unknown age,stray,field,santa rosa,"A small cat, domestic sh, agouti, unknown age. Intake: stray (field), from santa rosa.",0
+cat,domestic sh,gray tabby,kittn,baby (under 6 months),born here,mom stray,santa rosa,"A kittn cat, domestic sh, gray tabby, baby (under 6 months). Intake: born here (mom stray), from santa rosa.",0
+dog,dachshund,black/tan,small,unknown age,stray,field,santa rosa,"A small dog, dachshund, black/tan, unknown age. Intake: stray (field), from santa rosa.",0
+dog,germ shepherd,brown/black,med,unknown age,stray,field,petaluma,"A med dog, germ shepherd, brown/black, unknown age. Intake: stray (field), from petaluma.",1
+dog,aust shepherd,brown/white,med,young adult (1-3 years),confiscate,fld_arrest,santa rosa,"A med dog, aust shepherd, brown/white, young adult (1-3 years). Intake: confiscate (fld_arrest), from santa rosa.",1
+dog,french bulldog,blue merle,small,young adult (1-3 years),stray,over the counter,santa rosa,"A small dog, french bulldog, blue merle, young adult (1-3 years). Intake: stray (over the counter), from santa rosa.",1
+dog,pit bull/mix,white,med,adult (3-7 years),owner surrender,over the counter,santa rosa,"A med dog, pit bull/mix, white, adult (3-7 years). Intake: owner surrender (over the counter), from santa rosa.",1
+dog,chihuahua lh,white/brown,puppy,baby (under 6 months),confiscate,fld_arrest,county,"A puppy dog, chihuahua lh, white/brown, baby (under 6 months). Intake: confiscate (fld_arrest), from county.",1
+cat,domestic sh,agouti,small,unknown age,stray,field,county,"A small cat, domestic sh, agouti, unknown age. Intake: stray (field), from county.",0
+cat,domestic sh,black/white,small,juvenile (6-12 months),owner surrender,over the counter,county,"A small cat, domestic sh, black/white, juvenile (6-12 months). Intake: owner surrender (over the counter), from county.",1
+cat,domestic sh,black,kittn,baby (under 6 months),stray,field,santa rosa,"A kittn cat, domestic sh, black, baby (under 6 months). Intake: stray (field), from santa rosa.",1
+dog,pit bull/mix,red/brown,med,adult (3-7 years),confiscate,fld_invest,petaluma,"A med dog, pit bull/mix, red/brown, adult (3-7 years). Intake: confiscate (fld_invest), from petaluma.",0
+cat,domestic sh,agouti,small,unknown age,stray,field,santa rosa,"A small cat, domestic sh, agouti, unknown age. Intake: stray (field), from santa rosa.",0
+dog,siberian husky,tan/white,med,senior (over 10 years),confiscate,fld_coronr,petaluma,"A med dog, siberian husky, tan/white, senior (over 10 years). Intake: confiscate (fld_coronr), from petaluma.",0
+dog,golden retr,gold,large,young adult (1-3 years),stray,over the counter,county,"A large dog, golden retr, gold, young adult (1-3 years). Intake: stray (over the counter), from county.",1
+dog,siberian husky,tricolor,large,young adult (1-3 years),adoption return,over the counter,out of county,"A large dog, siberian husky, tricolor, young adult (1-3 years). Intake: adoption return (over the counter), from out of county.",1
+dog,labrador retr/mix,black/white,large,senior (over 10 years),confiscate,fld_hosptl,county,"A large dog, labrador retr/mix, black/white, senior (over 10 years). Intake: confiscate (fld_hosptl), from county.",1
+dog,pit bull,red/white,med,adult (3-7 years),stray,field,santa rosa,"A med dog, pit bull, red/white, adult (3-7 years). Intake: stray (field), from santa rosa.",1
+other,bat,black,small,unknown age,quarantine,over the counter,out of county,"A small other, bat, black, unknown age. Intake: quarantine (over the counter), from out of county.",0
+cat,domestic sh,gray/gray tabby,med,adult (3-7 years),confiscate,fld_cruel,santa rosa,"A med cat, domestic sh, gray/gray tabby, adult (3-7 years). Intake: confiscate (fld_cruel), from santa rosa.",1
+dog,germ shepherd,tan/black,puppy,juvenile (6-12 months),stray,field,windsor,"A puppy dog, germ shepherd, tan/black, juvenile (6-12 months). Intake: stray (field), from windsor.",0
+dog,aust cattle dog/mix,blue tick,med,young adult (1-3 years),stray,field,county,"A med dog, aust cattle dog/mix, blue tick, young adult (1-3 years). Intake: stray (field), from county.",1
+other,duck,brown,small,unknown age,stray,over the counter,santa rosa,"A small other, duck, brown, unknown age. Intake: stray (over the counter), from santa rosa.",0
+dog,germ shepherd/mix,white,large,adult (3-7 years),stray,field,santa rosa,"A large dog, germ shepherd/mix, white, adult (3-7 years). Intake: stray (field), from santa rosa.",1
+dog,chihuahua lh/mix,cream,small,unknown age,confiscate,fld_cruel,santa rosa,"A small dog, chihuahua lh/mix, cream, unknown age. Intake: confiscate (fld_cruel), from santa rosa.",0
+other,chicken,black,small,unknown age,stray,field,santa rosa,"A small other, chicken, black, unknown age. Intake: stray (field), from santa rosa.",0
+cat,domestic sh,brn tabby/white,small,baby (under 6 months),confiscate,fld_aband,santa rosa,"A small cat, domestic sh, brn tabby/white, baby (under 6 months). Intake: confiscate (fld_aband), from santa rosa.",0
+dog,germ shepherd/aust cattle dog,black/white,med,juvenile (6-12 months),stray,field,county,"A med dog, germ shepherd/aust cattle dog, black/white, juvenile (6-12 months). Intake: stray (field), from county.",0
+dog,germ shepherd,black/tan,large,older adult (7-10 years),stray,field,healdsburg,"A large dog, germ shepherd, black/tan, older adult (7-10 years). Intake: stray (field), from healdsburg.",1
+dog,beagle/mix,cream/tan,med,older adult (7-10 years),stray,over the counter,santa rosa,"A med dog, beagle/mix, cream/tan, older adult (7-10 years). Intake: stray (over the counter), from santa rosa.",0
+other,rabbit sh,gray,small,adult (3-7 years),stray,field,county,"A small other, rabbit sh, gray, adult (3-7 years). Intake: stray (field), from county.",0
+dog,siberian husky/mix,black/white,large,adult (3-7 years),stray,field,county,"A large dog, siberian husky/mix, black/white, adult (3-7 years). Intake: stray (field), from county.",0
+cat,domestic sh,gray,small,adult (3-7 years),stray,over the counter,santa rosa,"A small cat, domestic sh, gray, adult (3-7 years). Intake: stray (over the counter), from santa rosa.",1
+dog,belg malinois/mix,br brindle/white,puppy,baby (under 6 months),stray,field,county,"A puppy dog, belg malinois/mix, br brindle/white, baby (under 6 months). Intake: stray (field), from county.",1
+cat,domestic sh,brn tabby/white,small,young adult (1-3 years),stray,field,county,"A small cat, domestic sh, brn tabby/white, young adult (1-3 years). Intake: stray (field), from county.",0
+cat,domestic sh,tortie,kittn,baby (under 6 months),owner surrender,over the counter,santa rosa,"A kittn cat, domestic sh, tortie, baby (under 6 months). Intake: owner surrender (over the counter), from santa rosa.",1
+dog,germ shepherd,black/brown,med,adult (3-7 years),stray,field,santa rosa,"A med dog, germ shepherd, black/brown, adult (3-7 years). Intake: stray (field), from santa rosa.",1
+cat,domestic sh,black/white,small,young adult (1-3 years),stray,over the counter,county,"A small cat, domestic sh, black/white, young adult (1-3 years). Intake: stray (over the counter), from county.",1
+cat,domestic sh,flame pt,small,baby (under 6 months),stray,over the counter,santa rosa,"A small cat, domestic sh, flame pt, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",0
+cat,domestic sh,black,kittn,unknown age,stray,phone,windsor,"A kittn cat, domestic sh, black, unknown age. Intake: stray (phone), from windsor.",0
+cat,domestic mh,gray,small,older adult (7-10 years),stray,field,santa rosa,"A small cat, domestic mh, gray, older adult (7-10 years). Intake: stray (field), from santa rosa.",1
+dog,pit bull/mix,black/white,puppy,baby (under 6 months),adoption return,over the counter,santa rosa,"A puppy dog, pit bull/mix, black/white, baby (under 6 months). Intake: adoption return (over the counter), from santa rosa.",1
+other,chicken,brown,small,young adult (1-3 years),stray,over the counter,county,"A small other, chicken, brown, young adult (1-3 years). Intake: stray (over the counter), from county.",0
+cat,domestic sh,blk tabby,kittn,baby (under 6 months),stray,over the counter,santa rosa,"A kittn cat, domestic sh, blk tabby, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",0
+cat,domestic sh,buff,kittn,baby (under 6 months),stray,over the counter,county,"A kittn cat, domestic sh, buff, baby (under 6 months). Intake: stray (over the counter), from county.",1
+dog,border collie,black/white,med,unknown age,stray,field,petaluma,"A med dog, border collie, black/white, unknown age. Intake: stray (field), from petaluma.",0
+dog,dachshund lh/chihuahua lh,tan,small,young adult (1-3 years),confiscate,field,santa rosa,"A small dog, dachshund lh/chihuahua lh, tan, young adult (1-3 years). Intake: confiscate (field), from santa rosa.",1
+other,quail,brown,small,unknown age,stray,field,santa rosa,"A small other, quail, brown, unknown age. Intake: stray (field), from santa rosa.",0
+dog,great pyrenees,white,large,young adult (1-3 years),stray,field,cloverdale,"A large dog, great pyrenees, white, young adult (1-3 years). Intake: stray (field), from cloverdale.",1
+dog,chihuahua sh/mix,brown,small,adult (3-7 years),stray,field,santa rosa,"A small dog, chihuahua sh/mix, brown, adult (3-7 years). Intake: stray (field), from santa rosa.",1
+dog,pug,fawn,med,young adult (1-3 years),stray,over the counter,county,"A med dog, pug, fawn, young adult (1-3 years). Intake: stray (over the counter), from county.",1
+cat,domestic mh,gray tabby/white,kittn,baby (under 6 months),stray,over the counter,county,"A kittn cat, domestic mh, gray tabby/white, baby (under 6 months). Intake: stray (over the counter), from county.",0
+cat,domestic sh,black,kittn,unknown age,stray,phone,windsor,"A kittn cat, domestic sh, black, unknown age. Intake: stray (phone), from windsor.",0
+dog,chihuahua lh,gray/white,small,adult (3-7 years),confiscate,fld_arrest,santa rosa,"A small dog, chihuahua lh, gray/white, adult (3-7 years). Intake: confiscate (fld_arrest), from santa rosa.",0
+cat,domestic sh,black,small,unknown age,stray,email,county,"A small cat, domestic sh, black, unknown age. Intake: stray (email), from county.",0
+dog,french bulldog,tan,small,adult (3-7 years),stray,over the counter,county,"A small dog, french bulldog, tan, adult (3-7 years). Intake: stray (over the counter), from county.",1
+cat,domestic sh,gray/white,kittn,baby (under 6 months),quarantine,field,santa rosa,"A kittn cat, domestic sh, gray/white, baby (under 6 months). Intake: quarantine (field), from santa rosa.",0
+other,duck/indian runner,white/cream,small,juvenile (6-12 months),stray,field,santa rosa,"A small other, duck/indian runner, white/cream, juvenile (6-12 months). Intake: stray (field), from santa rosa.",1
+other,pigeon,white,small,unknown age,stray,over the counter,county,"A small other, pigeon, white, unknown age. Intake: stray (over the counter), from county.",1
+cat,domestic sh,black,small,senior (over 10 years),stray,field,county,"A small cat, domestic sh, black, senior (over 10 years). Intake: stray (field), from county.",1
+cat,domestic sh,brn tabby,small,unknown age,stray,field,santa rosa,"A small cat, domestic sh, brn tabby, unknown age. Intake: stray (field), from santa rosa.",0
+cat,domestic sh,black,kittn,unknown age,stray,phone,windsor,"A kittn cat, domestic sh, black, unknown age. Intake: stray (phone), from windsor.",0
+dog,alaskan husky,black/white,med,unknown age,confiscate,fld_cruel,*rohnert park,"A med dog, alaskan husky, black/white, unknown age. Intake: confiscate (fld_cruel), from *rohnert park.",0
+dog,pit bull/mix,white/brown,large,older adult (7-10 years),confiscate,fld_arrest,county,"A large dog, pit bull/mix, white/brown, older adult (7-10 years). Intake: confiscate (fld_arrest), from county.",1
+other,duck/indian runner,white/fawn,small,juvenile (6-12 months),stray,field,santa rosa,"A small other, duck/indian runner, white/fawn, juvenile (6-12 months). Intake: stray (field), from santa rosa.",1
+cat,domestic sh,black/white,kittn,baby (under 6 months),stray,field,santa rosa,"A kittn cat, domestic sh, black/white, baby (under 6 months). Intake: stray (field), from santa rosa.",1
+cat,domestic lh,black/white,small,older adult (7-10 years),stray,over the counter,county,"A small cat, domestic lh, black/white, older adult (7-10 years). Intake: stray (over the counter), from county.",0
+dog,chihuahua sh,tricolor,small,young adult (1-3 years),stray,field,santa rosa,"A small dog, chihuahua sh, tricolor, young adult (1-3 years). Intake: stray (field), from santa rosa.",1
+dog,belg malinois/labrador retr,black/white,med,young adult (1-3 years),confiscate,fld_cruel,santa rosa,"A med dog, belg malinois/labrador retr, black/white, young adult (1-3 years). Intake: confiscate (fld_cruel), from santa rosa.",1
+dog,norfolk terrier/mix,tricolor,small,adult (3-7 years),confiscate,fld_invest,*sonoma,"A small dog, norfolk terrier/mix, tricolor, adult (3-7 years). Intake: confiscate (fld_invest), from *sonoma.",1
+cat,domestic sh,gray/white,kittn,baby (under 6 months),quarantine,field,santa rosa,"A kittn cat, domestic sh, gray/white, baby (under 6 months). Intake: quarantine (field), from santa rosa.",0
+dog,doberman pinsch/germ shepherd,black/tan,large,young adult (1-3 years),stray,field,county,"A large dog, doberman pinsch/germ shepherd, black/tan, young adult (1-3 years). Intake: stray (field), from county.",0
+dog,chihuahua sh/min pinscher,brown/white,small,young adult (1-3 years),adoption return,over the counter,windsor,"A small dog, chihuahua sh/min pinscher, brown/white, young adult (1-3 years). Intake: adoption return (over the counter), from windsor.",1
+dog,chihuahua sh,tricolor,puppy,baby (under 6 months),born here,mom stray,santa rosa,"A puppy dog, chihuahua sh, tricolor, baby (under 6 months). Intake: born here (mom stray), from santa rosa.",1
+cat,domestic sh,brn tabby,small,baby (under 6 months),stray,field,county,"A small cat, domestic sh, brn tabby, baby (under 6 months). Intake: stray (field), from county.",0
+cat,domestic mh,tortie,small,adult (3-7 years),confiscate,fld_arrest,santa rosa,"A small cat, domestic mh, tortie, adult (3-7 years). Intake: confiscate (fld_arrest), from santa rosa.",1
+dog,germ shepherd,black/tan,puppy,juvenile (6-12 months),stray,field,santa rosa,"A puppy dog, germ shepherd, black/tan, juvenile (6-12 months). Intake: stray (field), from santa rosa.",1
+dog,schnauzer giant/mix,black/white,med,juvenile (6-12 months),stray,field,santa rosa,"A med dog, schnauzer giant/mix, black/white, juvenile (6-12 months). Intake: stray (field), from santa rosa.",1
+dog,labrador retr,white,large,senior (over 10 years),confiscate,fld_hosptl,county,"A large dog, labrador retr, white, senior (over 10 years). Intake: confiscate (fld_hosptl), from county.",1
+dog,chihuahua sh,tan,small,unknown age,confiscate,fld_hosptl,santa rosa,"A small dog, chihuahua sh, tan, unknown age. Intake: confiscate (fld_hosptl), from santa rosa.",0
+dog,chihuahua sh/mix,tricolor,small,young adult (1-3 years),owner surrender,field_os,santa rosa,"A small dog, chihuahua sh/mix, tricolor, young adult (1-3 years). Intake: owner surrender (field_os), from santa rosa.",0
+dog,germ shepherd/mix,brown/white,med,juvenile (6-12 months),confiscate,fld_arrest,santa rosa,"A med dog, germ shepherd/mix, brown/white, juvenile (6-12 months). Intake: confiscate (fld_arrest), from santa rosa.",1
+cat,domestic sh,black,small,baby (under 6 months),stray,field,santa rosa,"A small cat, domestic sh, black, baby (under 6 months). Intake: stray (field), from santa rosa.",0
+dog,great pyrenees/mix,white/black,x-lrg,adult (3-7 years),quarantine,field,santa rosa,"A x-lrg dog, great pyrenees/mix, white/black, adult (3-7 years). Intake: quarantine (field), from santa rosa.",0
+cat,domestic sh,brn tabby,small,baby (under 6 months),stray,field,santa rosa,"A small cat, domestic sh, brn tabby, baby (under 6 months). Intake: stray (field), from santa rosa.",0
+cat,domestic mh,brn tabby,small,baby (under 6 months),stray,over the counter,santa rosa,"A small cat, domestic mh, brn tabby, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",1
+dog,pit bull/mix,white/brn merle,small,baby (under 6 months),stray,over the counter,santa rosa,"A small dog, pit bull/mix, white/brn merle, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",1
+dog,chihuahua sh,black/white,puppy,baby (under 6 months),born here,mom stray,santa rosa,"A puppy dog, chihuahua sh, black/white, baby (under 6 months). Intake: born here (mom stray), from santa rosa.",1
+cat,domestic mh,black,small,young adult (1-3 years),stray,over the counter,santa rosa,"A small cat, domestic mh, black, young adult (1-3 years). Intake: stray (over the counter), from santa rosa.",1
+cat,domestic sh,lynx pt,kittn,baby (under 6 months),owner surrender,over the counter,county,"A kittn cat, domestic sh, lynx pt, baby (under 6 months). Intake: owner surrender (over the counter), from county.",1
+cat,domestic sh,black,kittn,baby (under 6 months),stray,over the counter,santa rosa,"A kittn cat, domestic sh, black, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",0
+dog,maltese,white,small,older adult (7-10 years),stray,field,santa rosa,"A small dog, maltese, white, older adult (7-10 years). Intake: stray (field), from santa rosa.",1
+cat,domestic sh,agouti,small,unknown age,stray,field,santa rosa,"A small cat, domestic sh, agouti, unknown age. Intake: stray (field), from santa rosa.",0
+cat,domestic lh,black/white,small,adult (3-7 years),owner surrender,over the counter,santa rosa,"A small cat, domestic lh, black/white, adult (3-7 years). Intake: owner surrender (over the counter), from santa rosa.",1
+dog,labrador retr,black,puppy,baby (under 6 months),confiscate,fld_arrest,santa rosa,"A puppy dog, labrador retr, black, baby (under 6 months). Intake: confiscate (fld_arrest), from santa rosa.",1
+cat,domestic sh,brn tabby,small,baby (under 6 months),stray,email,santa rosa,"A small cat, domestic sh, brn tabby, baby (under 6 months). Intake: stray (email), from santa rosa.",0
+cat,domestic sh,black,kittn,baby (under 6 months),stray,over the counter,santa rosa,"A kittn cat, domestic sh, black, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",0
+dog,pit bull/mix,tan/black,large,young adult (1-3 years),confiscate,fld_arrest,county,"A large dog, pit bull/mix, tan/black, young adult (1-3 years). Intake: confiscate (fld_arrest), from county.",1
+cat,domestic sh,brn tabby/tortie,small,baby (under 6 months),stray,over the counter,santa rosa,"A small cat, domestic sh, brn tabby/tortie, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",0
+cat,domestic sh,blue cream,small,juvenile (6-12 months),stray,over the counter,santa rosa,"A small cat, domestic sh, blue cream, juvenile (6-12 months). Intake: stray (over the counter), from santa rosa.",1
+cat,domestic mh,brn tabby,small,baby (under 6 months),stray,over the counter,santa rosa,"A small cat, domestic mh, brn tabby, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",1
+cat,domestic sh,brn tabby,small,adult (3-7 years),stray,over the counter,county,"A small cat, domestic sh, brn tabby, adult (3-7 years). Intake: stray (over the counter), from county.",1
+dog,french bulldog,gray/brown,small,adult (3-7 years),stray,field,county,"A small dog, french bulldog, gray/brown, adult (3-7 years). Intake: stray (field), from county.",1
+other,goat,white/brown,med,unknown age,stray,field,county,"A med other, goat, white/brown, unknown age. Intake: stray (field), from county.",0
+cat,domestic sh,brn tabby/white,small,senior (over 10 years),stray,field,santa rosa,"A small cat, domestic sh, brn tabby/white, senior (over 10 years). Intake: stray (field), from santa rosa.",1
+dog,border collie/mix,black/white,med,older adult (7-10 years),stray,field,county,"A med dog, border collie/mix, black/white, older adult (7-10 years). Intake: stray (field), from county.",1
+dog,maltese/mix,cream,small,unknown age,confiscate,fld_cruel,santa rosa,"A small dog, maltese/mix, cream, unknown age. Intake: confiscate (fld_cruel), from santa rosa.",0
+other,bat,brown,small,unknown age,quarantine,field,santa rosa,"A small other, bat, brown, unknown age. Intake: quarantine (field), from santa rosa.",0
+cat,domestic sh,tortie,kittn,baby (under 6 months),stray,over the counter,county,"A kittn cat, domestic sh, tortie, baby (under 6 months). Intake: stray (over the counter), from county.",1
+cat,domestic sh,black/white,small,young adult (1-3 years),stray,over the counter,santa rosa,"A small cat, domestic sh, black/white, young adult (1-3 years). Intake: stray (over the counter), from santa rosa.",1
+dog,chihuahua sh,black/tan,small,adult (3-7 years),stray,phone,santa rosa,"A small dog, chihuahua sh, black/tan, adult (3-7 years). Intake: stray (phone), from santa rosa.",0
+dog,pug,tan,small,older adult (7-10 years),stray,field,county,"A small dog, pug, tan, older adult (7-10 years). Intake: stray (field), from county.",1
+cat,domestic sh,lynx pt,kittn,baby (under 6 months),owner surrender,over the counter,county,"A kittn cat, domestic sh, lynx pt, baby (under 6 months). Intake: owner surrender (over the counter), from county.",1
+cat,persian,orange,small,older adult (7-10 years),stray,over the counter,santa rosa,"A small cat, persian, orange, older adult (7-10 years). Intake: stray (over the counter), from santa rosa.",1
+dog,germ shepherd,tan,large,young adult (1-3 years),stray,over the counter,county,"A large dog, germ shepherd, tan, young adult (1-3 years). Intake: stray (over the counter), from county.",0
+cat,domestic sh,brn tabby/white,small,young adult (1-3 years),owner surrender,field,santa rosa,"A small cat, domestic sh, brn tabby/white, young adult (1-3 years). Intake: owner surrender (field), from santa rosa.",1
+dog,aust shepherd,blue merle/tan,med,unknown age,stray,field,county,"A med dog, aust shepherd, blue merle/tan, unknown age. Intake: stray (field), from county.",1
+cat,domestic sh,buff/orange,small,baby (under 6 months),stray,over the counter,santa rosa,"A small cat, domestic sh, buff/orange, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",0
+dog,pit bull,blue/white,med,adult (3-7 years),confiscate,fld_arrest,santa rosa,"A med dog, pit bull, blue/white, adult (3-7 years). Intake: confiscate (fld_arrest), from santa rosa.",0
+dog,french bulldog,fawn,small,older adult (7-10 years),confiscate,fld_arrest,santa rosa,"A small dog, french bulldog, fawn, older adult (7-10 years). Intake: confiscate (fld_arrest), from santa rosa.",1
+dog,chihuahua sh,tan/white,small,adult (3-7 years),owner surrender,field_os,santa rosa,"A small dog, chihuahua sh, tan/white, adult (3-7 years). Intake: owner surrender (field_os), from santa rosa.",0
+cat,siamese,white,small,unknown age,quarantine,field,santa rosa,"A small cat, siamese, white, unknown age. Intake: quarantine (field), from santa rosa.",1
+cat,domestic sh,buff/white,small,juvenile (6-12 months),stray,over the counter,santa rosa,"A small cat, domestic sh, buff/white, juvenile (6-12 months). Intake: stray (over the counter), from santa rosa.",1
+cat,domestic sh,brn tabby,small,unknown age,stray,over the counter,county,"A small cat, domestic sh, brn tabby, unknown age. Intake: stray (over the counter), from county.",0
+other,bat,brown,small,unknown age,quarantine,field,county,"A small other, bat, brown, unknown age. Intake: quarantine (field), from county.",0
+cat,domestic sh,blk tabby,kittn,baby (under 6 months),stray,over the counter,santa rosa,"A kittn cat, domestic sh, blk tabby, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",0
+dog,pit bull,tan,med,unknown age,confiscate,fld_arrest,petaluma,"A med dog, pit bull, tan, unknown age. Intake: confiscate (fld_arrest), from petaluma.",0
+dog,staffordshire/mix,tan,med,young adult (1-3 years),stray,field,county,"A med dog, staffordshire/mix, tan, young adult (1-3 years). Intake: stray (field), from county.",0
+dog,maltese/mix,gold,small,adult (3-7 years),stray,field,santa rosa,"A small dog, maltese/mix, gold, adult (3-7 years). Intake: stray (field), from santa rosa.",0
+dog,belg malinois/mix,br brindle,puppy,baby (under 6 months),stray,field,county,"A puppy dog, belg malinois/mix, br brindle, baby (under 6 months). Intake: stray (field), from county.",1
+cat,domestic sh,gray tabby,kittn,baby (under 6 months),born here,mom stray,santa rosa,"A kittn cat, domestic sh, gray tabby, baby (under 6 months). Intake: born here (mom stray), from santa rosa.",0
+dog,border collie,black/white,large,older adult (7-10 years),confiscate,fld_arrest,petaluma,"A large dog, border collie, black/white, older adult (7-10 years). Intake: confiscate (fld_arrest), from petaluma.",1
+cat,domestic sh,brn tabby/white,kittn,unknown age,stray,field,santa rosa,"A kittn cat, domestic sh, brn tabby/white, unknown age. Intake: stray (field), from santa rosa.",0
+cat,domestic sh,gray tabby,kittn,baby (under 6 months),born here,mom stray,santa rosa,"A kittn cat, domestic sh, gray tabby, baby (under 6 months). Intake: born here (mom stray), from santa rosa.",0
+dog,chihuahua sh,brown/tricolor,small,young adult (1-3 years),owner surrender,field_os,santa rosa,"A small dog, chihuahua sh, brown/tricolor, young adult (1-3 years). Intake: owner surrender (field_os), from santa rosa.",1
+cat,domestic sh,tortie,kittn,baby (under 6 months),stray,email,county,"A kittn cat, domestic sh, tortie, baby (under 6 months). Intake: stray (email), from county.",0
+cat,domestic sh,black,kittn,baby (under 6 months),stray,over the counter,santa rosa,"A kittn cat, domestic sh, black, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",0
+cat,domestic sh,lynx pt,kittn,baby (under 6 months),owner surrender,over the counter,county,"A kittn cat, domestic sh, lynx pt, baby (under 6 months). Intake: owner surrender (over the counter), from county.",1
+cat,domestic sh,black/white,small,unknown age,stray,over the counter,county,"A small cat, domestic sh, black/white, unknown age. Intake: stray (over the counter), from county.",0
+cat,domestic sh,agouti,small,unknown age,stray,field,county,"A small cat, domestic sh, agouti, unknown age. Intake: stray (field), from county.",0
+dog,pit bull,brown/white,large,adult (3-7 years),stray,field,county,"A large dog, pit bull, brown/white, adult (3-7 years). Intake: stray (field), from county.",1
+dog,chihuahua sh,brown,small,adult (3-7 years),stray,phone,county,"A small dog, chihuahua sh, brown, adult (3-7 years). Intake: stray (phone), from county.",1
+cat,domestic sh,blk tabby,kittn,baby (under 6 months),stray,over the counter,santa rosa,"A kittn cat, domestic sh, blk tabby, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",0
+dog,min pinscher/mix,black/tan,small,young adult (1-3 years),confiscate,fld_invest,*sonoma,"A small dog, min pinscher/mix, black/tan, young adult (1-3 years). Intake: confiscate (fld_invest), from *sonoma.",0
+dog,chihuahua sh,tricolor,small,young adult (1-3 years),owner surrender,field_os,santa rosa,"A small dog, chihuahua sh, tricolor, young adult (1-3 years). Intake: owner surrender (field_os), from santa rosa.",1
+cat,domestic sh,black,kittn,baby (under 6 months),stray,field,county,"A kittn cat, domestic sh, black, baby (under 6 months). Intake: stray (field), from county.",1
+other,bat,brown,small,unknown age,quarantine,field,county,"A small other, bat, brown, unknown age. Intake: quarantine (field), from county.",0
+dog,chihuahua sh/mix,red/black,small,older adult (7-10 years),confiscate,fld_arrest,santa rosa,"A small dog, chihuahua sh/mix, red/black, older adult (7-10 years). Intake: confiscate (fld_arrest), from santa rosa.",1
+dog,pug,tan/black,small,unknown age,confiscate,fld_arrest,santa rosa,"A small dog, pug, tan/black, unknown age. Intake: confiscate (fld_arrest), from santa rosa.",1
+dog,pit bull,black/tricolor,puppy,baby (under 6 months),stray,field,county,"A puppy dog, pit bull, black/tricolor, baby (under 6 months). Intake: stray (field), from county.",1
+dog,labrador retr,sable,large,older adult (7-10 years),confiscate,fld_hosptl,county,"A large dog, labrador retr, sable, older adult (7-10 years). Intake: confiscate (fld_hosptl), from county.",1
+cat,domestic sh,seal pt,kittn,baby (under 6 months),owner surrender,over the counter,county,"A kittn cat, domestic sh, seal pt, baby (under 6 months). Intake: owner surrender (over the counter), from county.",1
+cat,domestic sh,black,small,unknown age,stray,field,santa rosa,"A small cat, domestic sh, black, unknown age. Intake: stray (field), from santa rosa.",0
+dog,alaskan husky,black/white,med,unknown age,confiscate,fld_cruel,*rohnert park,"A med dog, alaskan husky, black/white, unknown age. Intake: confiscate (fld_cruel), from *rohnert park.",0
+dog,alaskan husky/mix,white/tan,large,young adult (1-3 years),confiscate,fld_hosptl,santa rosa,"A large dog, alaskan husky/mix, white/tan, young adult (1-3 years). Intake: confiscate (fld_hosptl), from santa rosa.",1
+dog,pit bull,black/white,med,older adult (7-10 years),stray,field,santa rosa,"A med dog, pit bull, black/white, older adult (7-10 years). Intake: stray (field), from santa rosa.",0
+dog,welsh corgi pem,tricolor,med,older adult (7-10 years),stray,field,county,"A med dog, welsh corgi pem, tricolor, older adult (7-10 years). Intake: stray (field), from county.",1
+dog,chihuahua sh,tan,small,adult (3-7 years),owner surrender,field_os,santa rosa,"A small dog, chihuahua sh, tan, adult (3-7 years). Intake: owner surrender (field_os), from santa rosa.",1
+dog,aust cattle dog/mix,white/blue merle,med,juvenile (6-12 months),stray,over the counter,county,"A med dog, aust cattle dog/mix, white/blue merle, juvenile (6-12 months). Intake: stray (over the counter), from county.",1
+dog,alaskan husky,black/white,med,unknown age,confiscate,fld_cruel,*rohnert park,"A med dog, alaskan husky, black/white, unknown age. Intake: confiscate (fld_cruel), from *rohnert park.",0
+dog,chihuahua sh,black,puppy,baby (under 6 months),born here,mom stray,santa rosa,"A puppy dog, chihuahua sh, black, baby (under 6 months). Intake: born here (mom stray), from santa rosa.",1
+other,dove,white,small,unknown age,stray,field,santa rosa,"A small other, dove, white, unknown age. Intake: stray (field), from santa rosa.",1
+cat,domestic sh,gray,small,unknown age,stray,over the counter,county,"A small cat, domestic sh, gray, unknown age. Intake: stray (over the counter), from county.",0
+dog,golden retr/poodle stnd,apricot,large,young adult (1-3 years),stray,over the counter,county,"A large dog, golden retr/poodle stnd, apricot, young adult (1-3 years). Intake: stray (over the counter), from county.",1
+cat,domestic sh,org tabby,small,baby (under 6 months),stray,over the counter,county,"A small cat, domestic sh, org tabby, baby (under 6 months). Intake: stray (over the counter), from county.",1
+dog,poodle min,black,small,older adult (7-10 years),stray,field,county,"A small dog, poodle min, black, older adult (7-10 years). Intake: stray (field), from county.",0
+dog,alaskan husky,black/white,med,unknown age,confiscate,fld_cruel,*rohnert park,"A med dog, alaskan husky, black/white, unknown age. Intake: confiscate (fld_cruel), from *rohnert park.",0
+dog,chihuahua sh/min pinscher,brown/white,small,juvenile (6-12 months),stray,field,santa rosa,"A small dog, chihuahua sh/min pinscher, brown/white, juvenile (6-12 months). Intake: stray (field), from santa rosa.",1
+cat,domestic sh,orange,small,unknown age,confiscate,fld_cruel,santa rosa,"A small cat, domestic sh, orange, unknown age. Intake: confiscate (fld_cruel), from santa rosa.",0
+dog,chihuahua sh,tricolor,small,adult (3-7 years),owner surrender,field_os,santa rosa,"A small dog, chihuahua sh, tricolor, adult (3-7 years). Intake: owner surrender (field_os), from santa rosa.",1
+dog,siberian husky/mix,black/tan,med,young adult (1-3 years),adoption return,over the counter,*rohnert park,"A med dog, siberian husky/mix, black/tan, young adult (1-3 years). Intake: adoption return (over the counter), from *rohnert park.",1
+cat,domestic sh,brn tabby,kittn,baby (under 6 months),stray,field,county,"A kittn cat, domestic sh, brn tabby, baby (under 6 months). Intake: stray (field), from county.",1
+dog,siberian husky/germ shepherd,white,med,older adult (7-10 years),confiscate,fld_coronr,petaluma,"A med dog, siberian husky/germ shepherd, white, older adult (7-10 years). Intake: confiscate (fld_coronr), from petaluma.",0
+other,cockatiel,white/gray,small,unknown age,confiscate,fld_aband,santa rosa,"A small other, cockatiel, white/gray, unknown age. Intake: confiscate (fld_aband), from santa rosa.",1
+dog,rottweiler/mix,black/brown,puppy,baby (under 6 months),stray,over the counter,santa rosa,"A puppy dog, rottweiler/mix, black/brown, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",1
+cat,domestic sh,brn tabby,small,adult (3-7 years),stray,over the counter,santa rosa,"A small cat, domestic sh, brn tabby, adult (3-7 years). Intake: stray (over the counter), from santa rosa.",0
+dog,beagle/mix,tan,med,older adult (7-10 years),stray,over the counter,santa rosa,"A med dog, beagle/mix, tan, older adult (7-10 years). Intake: stray (over the counter), from santa rosa.",0
+dog,maltese/poodle min,white,small,young adult (1-3 years),stray,field,santa rosa,"A small dog, maltese/poodle min, white, young adult (1-3 years). Intake: stray (field), from santa rosa.",1
+cat,domestic sh,black,small,adult (3-7 years),confiscate,fld_arrest,santa rosa,"A small cat, domestic sh, black, adult (3-7 years). Intake: confiscate (fld_arrest), from santa rosa.",1
+other,bat,brown,small,unknown age,quarantine,field,petaluma,"A small other, bat, brown, unknown age. Intake: quarantine (field), from petaluma.",0
+cat,domestic sh,tortie,small,adult (3-7 years),stray,field,santa rosa,"A small cat, domestic sh, tortie, adult (3-7 years). Intake: stray (field), from santa rosa.",0
+dog,border terrier/mix,black/tan,small,young adult (1-3 years),confiscate,fld_invest,*sonoma,"A small dog, border terrier/mix, black/tan, young adult (1-3 years). Intake: confiscate (fld_invest), from *sonoma.",0
+cat,domestic sh,black,kittn,unknown age,stray,phone,windsor,"A kittn cat, domestic sh, black, unknown age. Intake: stray (phone), from windsor.",0
+dog,alaskan husky,black/white,med,unknown age,confiscate,fld_cruel,*rohnert park,"A med dog, alaskan husky, black/white, unknown age. Intake: confiscate (fld_cruel), from *rohnert park.",0
+dog,amer foxhound/fox terr smooth,tan/white,med,young adult (1-3 years),stray,field,county,"A med dog, amer foxhound/fox terr smooth, tan/white, young adult (1-3 years). Intake: stray (field), from county.",0
+cat,domestic sh,orange,kittn,baby (under 6 months),owner surrender,over the counter,santa rosa,"A kittn cat, domestic sh, orange, baby (under 6 months). Intake: owner surrender (over the counter), from santa rosa.",1
+cat,domestic sh,gray tabby,kittn,baby (under 6 months),born here,mom stray,santa rosa,"A kittn cat, domestic sh, gray tabby, baby (under 6 months). Intake: born here (mom stray), from santa rosa.",0
+dog,siberian husky,black/white,med,adult (3-7 years),stray,field,santa rosa,"A med dog, siberian husky, black/white, adult (3-7 years). Intake: stray (field), from santa rosa.",0
+dog,border collie/mix,black/white,med,juvenile (6-12 months),stray,over the counter,county,"A med dog, border collie/mix, black/white, juvenile (6-12 months). Intake: stray (over the counter), from county.",1
+dog,pit bull,black/white,med,juvenile (6-12 months),owner surrender,field,santa rosa,"A med dog, pit bull, black/white, juvenile (6-12 months). Intake: owner surrender (field), from santa rosa.",0
+cat,domestic lh,gray,small,older adult (7-10 years),stray,field,santa rosa,"A small cat, domestic lh, gray, older adult (7-10 years). Intake: stray (field), from santa rosa.",0
+cat,domestic sh,agouti,small,unknown age,stray,field,santa rosa,"A small cat, domestic sh, agouti, unknown age. Intake: stray (field), from santa rosa.",0
+dog,whippet/mix,black/tan,med,young adult (1-3 years),stray,field,santa rosa,"A med dog, whippet/mix, black/tan, young adult (1-3 years). Intake: stray (field), from santa rosa.",1
+cat,siamese/mix,tortie pt,small,young adult (1-3 years),stray,over the counter,santa rosa,"A small cat, siamese/mix, tortie pt, young adult (1-3 years). Intake: stray (over the counter), from santa rosa.",0
+other,bat,black,small,unknown age,quarantine,over the counter,county,"A small other, bat, black, unknown age. Intake: quarantine (over the counter), from county.",0
+dog,pug,white/black,small,adult (3-7 years),confiscate,fld_hosptl,petaluma,"A small dog, pug, white/black, adult (3-7 years). Intake: confiscate (fld_hosptl), from petaluma.",0
+cat,domestic sh,black,kittn,unknown age,stray,phone,windsor,"A kittn cat, domestic sh, black, unknown age. Intake: stray (phone), from windsor.",0
+other,cockatiel,white/gray,small,unknown age,stray,field,windsor,"A small other, cockatiel, white/gray, unknown age. Intake: stray (field), from windsor.",0
+dog,chihuahua sh/mix,black/white,small,juvenile (6-12 months),confiscate,fld_arrest,santa rosa,"A small dog, chihuahua sh/mix, black/white, juvenile (6-12 months). Intake: confiscate (fld_arrest), from santa rosa.",1
+cat,domestic sh,brn tabby,small,baby (under 6 months),stray,over the counter,county,"A small cat, domestic sh, brn tabby, baby (under 6 months). Intake: stray (over the counter), from county.",0
+cat,domestic mh,brn tabby/white,small,baby (under 6 months),stray,over the counter,santa rosa,"A small cat, domestic mh, brn tabby/white, baby (under 6 months). Intake: stray (over the counter), from santa rosa.",1
+dog,pit bull,tricolor,med,unknown age,confiscate,fld_arrest,petaluma,"A med dog, pit bull, tricolor, unknown age. Intake: confiscate (fld_arrest), from petaluma.",0
+cat,domestic sh,black,small,baby (under 6 months),stray,email,santa rosa,"A small cat, domestic sh, black, baby (under 6 months). Intake: stray (email), from santa rosa.",0
+dog,germ shepherd/mix,black/tan,large,adult (3-7 years),stray,field,county,"A large dog, germ shepherd/mix, black/tan, adult (3-7 years). Intake: stray (field), from county.",1
+cat,domestic sh,brn tabby,small,unknown age,quarantine,field,santa rosa,"A small cat, domestic sh, brn tabby, unknown age. Intake: quarantine (field), from santa rosa.",0
+cat,domestic sh,gray tabby,kittn,baby (under 6 months),born here,mom stray,santa rosa,"A kittn cat, domestic sh, gray tabby, baby (under 6 months). Intake: born here (mom stray), from santa rosa.",0

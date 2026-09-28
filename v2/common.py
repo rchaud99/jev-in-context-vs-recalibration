@@ -49,12 +49,18 @@ import sys  # noqa: E402
 sys.path.insert(0, ROOT)
 from tasks import TASKS  # noqa: E402  (context / question / yes / no wording is unchanged from v1)
 
-TASK_ORDER = ["nyc311", "crimes", "shelter", "flights", "stackoverflow", "hn", "github_prs", "inspections"]
+DATASET = os.environ.get("V2_DATASET", "v2")  # "v2" = E1 data; "v2_fresh" = September 2026 replication data (E1-R)
+DATA_DIR = os.path.join(ROOT, "data", DATASET)
+PREFIX = {"v2": "e1", "v2_fresh": "e1r"}[DATASET]
+if DATASET == "v2":
+    TASK_ORDER = ["nyc311", "crimes", "shelter", "flights", "stackoverflow", "hn", "github_prs", "inspections"]
+else:  # tasks with >= 600 fresh rows (300 test + 300 unlabelled pool); fixed in the E1-R preregistration
+    TASK_ORDER = ["nyc311", "crimes", "hn", "github_prs", "inspections"]
 
 
 def load(task):
     """(pool, test, feats) from data/v2/<task>.csv: first 300 rows = fixed test set, the rest = pool."""
-    df = pd.read_csv(os.path.join(V2DATA, f"{task}.csv"))
+    df = pd.read_csv(os.path.join(DATA_DIR, f"{task}.csv"))
     feats = [c for c in df.columns if c not in ("text", "label")]
     df[feats] = df[feats].astype(str)
     return df.iloc[N_TEST:].reset_index(drop=True), df.iloc[:N_TEST].reset_index(drop=True), feats
@@ -130,7 +136,9 @@ _session.mount("https://", requests.adapters.HTTPAdapter(pool_connections=4, poo
 def _post(url, body, timeout=180):
     """POST with retries on transient errors. 402 -> OutOfCredit (never retried)."""
     last = None
-    for attempt in range(7):
+    waits = 0
+    attempt = 0
+    while attempt < 7:
         _check_cap()
         try:
             r = _session.post(url, json=body, timeout=timeout,
@@ -146,11 +154,16 @@ def _post(url, body, timeout=180):
                     raise OutOfCredit(last)
             elif r.status_code in (400, 401, 403, 404):
                 raise RuntimeError(f"HTTP {r.status_code}: {r.text[:400]}")
+            elif r.status_code == 429 and waits < 60:  # rate limit: wait without using up an attempt
+                waits += 1
+                time.sleep(20)
+                continue
             else:
                 last = f"HTTP {r.status_code}: {r.text[:200]}"
         except requests.RequestException as e:
             last = repr(e)[:200]
         time.sleep(min(60, 2 ** attempt))
+        attempt += 1
     raise RuntimeError(f"failed after retries: {last}")
 
 
@@ -210,7 +223,7 @@ def _p_yes(resp):
     return y / (y + n), y + n
 
 
-def chat_logprob(model, state, cases, question, experiment, workers=16):
+def chat_logprob(model, state, cases, question, experiment, workers=int(os.environ.get("V2_WORKERS", "16"))):
     from concurrent.futures import ThreadPoolExecutor
     mid, prov, extra = LOGPROB_MODELS[model]
 
@@ -258,7 +271,10 @@ def verbal_prompt(state, question, cases):  # identical to v1 gemini_study.promp
             f'{{"probabilities": [one number per case, in order]}}\n\n{listing}')
 
 
-def chat_verbalized(model, state, cases, question, experiment, batch=25, workers=6):
+FALLBACKS = []
+
+
+def chat_verbalized(model, state, cases, question, experiment, batch=25, workers=int(os.environ.get("V2_VWORKERS", "6"))):
     from concurrent.futures import ThreadPoolExecutor
     mid, prov, extra = VERBAL_MODELS[model]
     chunks = [cases[i:i + batch] for i in range(0, len(cases), batch)]
@@ -283,7 +299,14 @@ def chat_verbalized(model, state, cases, question, experiment, batch=25, workers
                 except Exception:  # noqa: BLE001 - malformed reply: retry
                     pass
             else:
-                raise RuntimeError("verbalized: no valid reply after 10 attempts")
+                if len(ch) <= 5:
+                    raise RuntimeError("verbalized: no valid reply after 10 attempts")
+                # Protocol deviation (logged): a chunk the model keeps miscounting is re-asked in sub-batches of 5.
+                with _lock:
+                    FALLBACKS.append((model, len(ch)))
+                    with open(os.path.join(OUT, "verbal_fallbacks.log"), "a") as f:
+                        f.write(f"{time.time():.0f}\t{model}\t{experiment}\t{len(ch)}\t{ch[0][:60]}\n")
+                return [v for i in range(0, len(ch), 5) for v in run(ch[i:i + 5])]
             _store(h, model, body, resp)
         p = json.loads(resp["choices"][0]["message"]["content"])["probabilities"]
         return [min(max(float(v) / 100.0, 0.0), 1.0) for v in p]

@@ -1,0 +1,701 @@
+business,facility_type,risk,inspection_type,zip,text,label
+Phils Pizza Of Bridgeport Inc,restaurant,1 (high),complaint,60609,"Phils Pizza Of Bridgeport Inc, a restaurant in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: complaint.",0
+Taco Bell,restaurant,1 (high),complaint,60630,"Taco Bell, a restaurant in Chicago ZIP 60630. Risk category: 1 (high). Inspection type: complaint.",0
+Creative Scholars Preschool,daycare (2 - 6 years),1 (high),license,60642,"Creative Scholars Preschool, a daycare (2 - 6 years) in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: license.",0
+Hampton Inn And Homewood Suites Chicagodowntown/Ma,restaurant,1 (high),canvass re-inspection,60611,"Hampton Inn And Homewood Suites Chicagodowntown/Ma, a restaurant in Chicago ZIP 60611. Risk category: 1 (high). Inspection type: canvass re-inspection.",1
+Err Thang Bussin,restaurant,1 (high),license re-inspection,60623,"Err Thang Bussin, a restaurant in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: license re-inspection.",0
+La Costena Ice Cream Shop Corp.,restaurant,1 (high),canvass re-inspection,60632,"La Costena Ice Cream Shop Corp., a restaurant in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Baskin Robbins/ Dunkin Donuts,restaurant,2 (medium),complaint,60634,"Baskin Robbins/ Dunkin Donuts, a restaurant in Chicago ZIP 60634. Risk category: 2 (medium). Inspection type: complaint.",1
+Subway,restaurant,1 (high),canvass,60647,"Subway, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: canvass.",1
+Roti,restaurant,1 (high),license,60615,"Roti, a restaurant in Chicago ZIP 60615. Risk category: 1 (high). Inspection type: license.",0
+The Getaway Bar,restaurant,3 (low),short form complaint,60625,"The Getaway Bar, a restaurant in Chicago ZIP 60625. Risk category: 3 (low). Inspection type: short form complaint.",0
+Norwegian-Americian Hospital,hospital,1 (high),canvass,60622,"Norwegian-Americian Hospital, a hospital in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: canvass.",0
+2528 Restaurant,restaurant,1 (high),license re-inspection,60647,"2528 Restaurant, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: license re-inspection.",0
+O'Toole Elementary,school,1 (high),canvass,60636,"O'Toole Elementary, a school in Chicago ZIP 60636. Risk category: 1 (high). Inspection type: canvass.",0
+Acero Rufino Tamayo,school,1 (high),canvass,60632,"Acero Rufino Tamayo, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",0
+Hotel Silversmith,restaurant,3 (low),license re-inspection,60603,"Hotel Silversmith, a restaurant in Chicago ZIP 60603. Risk category: 3 (low). Inspection type: license re-inspection.",0
+Tacos Del Barrio,restaurant,1 (high),license,60647,"Tacos Del Barrio, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: license.",1
+Centro Nuestro Child Development Center,children's services facility,1 (high),license,60651,"Centro Nuestro Child Development Center, a children's services facility in Chicago ZIP 60651. Risk category: 1 (high). Inspection type: license.",0
+Daniel J Corkery School,school,1 (high),canvass,60623,"Daniel J Corkery School, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",1
+Chicago Yacht Club,restaurant,1 (high),canvass re-inspection,60657,"Chicago Yacht Club, a restaurant in Chicago ZIP 60657. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Charles  Darwin Elementary School,school,1 (high),canvass,60647,"Charles  Darwin Elementary School, a school in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: canvass.",0
+Vick Pre-K,school,1 (high),canvass,60643,"Vick Pre-K, a school in Chicago ZIP 60643. Risk category: 1 (high). Inspection type: canvass.",0
+Mr G'S Food & Liquor,grocery store,2 (medium),complaint,60637,"Mr G'S Food & Liquor, a grocery store in Chicago ZIP 60637. Risk category: 2 (medium). Inspection type: complaint.",0
+Dunkin Donuts Baskin Robbins,restaurant,2 (medium),canvass,60634,"Dunkin Donuts Baskin Robbins, a restaurant in Chicago ZIP 60634. Risk category: 2 (medium). Inspection type: canvass.",0
+Taco Motora Inc.,mobile food preparer,2 (medium),license,60608,"Taco Motora Inc., a mobile food preparer in Chicago ZIP 60608. Risk category: 2 (medium). Inspection type: license.",1
+Dog Haus,restaurant,1 (high),complaint re-inspection,60614,"Dog Haus, a restaurant in Chicago ZIP 60614. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+Drw College Prep,school,1 (high),canvass,60624,"Drw College Prep, a school in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: canvass.",0
+Smyser Primary Center,school,1 (high),canvass,60634,"Smyser Primary Center, a school in Chicago ZIP 60634. Risk category: 1 (high). Inspection type: canvass.",0
+Mado Healthcare-Douglas Park,long term care,1 (high),canvass,60623,"Mado Healthcare-Douglas Park, a long term care in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Gwacamole Restaurant,restaurant,1 (high),complaint,60634,"Gwacamole Restaurant, a restaurant in Chicago ZIP 60634. Risk category: 1 (high). Inspection type: complaint.",0
+Neveria La Garrafita,restaurant,2 (medium),license,60639,"Neveria La Garrafita, a restaurant in Chicago ZIP 60639. Risk category: 2 (medium). Inspection type: license.",1
+Fort Dearborn Elementary,school,1 (high),canvass,60620,"Fort Dearborn Elementary, a school in Chicago ZIP 60620. Risk category: 1 (high). Inspection type: canvass.",0
+Crane High School,school,1 (high),canvass,60612,"Crane High School, a school in Chicago ZIP 60612. Risk category: 1 (high). Inspection type: canvass.",0
+Momento Cantina,restaurant,1 (high),complaint re-inspection,60603,"Momento Cantina, a restaurant in Chicago ZIP 60603. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+O'Keeffe,school,1 (high),canvass,60649,"O'Keeffe, a school in Chicago ZIP 60649. Risk category: 1 (high). Inspection type: canvass.",0
+Chi Cafe,restaurant,1 (high),license,60616,"Chi Cafe, a restaurant in Chicago ZIP 60616. Risk category: 1 (high). Inspection type: license.",0
+"Fantasy Island Schools For Kids, Llc",children's services facility,1 (high),license,60646,"Fantasy Island Schools For Kids, Llc, a children's services facility in Chicago ZIP 60646. Risk category: 1 (high). Inspection type: license.",0
+2015 See Thru Chinese Kitchen,restaurant,1 (high),short form complaint,60619,"2015 See Thru Chinese Kitchen, a restaurant in Chicago ZIP 60619. Risk category: 1 (high). Inspection type: short form complaint.",0
+Al Raby High School,school,1 (high),canvass,60624,"Al Raby High School, a school in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: canvass.",0
+"Shop & Save Ashland, Inc",grocery store,3 (low),license,60620,"Shop & Save Ashland, Inc, a grocery store in Chicago ZIP 60620. Risk category: 3 (low). Inspection type: license.",0
+Cyrus H Mccormick Elementary School Modular,school,1 (high),canvass,60623,"Cyrus H Mccormick Elementary School Modular, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+La Michoacana Classic Of Chicago,restaurant,1 (high),license,60639,"La Michoacana Classic Of Chicago, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: license.",1
+Mago'S Tamales & Taqueria,restaurant,1 (high),complaint,60639,"Mago'S Tamales & Taqueria, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: complaint.",1
+2528 Restaurant,restaurant,3 (low),license re-inspection,60647,"2528 Restaurant, a restaurant in Chicago ZIP 60647. Risk category: 3 (low). Inspection type: license re-inspection.",0
+Mimi Dao,restaurant,1 (high),license,60615,"Mimi Dao, a restaurant in Chicago ZIP 60615. Risk category: 1 (high). Inspection type: license.",0
+Chicago Eagle,restaurant,2 (medium),canvass,60640,"Chicago Eagle, a restaurant in Chicago ZIP 60640. Risk category: 2 (medium). Inspection type: canvass.",0
+Baskin Robbins/ Dunkin Donuts,restaurant,2 (medium),complaint re-inspection,60634,"Baskin Robbins/ Dunkin Donuts, a restaurant in Chicago ZIP 60634. Risk category: 2 (medium). Inspection type: complaint re-inspection.",0
+South Shore Fine Arts Academy,school,1 (high),canvass,60637,"South Shore Fine Arts Academy, a school in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: canvass.",0
+Azteca Jalisco Restaurante,restaurant,1 (high),canvass,60634,"Azteca Jalisco Restaurante, a restaurant in Chicago ZIP 60634. Risk category: 1 (high). Inspection type: canvass.",0
+Francisco I. Madero Middle School,school,1 (high),canvass,60623,"Francisco I. Madero Middle School, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Polaris Club,restaurant,1 (high),canvass re-inspection,60666,"Polaris Club, a restaurant in Chicago ZIP 60666. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+"Taqueria Misantla Ver, Inc",mobile food preparer,2 (medium),license,60608,"Taqueria Misantla Ver, Inc, a mobile food preparer in Chicago ZIP 60608. Risk category: 2 (medium). Inspection type: license.",0
+Bar Novela,liquor,3 (low),license re-inspection,60647,"Bar Novela, a liquor in Chicago ZIP 60647. Risk category: 3 (low). Inspection type: license re-inspection.",0
+Potbelly Sandwich Works,restaurant,1 (high),canvass re-inspection,60606,"Potbelly Sandwich Works, a restaurant in Chicago ZIP 60606. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Annie Keller Gifted School,school,1 (high),canvass,60655,"Annie Keller Gifted School, a school in Chicago ZIP 60655. Risk category: 1 (high). Inspection type: canvass.",0
+Sullivan House High School,school,2 (medium),canvass,60617,"Sullivan House High School, a school in Chicago ZIP 60617. Risk category: 2 (medium). Inspection type: canvass.",1
+Telpochcalli,school,1 (high),canvass,60623,"Telpochcalli, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",1
+Visions,restaurant,1 (high),canvass re-inspection,60643,"Visions, a restaurant in Chicago ZIP 60643. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Black Magnet Branch,school,1 (high),canvass re-inspection,60649,"Black Magnet Branch, a school in Chicago ZIP 60649. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Toast Of Chicago Haire'S Gulf Shrimp,restaurant,2 (medium),complaint re-inspection,60601,"Toast Of Chicago Haire'S Gulf Shrimp, a restaurant in Chicago ZIP 60601. Risk category: 2 (medium). Inspection type: complaint re-inspection.",0
+Jerk Yard,restaurant,1 (high),short form complaint,60615,"Jerk Yard, a restaurant in Chicago ZIP 60615. Risk category: 1 (high). Inspection type: short form complaint.",0
+Carnegie,school,1 (high),canvass,60637,"Carnegie, a school in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: canvass.",0
+Henderson,school,1 (high),canvass,60636,"Henderson, a school in Chicago ZIP 60636. Risk category: 1 (high). Inspection type: canvass.",0
+El Gallo Maro 2,restaurant,1 (high),license,60646,"El Gallo Maro 2, a restaurant in Chicago ZIP 60646. Risk category: 1 (high). Inspection type: license.",1
+Mei Shung Chinese Restaurant,restaurant,1 (high),canvass,60640,"Mei Shung Chinese Restaurant, a restaurant in Chicago ZIP 60640. Risk category: 1 (high). Inspection type: canvass.",1
+Popeye'S #868,restaurant,1 (high),short form complaint,60638,"Popeye'S #868, a restaurant in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: short form complaint.",1
+Harolds Chicken Chatham #82,restaurant,2 (medium),complaint re-inspection,60619,"Harolds Chicken Chatham #82, a restaurant in Chicago ZIP 60619. Risk category: 2 (medium). Inspection type: complaint re-inspection.",0
+Andersonville Montessori,children's services facility,1 (high),short form complaint,60640,"Andersonville Montessori, a children's services facility in Chicago ZIP 60640. Risk category: 1 (high). Inspection type: short form complaint.",1
+Ted Lenart,school,1 (high),canvass,60620,"Ted Lenart, a school in Chicago ZIP 60620. Risk category: 1 (high). Inspection type: canvass.",0
+Iron Age Chicago,restaurant,1 (high),complaint re-inspection,60622,"Iron Age Chicago, a restaurant in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Claremont Academy,school,1 (high),canvass,60636,"Claremont Academy, a school in Chicago ZIP 60636. Risk category: 1 (high). Inspection type: canvass.",0
+Popeye'S #832,restaurant,1 (high),complaint,60660,"Popeye'S #832, a restaurant in Chicago ZIP 60660. Risk category: 1 (high). Inspection type: complaint.",0
+Little Tykes Ii Daycare Inc,daycare above and under 2 years,1 (high),canvass,60609,"Little Tykes Ii Daycare Inc, a daycare above and under 2 years in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: canvass.",0
+Can'T Believe It'S Not Meat,restaurant,1 (high),canvass,60615,"Can'T Believe It'S Not Meat, a restaurant in Chicago ZIP 60615. Risk category: 1 (high). Inspection type: canvass.",0
+Tabu Tacos,restaurant,1 (high),canvass re-inspection,60642,"Tabu Tacos, a restaurant in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Eberhart Elementary School,school,1 (high),canvass,60629,"Eberhart Elementary School, a school in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: canvass.",0
+Clissold,school,1 (high),canvass,60643,"Clissold, a school in Chicago ZIP 60643. Risk category: 1 (high). Inspection type: canvass.",0
+Munchies Gyros Original,restaurant,1 (high),complaint,60618,"Munchies Gyros Original, a restaurant in Chicago ZIP 60618. Risk category: 1 (high). Inspection type: complaint.",0
+Spinzer Restaurant,restaurant,1 (high),complaint,60659,"Spinzer Restaurant, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint.",1
+Rafa'S Chicken,restaurant,1 (high),complaint,60629,"Rafa'S Chicken, a restaurant in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: complaint.",0
+Err Thang Bussin,restaurant,1 (high),license,60623,"Err Thang Bussin, a restaurant in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: license.",1
+Chipotle Mexican Grill,restaurant,1 (high),complaint re-inspection,60601,"Chipotle Mexican Grill, a restaurant in Chicago ZIP 60601. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Metcalfe Community,school,1 (high),canvass,60628,"Metcalfe Community, a school in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: canvass.",0
+Las Islas Marias,restaurant,1 (high),complaint re-inspection,60623,"Las Islas Marias, a restaurant in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+El Senor Tamal,restaurant,1 (high),canvass,60639,"El Senor Tamal, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: canvass.",0
+Helin Cafe,restaurant,2 (medium),license,60657,"Helin Cafe, a restaurant in Chicago ZIP 60657. Risk category: 2 (medium). Inspection type: license.",0
+Valle'S Produce #5 Corporation,grocery store,1 (high),canvass,60638,"Valle'S Produce #5 Corporation, a grocery store in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+John Garvy Elementary School,school,1 (high),canvass,60656,"John Garvy Elementary School, a school in Chicago ZIP 60656. Risk category: 1 (high). Inspection type: canvass.",0
+Randolph Tavern,restaurant,1 (high),complaint re-inspection,60601,"Randolph Tavern, a restaurant in Chicago ZIP 60601. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Birrieria  La Tapatia,restaurant,1 (high),complaint re-inspection,60623,"Birrieria  La Tapatia, a restaurant in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+Little Wok,restaurant,1 (high),complaint re-inspection,60622,"Little Wok, a restaurant in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Stepping Stones Nursery School,children's services facility,1 (high),license,60647,"Stepping Stones Nursery School, a children's services facility in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: license.",0
+Mcdonald'S #4308,restaurant,2 (medium),complaint re-inspection,60632,"Mcdonald'S #4308, a restaurant in Chicago ZIP 60632. Risk category: 2 (medium). Inspection type: complaint re-inspection.",0
+St. Ann School,school,1 (high),canvass,60608,"St. Ann School, a school in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass.",0
+South Shore International College Prep,school,1 (high),canvass re-inspection,60649,"South Shore International College Prep, a school in Chicago ZIP 60649. Risk category: 1 (high). Inspection type: canvass re-inspection.",1
+Nahda Market,grocery store,3 (low),license,60649,"Nahda Market, a grocery store in Chicago ZIP 60649. Risk category: 3 (low). Inspection type: license.",0
+Funston (Main Building),school,1 (high),canvass,60647,"Funston (Main Building), a school in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: canvass.",1
+Washington High School,school,1 (high),canvass re-inspection,60617,"Washington High School, a school in Chicago ZIP 60617. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+"Red Snapper Hyde Park, Inc.",restaurant,1 (high),canvass re-inspection,60615,"Red Snapper Hyde Park, Inc., a restaurant in Chicago ZIP 60615. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Bibibop Llc,restaurant,1 (high),short form complaint,60618,"Bibibop Llc, a restaurant in Chicago ZIP 60618. Risk category: 1 (high). Inspection type: short form complaint.",1
+Charles Hammond Elementary,school,1 (high),canvass,60623,"Charles Hammond Elementary, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",1
+Children Learn & Play Day Care Ii Inc.,daycare above and under 2 years,1 (high),license,60621,"Children Learn & Play Day Care Ii Inc., a daycare above and under 2 years in Chicago ZIP 60621. Risk category: 1 (high). Inspection type: license.",0
+Dunne,school,1 (high),canvass,60628,"Dunne, a school in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: canvass.",0
+The Reserve,restaurant,2 (medium),license,60661,"The Reserve, a restaurant in Chicago ZIP 60661. Risk category: 2 (medium). Inspection type: license.",0
+Chef Taryn,restaurant,1 (high),complaint,60614,"Chef Taryn, a restaurant in Chicago ZIP 60614. Risk category: 1 (high). Inspection type: complaint.",1
+El Nopal Bakery,bakery,2 (medium),complaint,60623,"El Nopal Bakery, a bakery in Chicago ZIP 60623. Risk category: 2 (medium). Inspection type: complaint.",1
+Bobijoa,restaurant,1 (high),complaint,60608,"Bobijoa, a restaurant in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: complaint.",1
+Hotel Silversmith,restaurant,1 (high),license,60603,"Hotel Silversmith, a restaurant in Chicago ZIP 60603. Risk category: 1 (high). Inspection type: license.",1
+Easy Food Market,grocery store,3 (low),license,60621,"Easy Food Market, a grocery store in Chicago ZIP 60621. Risk category: 3 (low). Inspection type: license.",0
+La Fuente Restaurante #2,restaurant,1 (high),canvass,60629,"La Fuente Restaurante #2, a restaurant in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: canvass.",0
+David G Farragut Academy  H/S,school,1 (high),canvass,60623,"David G Farragut Academy  H/S, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Taqueria El Asadero #1,restaurant,1 (high),complaint,60618,"Taqueria El Asadero #1, a restaurant in Chicago ZIP 60618. Risk category: 1 (high). Inspection type: complaint.",1
+Reggio'S Pizza Express,restaurant,1 (high),canvass re-inspection,60666,"Reggio'S Pizza Express, a restaurant in Chicago ZIP 60666. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Golden Diner,golden diner,1 (high),canvass,60622,"Golden Diner, a golden diner in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: canvass.",0
+Circle K,grocery store,2 (medium),complaint re-inspection,60602,"Circle K, a grocery store in Chicago ZIP 60602. Risk category: 2 (medium). Inspection type: complaint re-inspection.",0
+Players Sports Center,restaurant,2 (medium),license,60647,"Players Sports Center, a restaurant in Chicago ZIP 60647. Risk category: 2 (medium). Inspection type: license.",0
+Ruman Chai Shai & Restaurant,restaurant,1 (high),complaint,60659,"Ruman Chai Shai & Restaurant, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint.",1
+Bistro Campagne,restaurant,1 (high),suspected food poisoning,60625,"Bistro Campagne, a restaurant in Chicago ZIP 60625. Risk category: 1 (high). Inspection type: suspected food poisoning.",0
+Columbia Explorers,school,1 (high),canvass re-inspection,60632,"Columbia Explorers, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Anticonquista Cafe,restaurant,2 (medium),canvass,60608,"Anticonquista Cafe, a restaurant in Chicago ZIP 60608. Risk category: 2 (medium). Inspection type: canvass.",0
+Park To Shop Supermarket Canal,grocery store,1 (high),complaint re-inspection,60616,"Park To Shop Supermarket Canal, a grocery store in Chicago ZIP 60616. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+J & J Fish,restaurant,2 (medium),complaint re-inspection,60628,"J & J Fish, a restaurant in Chicago ZIP 60628. Risk category: 2 (medium). Inspection type: complaint re-inspection.",0
+Subway,restaurant,1 (high),complaint,60615,"Subway, a restaurant in Chicago ZIP 60615. Risk category: 1 (high). Inspection type: complaint.",1
+"Icebox Beer, Wine, And Spirits",grocery store,3 (low),license,60618,"Icebox Beer, Wine, And Spirits, a grocery store in Chicago ZIP 60618. Risk category: 3 (low). Inspection type: license.",0
+Assoc. House Charter School,school,2 (medium),canvass,60651,"Assoc. House Charter School, a school in Chicago ZIP 60651. Risk category: 2 (medium). Inspection type: canvass.",0
+Whittier Elementary,school,1 (high),canvass,60608,"Whittier Elementary, a school in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass.",0
+Halal Mandi House,restaurant,1 (high),short form complaint,60659,"Halal Mandi House, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: short form complaint.",1
+Panda Express #2522,restaurant,1 (high),complaint re-inspection,60601,"Panda Express #2522, a restaurant in Chicago ZIP 60601. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Bundoo Khan,restaurant,1 (high),complaint re-inspection,60659,"Bundoo Khan, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+Oriole Park,school,1 (high),canvass,60656,"Oriole Park, a school in Chicago ZIP 60656. Risk category: 1 (high). Inspection type: canvass.",0
+John Milton Gregory,school,1 (high),canvass re-inspection,60624,"John Milton Gregory, a school in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Seafood City Supermarket/Grill City/Crispy Town/No,grocery store,1 (high),complaint,60630,"Seafood City Supermarket/Grill City/Crispy Town/No, a grocery store in Chicago ZIP 60630. Risk category: 1 (high). Inspection type: complaint.",1
+James Weldon Johnson Cpc,school,1 (high),canvass re-inspection,60623,"James Weldon Johnson Cpc, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Westside Alternative H.S.,school,3 (low),canvass,60651,"Westside Alternative H.S., a school in Chicago ZIP 60651. Risk category: 3 (low). Inspection type: canvass.",0
+The Origin Restaurant And Lounge Chicago,restaurant,1 (high),complaint re-inspection,60647,"The Origin Restaurant And Lounge Chicago, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Finki Elementary Academy,school,1 (high),canvass,60608,"Finki Elementary Academy, a school in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass.",0
+Dirksen Elementary School,school,1 (high),canvass,60656,"Dirksen Elementary School, a school in Chicago ZIP 60656. Risk category: 1 (high). Inspection type: canvass.",1
+Bouchet Elementary,school,1 (high),canvass re-inspection,60649,"Bouchet Elementary, a school in Chicago ZIP 60649. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Coleman'S Barbeque 2 Llc,restaurant,1 (high),complaint re-inspection,60651,"Coleman'S Barbeque 2 Llc, a restaurant in Chicago ZIP 60651. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Mombo Wings & Bubble Tea,restaurant,1 (high),complaint,60659,"Mombo Wings & Bubble Tea, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint.",1
+Daley,school,1 (high),canvass,60609,"Daley, a school in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: canvass.",0
+Dulles,school,1 (high),canvass,60637,"Dulles, a school in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: canvass.",0
+Bar Parisette,restaurant,1 (high),complaint re-inspection,60647,"Bar Parisette, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Billy Goat Iv Inc,restaurant,1 (high),canvass,60666,"Billy Goat Iv Inc, a restaurant in Chicago ZIP 60666. Risk category: 1 (high). Inspection type: canvass.",0
+Visions Cafe,restaurant,1 (high),license,60624,"Visions Cafe, a restaurant in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: license.",1
+Building Blocks Learning Academy,daycare above and under 2 years,1 (high),license re-inspection,60621,"Building Blocks Learning Academy, a daycare above and under 2 years in Chicago ZIP 60621. Risk category: 1 (high). Inspection type: license re-inspection.",0
+Shinya Ramen House,restaurant,1 (high),canvass,60608,"Shinya Ramen House, a restaurant in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass.",1
+Hale Family Mcdonald'S,restaurant,2 (medium),short form complaint,60666,"Hale Family Mcdonald'S, a restaurant in Chicago ZIP 60666. Risk category: 2 (medium). Inspection type: short form complaint.",0
+Act Kipp Create,school,2 (medium),canvass,60644,"Act Kipp Create, a school in Chicago ZIP 60644. Risk category: 2 (medium). Inspection type: canvass.",0
+O'Briens Restaurant & Bar,restaurant,1 (high),canvass,60666,"O'Briens Restaurant & Bar, a restaurant in Chicago ZIP 60666. Risk category: 1 (high). Inspection type: canvass.",0
+Io Theater,restaurant,1 (high),canvass re-inspection,60642,"Io Theater, a restaurant in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Chicago Pit Stop Bbq,restaurant,1 (high),complaint,60636,"Chicago Pit Stop Bbq, a restaurant in Chicago ZIP 60636. Risk category: 1 (high). Inspection type: complaint.",0
+Latino Youth Center  (H/S),school,1 (high),canvass,60608,"Latino Youth Center  (H/S), a school in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass.",0
+Yates Liquor,grocery store,3 (low),license,60617,"Yates Liquor, a grocery store in Chicago ZIP 60617. Risk category: 3 (low). Inspection type: license.",0
+Sharks Fish & Chicken,restaurant,1 (high),canvass,60649,"Sharks Fish & Chicken, a restaurant in Chicago ZIP 60649. Risk category: 1 (high). Inspection type: canvass.",0
+Air Force Academy,school,1 (high),canvass,60609,"Air Force Academy, a school in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: canvass.",0
+Nahah Deli And Market,grocery store,1 (high),license re-inspection,60624,"Nahah Deli And Market, a grocery store in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: license re-inspection.",0
+Fisherman'S Island,restaurant,1 (high),complaint re-inspection,60612,"Fisherman'S Island, a restaurant in Chicago ZIP 60612. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Strong Cardio & Nutricion,unknown,2 (medium),complaint,60623,"Strong Cardio & Nutricion, a unknown in Chicago ZIP 60623. Risk category: 2 (medium). Inspection type: complaint.",1
+Seashell Restaurants,restaurant,1 (high),short form complaint,60619,"Seashell Restaurants, a restaurant in Chicago ZIP 60619. Risk category: 1 (high). Inspection type: short form complaint.",0
+Canter Middle,school,2 (medium),canvass,60615,"Canter Middle, a school in Chicago ZIP 60615. Risk category: 2 (medium). Inspection type: canvass.",0
+All Aboard Learning Express,children's services facility,1 (high),license,60646,"All Aboard Learning Express, a children's services facility in Chicago ZIP 60646. Risk category: 1 (high). Inspection type: license.",1
+Phoenix Military,school,1 (high),canvass re-inspection,60612,"Phoenix Military, a school in Chicago ZIP 60612. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Noble Day Care,children's services facility,1 (high),license,60642,"Noble Day Care, a children's services facility in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: license.",0
+Carson (Old),school,1 (high),canvass,60629,"Carson (Old), a school in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: canvass.",0
+Orr Academy High School,school,1 (high),canvass,60624,"Orr Academy High School, a school in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: canvass.",1
+Joy Yee Noodle,restaurant,1 (high),canvass re-inspection,60607,"Joy Yee Noodle, a restaurant in Chicago ZIP 60607. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Junior'S Mariscos And Grill,restaurant,1 (high),license,60638,"Junior'S Mariscos And Grill, a restaurant in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: license.",0
+North Lawndale School College Prep,school,1 (high),canvass,60623,"North Lawndale School College Prep, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Washington Irving School,school,1 (high),canvass,60612,"Washington Irving School, a school in Chicago ZIP 60612. Risk category: 1 (high). Inspection type: canvass.",0
+Happy Holdings Group Llc,shared kitchen user (long term),1 (high),short form complaint,60616,"Happy Holdings Group Llc, a shared kitchen user (long term) in Chicago ZIP 60616. Risk category: 1 (high). Inspection type: short form complaint.",0
+Red Snapper,restaurant,2 (medium),complaint,60619,"Red Snapper, a restaurant in Chicago ZIP 60619. Risk category: 2 (medium). Inspection type: complaint.",1
+Youth Connection Charter School,school,2 (medium),canvass,60623,"Youth Connection Charter School, a school in Chicago ZIP 60623. Risk category: 2 (medium). Inspection type: canvass.",0
+Joe'S Grill,restaurant,1 (high),short form complaint,60609,"Joe'S Grill, a restaurant in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: short form complaint.",0
+Baba Shawarma Inc.,restaurant,1 (high),complaint re-inspection,60645,"Baba Shawarma Inc., a restaurant in Chicago ZIP 60645. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Benny'S Pizza,restaurant,1 (high),license,60608,"Benny'S Pizza, a restaurant in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: license.",0
+"Sora Temakeria, Llc",restaurant,1 (high),canvass,60623,"Sora Temakeria, Llc, a restaurant in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",1
+"Cremeria Santa Maria, Inc",restaurant,1 (high),canvass,60609,"Cremeria Santa Maria, Inc, a restaurant in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: canvass.",0
+Seafood City Supermarket/Grill City/Crispy Town/No,grocery store,1 (high),complaint re-inspection,60630,"Seafood City Supermarket/Grill City/Crispy Town/No, a grocery store in Chicago ZIP 60630. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Honey Bzzz Soulfood Llc,restaurant,1 (high),license,60609,"Honey Bzzz Soulfood Llc, a restaurant in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: license.",0
+Taco Bell,restaurant,1 (high),short form complaint,60657,"Taco Bell, a restaurant in Chicago ZIP 60657. Risk category: 1 (high). Inspection type: short form complaint.",0
+Copper Club,restaurant,1 (high),canvass re-inspection,60602,"Copper Club, a restaurant in Chicago ZIP 60602. Risk category: 1 (high). Inspection type: canvass re-inspection.",1
+Charles Darwin Modular School,school,1 (high),canvass,60647,"Charles Darwin Modular School, a school in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: canvass.",1
+Lazaro Cardenas South,school,1 (high),canvass,60623,"Lazaro Cardenas South, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Columbia Explorers,school,1 (high),canvass,60632,"Columbia Explorers, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",1
+Hazar House,restaurant,1 (high),license,60625,"Hazar House, a restaurant in Chicago ZIP 60625. Risk category: 1 (high). Inspection type: license.",0
+Selo European Deli & Market,grocery store,1 (high),canvass re-inspection,60630,"Selo European Deli & Market, a grocery store in Chicago ZIP 60630. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Pl Pho Inc.,restaurant,1 (high),license,60625,"Pl Pho Inc., a restaurant in Chicago ZIP 60625. Risk category: 1 (high). Inspection type: license.",1
+Oglesby School,school,1 (high),canvass,60620,"Oglesby School, a school in Chicago ZIP 60620. Risk category: 1 (high). Inspection type: canvass.",0
+Popeye'S#835,restaurant,1 (high),short form complaint,60624,"Popeye'S#835, a restaurant in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: short form complaint.",0
+A & M Llc,restaurant,1 (high),canvass re-inspection,60611,"A & M Llc, a restaurant in Chicago ZIP 60611. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Ashburn Elementary,school,1 (high),canvass,60652,"Ashburn Elementary, a school in Chicago ZIP 60652. Risk category: 1 (high). Inspection type: canvass.",1
+Foster Park Elementary School,school,1 (high),canvass re-inspection,60620,"Foster Park Elementary School, a school in Chicago ZIP 60620. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Ezankaya,restaurant,1 (high),canvass re-inspection,60660,"Ezankaya, a restaurant in Chicago ZIP 60660. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Washington High School,school,1 (high),canvass,60617,"Washington High School, a school in Chicago ZIP 60617. Risk category: 1 (high). Inspection type: canvass.",1
+Hamline,school,1 (high),canvass,60609,"Hamline, a school in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: canvass.",0
+Learn Charter School,school,1 (high),canvass,60612,"Learn Charter School, a school in Chicago ZIP 60612. Risk category: 1 (high). Inspection type: canvass.",0
+Maria Saucedo Elementary,school,1 (high),canvass,60623,"Maria Saucedo Elementary, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",1
+Applebee'S Neighborhood Grill & Bar,restaurant,1 (high),complaint re-inspection,60707,"Applebee'S Neighborhood Grill & Bar, a restaurant in Chicago ZIP 60707. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Subway,restaurant,1 (high),license,60618,"Subway, a restaurant in Chicago ZIP 60618. Risk category: 1 (high). Inspection type: license.",0
+Sixth Room Spirits,liquor,3 (low),license,60647,"Sixth Room Spirits, a liquor in Chicago ZIP 60647. Risk category: 3 (low). Inspection type: license.",1
+Chef Taryn,restaurant,1 (high),complaint re-inspection,60614,"Chef Taryn, a restaurant in Chicago ZIP 60614. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+Bahia Burger'S 63 Inc,restaurant,1 (high),complaint re-inspection,60629,"Bahia Burger'S 63 Inc, a restaurant in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Little Learners Daycare,daycare (2 - 6 years),1 (high),canvass,60638,"Little Learners Daycare, a daycare (2 - 6 years) in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+Erick Solorio Academy High School,school,1 (high),canvass,60632,"Erick Solorio Academy High School, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",1
+The Garage Chicago Lincoln Park,restaurant,2 (medium),license,60614,"The Garage Chicago Lincoln Park, a restaurant in Chicago ZIP 60614. Risk category: 2 (medium). Inspection type: license.",1
+Tandoor,restaurant,1 (high),suspected food poisoning,60614,"Tandoor, a restaurant in Chicago ZIP 60614. Risk category: 1 (high). Inspection type: suspected food poisoning.",0
+Westcott Elementary School,school,1 (high),canvass,60620,"Westcott Elementary School, a school in Chicago ZIP 60620. Risk category: 1 (high). Inspection type: canvass.",0
+Soli On The Fly,grocery store,3 (low),license re-inspection,60666,"Soli On The Fly, a grocery store in Chicago ZIP 60666. Risk category: 3 (low). Inspection type: license re-inspection.",0
+Seward,school,1 (high),canvass,60609,"Seward, a school in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: canvass.",0
+Hancock High School,school,1 (high),canvass,60638,"Hancock High School, a school in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+Los Azares Mexican Grill Llc,restaurant,1 (high),complaint,60630,"Los Azares Mexican Grill Llc, a restaurant in Chicago ZIP 60630. Risk category: 1 (high). Inspection type: complaint.",0
+Tacos Del Barrio,restaurant,1 (high),license,60647,"Tacos Del Barrio, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: license.",1
+Mariano'S Fresh Market #8503,grocery store,1 (high),complaint re-inspection,60601,"Mariano'S Fresh Market #8503, a grocery store in Chicago ZIP 60601. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+Subway,restaurant,1 (high),short form complaint,60612,"Subway, a restaurant in Chicago ZIP 60612. Risk category: 1 (high). Inspection type: short form complaint.",1
+P & R Cafe,restaurant,1 (high),complaint,60628,"P & R Cafe, a restaurant in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: complaint.",1
+Alain Locke Charter Academy,school,1 (high),canvass,60612,"Alain Locke Charter Academy, a school in Chicago ZIP 60612. Risk category: 1 (high). Inspection type: canvass.",0
+Starbucks T1 C17,restaurant,2 (medium),canvass,60666,"Starbucks T1 C17, a restaurant in Chicago ZIP 60666. Risk category: 2 (medium). Inspection type: canvass.",1
+Momento Cantina,restaurant,1 (high),complaint re-inspection,60603,"Momento Cantina, a restaurant in Chicago ZIP 60603. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Pete'S Market #3,grocery store,1 (high),complaint,60632,"Pete'S Market #3, a grocery store in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: complaint.",0
+Tabaq Restaurant,restaurant,1 (high),complaint re-inspection,60610,"Tabaq Restaurant, a restaurant in Chicago ZIP 60610. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Popeye'S #864,restaurant,1 (high),complaint,60617,"Popeye'S #864, a restaurant in Chicago ZIP 60617. Risk category: 1 (high). Inspection type: complaint.",1
+Taft Freshman Academy,school,1 (high),canvass,60634,"Taft Freshman Academy, a school in Chicago ZIP 60634. Risk category: 1 (high). Inspection type: canvass.",0
+Grab And Go,restaurant,2 (medium),license,60606,"Grab And Go, a restaurant in Chicago ZIP 60606. Risk category: 2 (medium). Inspection type: license.",0
+Bacci Cafe And Pizzeria On Milwaukee Ave. Inc.,restaurant,1 (high),complaint re-inspection,60641,"Bacci Cafe And Pizzeria On Milwaukee Ave. Inc., a restaurant in Chicago ZIP 60641. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Gorilla Sushi Wicker Park,restaurant,1 (high),license,60622,"Gorilla Sushi Wicker Park, a restaurant in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: license.",0
+Horizon Science Academy Southwest Chicago,school,1 (high),canvass,60609,"Horizon Science Academy Southwest Chicago, a school in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: canvass.",0
+Las Islas Marias,restaurant,1 (high),canvass re-inspection,60707,"Las Islas Marias, a restaurant in Chicago ZIP 60707. Risk category: 1 (high). Inspection type: canvass re-inspection.",1
+Hurley School,school,1 (high),canvass,60629,"Hurley School, a school in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: canvass.",0
+Drummond,school,1 (high),canvass,60622,"Drummond, a school in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: canvass.",0
+Spinzer Restaurant,restaurant,1 (high),complaint re-inspection,60659,"Spinzer Restaurant, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+Kermess,restaurant,3 (low),license re-inspection,60601,"Kermess, a restaurant in Chicago ZIP 60601. Risk category: 3 (low). Inspection type: license re-inspection.",1
+Adom African Market,grocery store,2 (medium),canvass re-inspection,60653,"Adom African Market, a grocery store in Chicago ZIP 60653. Risk category: 2 (medium). Inspection type: canvass re-inspection.",0
+Taco Bell,restaurant,1 (high),canvass,60608,"Taco Bell, a restaurant in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass.",0
+Tacombi,restaurant,1 (high),complaint re-inspection,60607,"Tacombi, a restaurant in Chicago ZIP 60607. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Bouchet Elementary,school,1 (high),canvass,60649,"Bouchet Elementary, a school in Chicago ZIP 60649. Risk category: 1 (high). Inspection type: canvass.",1
+2528 Restaurant,restaurant,1 (high),license,60647,"2528 Restaurant, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: license.",1
+Sol Crown Community Academy,school,1 (high),canvass,60623,"Sol Crown Community Academy, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Teri'S Tastee,mfp,2 (medium),license,60608,"Teri'S Tastee, a mfp in Chicago ZIP 60608. Risk category: 2 (medium). Inspection type: license.",0
+Leon'S Bar-B-Que,restaurant,1 (high),canvass,60617,"Leon'S Bar-B-Que, a restaurant in Chicago ZIP 60617. Risk category: 1 (high). Inspection type: canvass.",0
+Funston Annex Elem. School,school,1 (high),canvass,60647,"Funston Annex Elem. School, a school in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: canvass.",0
+James Weldon Johnson School,school,1 (high),canvass re-inspection,60623,"James Weldon Johnson School, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Wasai Bbq,restaurant,3 (low),license re-inspection,60616,"Wasai Bbq, a restaurant in Chicago ZIP 60616. Risk category: 3 (low). Inspection type: license re-inspection.",0
+Maria Saucedo Elementary,school,1 (high),canvass re-inspection,60623,"Maria Saucedo Elementary, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass re-inspection.",1
+"Super Food & Liquors, Inc.",grocery store,2 (medium),complaint re-inspection,60660,"Super Food & Liquors, Inc., a grocery store in Chicago ZIP 60660. Risk category: 2 (medium). Inspection type: complaint re-inspection.",0
+Phoebe A Hearst Elementary School,school,1 (high),canvass,60638,"Phoebe A Hearst Elementary School, a school in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+Kipp One Academy,school,1 (high),canvass re-inspection,60624,"Kipp One Academy, a school in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: canvass re-inspection.",1
+Svea Restaurant,restaurant,1 (high),complaint,60640,"Svea Restaurant, a restaurant in Chicago ZIP 60640. Risk category: 1 (high). Inspection type: complaint.",1
+Mcdonald'S #4308,restaurant,2 (medium),complaint,60632,"Mcdonald'S #4308, a restaurant in Chicago ZIP 60632. Risk category: 2 (medium). Inspection type: complaint.",1
+Churros & Tamales Regina,restaurant,1 (high),canvass,60632,"Churros & Tamales Regina, a restaurant in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",1
+Subway,restaurant,1 (high),complaint,60609,"Subway, a restaurant in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: complaint.",0
+Mahalia Jackson Elementary School,school,1 (high),canvass,60620,"Mahalia Jackson Elementary School, a school in Chicago ZIP 60620. Risk category: 1 (high). Inspection type: canvass.",1
+Tutore Italian Cooking School,cooking school,3 (low),license,60622,"Tutore Italian Cooking School, a cooking school in Chicago ZIP 60622. Risk category: 3 (low). Inspection type: license.",0
+Dunkin Donuts,restaurant,2 (medium),short form complaint,60609,"Dunkin Donuts, a restaurant in Chicago ZIP 60609. Risk category: 2 (medium). Inspection type: short form complaint.",0
+Cassell,school,1 (high),canvass,60655,"Cassell, a school in Chicago ZIP 60655. Risk category: 1 (high). Inspection type: canvass.",0
+Subway,restaurant,1 (high),short form complaint,60639,"Subway, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: short form complaint.",0
+Eli Whitney Elementary School,school,1 (high),canvass,60623,"Eli Whitney Elementary School, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Hotel Silversmith,restaurant,1 (high),license re-inspection,60603,"Hotel Silversmith, a restaurant in Chicago ZIP 60603. Risk category: 1 (high). Inspection type: license re-inspection.",0
+Baba Shawarma Inc.,restaurant,1 (high),complaint,60645,"Baba Shawarma Inc., a restaurant in Chicago ZIP 60645. Risk category: 1 (high). Inspection type: complaint.",1
+Phoenix Military,school,1 (high),canvass,60612,"Phoenix Military, a school in Chicago ZIP 60612. Risk category: 1 (high). Inspection type: canvass.",1
+Dunkin Donuts/Baskin Robin,restaurant,2 (medium),complaint,60630,"Dunkin Donuts/Baskin Robin, a restaurant in Chicago ZIP 60630. Risk category: 2 (medium). Inspection type: complaint.",1
+Dunkin Donuts/Baskin Robbins,restaurant,2 (medium),short form complaint,60660,"Dunkin Donuts/Baskin Robbins, a restaurant in Chicago ZIP 60660. Risk category: 2 (medium). Inspection type: short form complaint.",0
+Halsted One Stop Deli,restaurant,1 (high),license,60621,"Halsted One Stop Deli, a restaurant in Chicago ZIP 60621. Risk category: 1 (high). Inspection type: license.",0
+Da Nang Kitchen,restaurant,1 (high),license,60640,"Da Nang Kitchen, a restaurant in Chicago ZIP 60640. Risk category: 1 (high). Inspection type: license.",0
+Vegan Plate,restaurant,1 (high),canvass re-inspection,60614,"Vegan Plate, a restaurant in Chicago ZIP 60614. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+City Hall,restaurant,1 (high),complaint,60642,"City Hall, a restaurant in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: complaint.",1
+Wasai Bbq,restaurant,1 (high),canvass re-inspection,60616,"Wasai Bbq, a restaurant in Chicago ZIP 60616. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Joseph  Gary School,school,1 (high),canvass,60623,"Joseph  Gary School, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Los Azares Mexican Grill Llc,restaurant,1 (high),complaint re-inspection,60630,"Los Azares Mexican Grill Llc, a restaurant in Chicago ZIP 60630. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Little Tykes Pre-School Inc.,daycare (2 - 6 years),1 (high),canvass,60609,"Little Tykes Pre-School Inc., a daycare (2 - 6 years) in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: canvass.",0
+Sabin Magnet,school,1 (high),canvass,60622,"Sabin Magnet, a school in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: canvass.",0
+P & R Cafe,restaurant,1 (high),complaint re-inspection,60628,"P & R Cafe, a restaurant in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Soul Vibez,restaurant,1 (high),canvass re-inspection,60654,"Soul Vibez, a restaurant in Chicago ZIP 60654. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+The Carlyle Club,restaurant,1 (high),license,60654,"The Carlyle Club, a restaurant in Chicago ZIP 60654. Risk category: 1 (high). Inspection type: license.",0
+Ruth Bader Ginsburg,school,1 (high),canvass,60622,"Ruth Bader Ginsburg, a school in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: canvass.",0
+Simpson Academy,school,1 (high),canvass,60608,"Simpson Academy, a school in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass.",0
+Sikia Bakery And Cafe,restaurant,1 (high),canvass,60621,"Sikia Bakery And Cafe, a restaurant in Chicago ZIP 60621. Risk category: 1 (high). Inspection type: canvass.",0
+La Costena Ice Cream Shop Corp.,restaurant,1 (high),canvass,60632,"La Costena Ice Cream Shop Corp., a restaurant in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",1
+Telpochcalli,school,1 (high),canvass re-inspection,60623,"Telpochcalli, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass re-inspection.",1
+Tacos El Tio 2 Inc.,restaurant,1 (high),complaint,60634,"Tacos El Tio 2 Inc., a restaurant in Chicago ZIP 60634. Risk category: 1 (high). Inspection type: complaint.",0
+Mark Twain Elementary,school,1 (high),canvass,60638,"Mark Twain Elementary, a school in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+Potbelly Sandwich Shop,restaurant,1 (high),complaint re-inspection,60607,"Potbelly Sandwich Shop, a restaurant in Chicago ZIP 60607. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Legacy Charter School,school,1 (high),canvass,60623,"Legacy Charter School, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",1
+Thrd Coffee Company,restaurant,2 (medium),license,60622,"Thrd Coffee Company, a restaurant in Chicago ZIP 60622. Risk category: 2 (medium). Inspection type: license.",0
+Chloe Chicago,restaurant,1 (high),license,60606,"Chloe Chicago, a restaurant in Chicago ZIP 60606. Risk category: 1 (high). Inspection type: license.",0
+La Dulce Bakery Inc,bakery,1 (high),complaint,60639,"La Dulce Bakery Inc, a bakery in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: complaint.",1
+Mcdonald'S,restaurant,2 (medium),license,60666,"Mcdonald'S, a restaurant in Chicago ZIP 60666. Risk category: 2 (medium). Inspection type: license.",0
+El Ranchito Food,grocery store,2 (medium),canvass re-inspection,60652,"El Ranchito Food, a grocery store in Chicago ZIP 60652. Risk category: 2 (medium). Inspection type: canvass re-inspection.",0
+Flat Top Grill,restaurant,1 (high),canvass re-inspection,60603,"Flat Top Grill, a restaurant in Chicago ZIP 60603. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Irene C. Hernandez Middle School,school,1 (high),canvass,60632,"Irene C. Hernandez Middle School, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",0
+Pizza Nova Inc,restaurant,1 (high),canvass,60608,"Pizza Nova Inc, a restaurant in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass.",0
+Little Angels Family Daycare,daycare above and under 2 years,1 (high),license,60621,"Little Angels Family Daycare, a daycare above and under 2 years in Chicago ZIP 60621. Risk category: 1 (high). Inspection type: license.",0
+Crossover Grill,restaurant,3 (low),license,60619,"Crossover Grill, a restaurant in Chicago ZIP 60619. Risk category: 3 (low). Inspection type: license.",0
+Jimenez Restaurant,restaurant,1 (high),canvass,60639,"Jimenez Restaurant, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: canvass.",0
+Black Magnet Branch,school,1 (high),canvass,60649,"Black Magnet Branch, a school in Chicago ZIP 60649. Risk category: 1 (high). Inspection type: canvass.",1
+The Big Mini,restaurant,2 (medium),license,60622,"The Big Mini, a restaurant in Chicago ZIP 60622. Risk category: 2 (medium). Inspection type: license.",0
+Snk,grocery store,1 (high),canvass,60651,"Snk, a grocery store in Chicago ZIP 60651. Risk category: 1 (high). Inspection type: canvass.",1
+Jj Fish,restaurant,1 (high),complaint,60639,"Jj Fish, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: complaint.",0
+Millennium Hall Casa Bonita,restaurant,1 (high),license,60602,"Millennium Hall Casa Bonita, a restaurant in Chicago ZIP 60602. Risk category: 1 (high). Inspection type: license.",0
+Svea Restaurant,restaurant,1 (high),complaint re-inspection,60640,"Svea Restaurant, a restaurant in Chicago ZIP 60640. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Safe Achieve Academy,school,2 (medium),canvass,60649,"Safe Achieve Academy, a school in Chicago ZIP 60649. Risk category: 2 (medium). Inspection type: canvass.",0
+Roti Modern Mediterranean,restaurant,1 (high),complaint re-inspection,60642,"Roti Modern Mediterranean, a restaurant in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+John Spry Community School,school,1 (high),canvass,60623,"John Spry Community School, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",1
+Soli On The Fly,grocery store,3 (low),license,60666,"Soli On The Fly, a grocery store in Chicago ZIP 60666. Risk category: 3 (low). Inspection type: license.",1
+Fat Shack,restaurant,1 (high),canvass re-inspection,60614,"Fat Shack, a restaurant in Chicago ZIP 60614. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Soli On The Fly,grocery store,3 (low),license re-inspection,60666,"Soli On The Fly, a grocery store in Chicago ZIP 60666. Risk category: 3 (low). Inspection type: license re-inspection.",0
+Butcher & The Burger,restaurant,1 (high),canvass,60666,"Butcher & The Burger, a restaurant in Chicago ZIP 60666. Risk category: 1 (high). Inspection type: canvass.",0
+One More Sushi Express,restaurant,1 (high),suspected food poisoning,60607,"One More Sushi Express, a restaurant in Chicago ZIP 60607. Risk category: 1 (high). Inspection type: suspected food poisoning.",0
+Taquitos Chicago,restaurant,1 (high),canvass re-inspection,60629,"Taquitos Chicago, a restaurant in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Buona,restaurant,1 (high),canvass re-inspection,60643,"Buona, a restaurant in Chicago ZIP 60643. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Bridge View Brew,coffee shop,2 (medium),license,60617,"Bridge View Brew, a coffee shop in Chicago ZIP 60617. Risk category: 2 (medium). Inspection type: license.",0
+Cook Elementary School,school,1 (high),canvass,60620,"Cook Elementary School, a school in Chicago ZIP 60620. Risk category: 1 (high). Inspection type: canvass.",1
+Shang Noodle,restaurant,3 (low),license,60647,"Shang Noodle, a restaurant in Chicago ZIP 60647. Risk category: 3 (low). Inspection type: license.",0
+Kermess,restaurant,1 (high),license re-inspection,60601,"Kermess, a restaurant in Chicago ZIP 60601. Risk category: 1 (high). Inspection type: license re-inspection.",0
+Jewel Food Store #3454,grocery store,1 (high),complaint re-inspection,60618,"Jewel Food Store #3454, a grocery store in Chicago ZIP 60618. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Dollar Tree #00798,grocery store,3 (low),license,60630,"Dollar Tree #00798, a grocery store in Chicago ZIP 60630. Risk category: 3 (low). Inspection type: license.",0
+Mariano'S #8539,grocery store,1 (high),short form complaint,60653,"Mariano'S #8539, a grocery store in Chicago ZIP 60653. Risk category: 1 (high). Inspection type: short form complaint.",0
+Dog Haus,restaurant,1 (high),complaint re-inspection,60614,"Dog Haus, a restaurant in Chicago ZIP 60614. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+Jessie Owens Community Academy North Campus,school,1 (high),canvass,60628,"Jessie Owens Community Academy North Campus, a school in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: canvass.",0
+South Shore International College Prep,school,1 (high),canvass re-inspection,60649,"South Shore International College Prep, a school in Chicago ZIP 60649. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Pathways To Learning Child Care Inc.,daycare above and under 2 years,1 (high),canvass,60629,"Pathways To Learning Child Care Inc., a daycare above and under 2 years in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: canvass.",0
+Tacos El Tio 2 Inc.,restaurant,1 (high),complaint re-inspection,60634,"Tacos El Tio 2 Inc., a restaurant in Chicago ZIP 60634. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Jenkins Institute Of Love,daycare above and under 2 years,1 (high),license,60619,"Jenkins Institute Of Love, a daycare above and under 2 years in Chicago ZIP 60619. Risk category: 1 (high). Inspection type: license.",0
+Reggio'S Pizza Express,restaurant,2 (medium),canvass,60666,"Reggio'S Pizza Express, a restaurant in Chicago ZIP 60666. Risk category: 2 (medium). Inspection type: canvass.",0
+V'S Convenience Store,grocery store,3 (low),license,60637,"V'S Convenience Store, a grocery store in Chicago ZIP 60637. Risk category: 3 (low). Inspection type: license.",0
+Shell,grocery store,2 (medium),license,60618,"Shell, a grocery store in Chicago ZIP 60618. Risk category: 2 (medium). Inspection type: license.",1
+Noonies Food Mart,grocery store,3 (low),license,60620,"Noonies Food Mart, a grocery store in Chicago ZIP 60620. Risk category: 3 (low). Inspection type: license.",0
+Beaudevin Wine Bar,restaurant,3 (low),canvass,60666,"Beaudevin Wine Bar, a restaurant in Chicago ZIP 60666. Risk category: 3 (low). Inspection type: canvass.",0
+Prime Pizzeria,restaurant,1 (high),complaint re-inspection,60639,"Prime Pizzeria, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Kidz Creative Concepts Learning Center,children's services facility,1 (high),canvass,60637,"Kidz Creative Concepts Learning Center, a children's services facility in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: canvass.",0
+Restaurante Y Tamaleria La Bendicion #2 Inc.,restaurant,1 (high),canvass,60639,"Restaurante Y Tamaleria La Bendicion #2 Inc., a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: canvass.",0
+Leaps Of Learning Childcare Center Inc.,children's services facility,1 (high),license,60619,"Leaps Of Learning Childcare Center Inc., a children's services facility in Chicago ZIP 60619. Risk category: 1 (high). Inspection type: license.",0
+Kipp Ascend Primary School,school,2 (medium),canvass re-inspection,60623,"Kipp Ascend Primary School, a school in Chicago ZIP 60623. Risk category: 2 (medium). Inspection type: canvass re-inspection.",0
+Pickard Elementary,school,1 (high),canvass,60608,"Pickard Elementary, a school in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass.",0
+The Westin Michigan Avenue,restaurant,3 (low),license,60611,"The Westin Michigan Avenue, a restaurant in Chicago ZIP 60611. Risk category: 3 (low). Inspection type: license.",0
+The Block Corner Store,grocery store,1 (high),license,60651,"The Block Corner Store, a grocery store in Chicago ZIP 60651. Risk category: 1 (high). Inspection type: license.",0
+Redhot Ranch,restaurant,2 (medium),complaint,60647,"Redhot Ranch, a restaurant in Chicago ZIP 60647. Risk category: 2 (medium). Inspection type: complaint.",1
+American Montessori Acamedy-South Loop,daycare above and under 2 years,1 (high),complaint re-inspection,60605,"American Montessori Acamedy-South Loop, a daycare above and under 2 years in Chicago ZIP 60605. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Viet Fusion,restaurant,1 (high),complaint re-inspection,60659,"Viet Fusion, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Villa Rosa On Archer,restaurant,1 (high),canvass,60638,"Villa Rosa On Archer, a restaurant in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+City Hall,restaurant,1 (high),complaint re-inspection,60642,"City Hall, a restaurant in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Poe Classical,school,1 (high),canvass,60628,"Poe Classical, a school in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: canvass.",0
+Kipp One Academy,school,1 (high),canvass,60624,"Kipp One Academy, a school in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: canvass.",1
+New Dokil Bakery,bakery,1 (high),canvass,60625,"New Dokil Bakery, a bakery in Chicago ZIP 60625. Risk category: 1 (high). Inspection type: canvass.",0
+Kipp Ascend Primary School,school,2 (medium),canvass,60623,"Kipp Ascend Primary School, a school in Chicago ZIP 60623. Risk category: 2 (medium). Inspection type: canvass.",1
+Itw David Speer Academy,charter school,1 (high),canvass,60639,"Itw David Speer Academy, a charter school in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: canvass.",0
+Brownell,school,1 (high),canvass,60637,"Brownell, a school in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: canvass.",0
+El Patron Pinches Tacos,restaurant,1 (high),canvass,60638,"El Patron Pinches Tacos, a restaurant in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+Soli On The Fly,grocery store,3 (low),license,60666,"Soli On The Fly, a grocery store in Chicago ZIP 60666. Risk category: 3 (low). Inspection type: license.",1
+Birrieria Jalisco,restaurant,1 (high),canvass re-inspection,60632,"Birrieria Jalisco, a restaurant in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Baba Shawarma Inc.,restaurant,1 (high),complaint re-inspection,60645,"Baba Shawarma Inc., a restaurant in Chicago ZIP 60645. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+Theodore Herzl Elementary School/Cpc,school,1 (high),canvass,60623,"Theodore Herzl Elementary School/Cpc, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Daniel J Corkery School,school,1 (high),canvass re-inspection,60623,"Daniel J Corkery School, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Crowbar Lounge,restaurant,1 (high),canvass,60617,"Crowbar Lounge, a restaurant in Chicago ZIP 60617. Risk category: 1 (high). Inspection type: canvass.",0
+Hotel Emc2,restaurant,1 (high),canvass re-inspection,60611,"Hotel Emc2, a restaurant in Chicago ZIP 60611. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Project Org. & Design Studio,daycare combo 1586,1 (high),license,60619,"Project Org. & Design Studio, a daycare combo 1586 in Chicago ZIP 60619. Risk category: 1 (high). Inspection type: license.",0
+Dr. Pedro Albizu Campus,school,2 (medium),canvass,60622,"Dr. Pedro Albizu Campus, a school in Chicago ZIP 60622. Risk category: 2 (medium). Inspection type: canvass.",0
+Cook Elementary School,school,1 (high),canvass re-inspection,60620,"Cook Elementary School, a school in Chicago ZIP 60620. Risk category: 1 (high). Inspection type: canvass re-inspection.",1
+Chicago Excel Academy Of Englewood,school,1 (high),canvass,60621,"Chicago Excel Academy Of Englewood, a school in Chicago ZIP 60621. Risk category: 1 (high). Inspection type: canvass.",0
+Los Cuates De Juanita'S,restaurant,1 (high),complaint re-inspection,60629,"Los Cuates De Juanita'S, a restaurant in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Sheffield'S Coffee,restaurant,2 (medium),canvass re-inspection,60614,"Sheffield'S Coffee, a restaurant in Chicago ZIP 60614. Risk category: 2 (medium). Inspection type: canvass re-inspection.",0
+7-Eleven #33758 C,grocery store,2 (medium),canvass,60655,"7-Eleven #33758 C, a grocery store in Chicago ZIP 60655. Risk category: 2 (medium). Inspection type: canvass.",0
+Azteca Jalisco Restaurante,restaurant,1 (high),license,60634,"Azteca Jalisco Restaurante, a restaurant in Chicago ZIP 60634. Risk category: 1 (high). Inspection type: license.",0
+Redhot Ranch,restaurant,2 (medium),complaint re-inspection,60647,"Redhot Ranch, a restaurant in Chicago ZIP 60647. Risk category: 2 (medium). Inspection type: complaint re-inspection.",0
+Daniel S. Wentworth Annex,school,1 (high),canvass,60636,"Daniel S. Wentworth Annex, a school in Chicago ZIP 60636. Risk category: 1 (high). Inspection type: canvass.",0
+Harold'S Chicken',restaurant,1 (high),canvass,60619,"Harold'S Chicken', a restaurant in Chicago ZIP 60619. Risk category: 1 (high). Inspection type: canvass.",1
+Pak Sweets Inc.,restaurant,1 (high),short form complaint,60659,"Pak Sweets Inc., a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: short form complaint.",1
+Cambria Hotel & Suites,restaurant,1 (high),canvass re-inspection,60601,"Cambria Hotel & Suites, a restaurant in Chicago ZIP 60601. Risk category: 1 (high). Inspection type: canvass re-inspection.",1
+Mago'S Tamales & Taqueria,restaurant,1 (high),complaint re-inspection,60639,"Mago'S Tamales & Taqueria, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Somosmonos Cerveceria,restaurant,2 (medium),license,60609,"Somosmonos Cerveceria, a restaurant in Chicago ZIP 60609. Risk category: 2 (medium). Inspection type: license.",0
+Hollywood Market Place,grocery store,3 (low),license,60660,"Hollywood Market Place, a grocery store in Chicago ZIP 60660. Risk category: 3 (low). Inspection type: license.",0
+Bennett,school,1 (high),canvass,60628,"Bennett, a school in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: canvass.",0
+Roswell Mason Cpc,school,1 (high),canvass re-inspection,60623,"Roswell Mason Cpc, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Cook Elementary School,school,1 (high),canvass re-inspection,60620,"Cook Elementary School, a school in Chicago ZIP 60620. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Gage Park (H/S),school,1 (high),canvass re-inspection,60629,"Gage Park (H/S), a school in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: canvass re-inspection.",1
+Amandla Charter School,school,1 (high),canvass,60629,"Amandla Charter School, a school in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: canvass.",0
+Noble St Chtr-Crimson(Corliss Hs),school,1 (high),canvass,60628,"Noble St Chtr-Crimson(Corliss Hs), a school in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: canvass.",1
+The Stickup Llc,shared kitchen user (long term),2 (medium),canvass,60623,"The Stickup Llc, a shared kitchen user (long term) in Chicago ZIP 60623. Risk category: 2 (medium). Inspection type: canvass.",0
+"Webster, Hansberry",school,1 (high),canvass re-inspection,60624,"Webster, Hansberry, a school in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Nigerian Kitchen Incorporated,restaurant,1 (high),complaint,60640,"Nigerian Kitchen Incorporated, a restaurant in Chicago ZIP 60640. Risk category: 1 (high). Inspection type: complaint.",1
+Busy Bumble Bee Academy Daycare,daycare (2 - 6 years),1 (high),canvass,60637,"Busy Bumble Bee Academy Daycare, a daycare (2 - 6 years) in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: canvass.",0
+The Reserve,restaurant,2 (medium),license,60661,"The Reserve, a restaurant in Chicago ZIP 60661. Risk category: 2 (medium). Inspection type: license.",1
+Manchamanteles,restaurant,1 (high),complaint,60647,"Manchamanteles, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: complaint.",1
+Hay Community Academy,school,1 (high),canvass,60651,"Hay Community Academy, a school in Chicago ZIP 60651. Risk category: 1 (high). Inspection type: canvass.",0
+Visions,restaurant,1 (high),canvass,60643,"Visions, a restaurant in Chicago ZIP 60643. Risk category: 1 (high). Inspection type: canvass.",0
+"Webster, Hansberry",school,1 (high),canvass,60624,"Webster, Hansberry, a school in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: canvass.",1
+Hollywood Market Place,grocery store,3 (low),canvass,60660,"Hollywood Market Place, a grocery store in Chicago ZIP 60660. Risk category: 3 (low). Inspection type: canvass.",0
+Rizzo'S Bar & Inn,restaurant,1 (high),canvass re-inspection,60613,"Rizzo'S Bar & Inn, a restaurant in Chicago ZIP 60613. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Chick-Fil-A State And Lake In-Line,restaurant,1 (high),canvass re-inspection,60601,"Chick-Fil-A State And Lake In-Line, a restaurant in Chicago ZIP 60601. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Kermess,restaurant,3 (low),license re-inspection,60601,"Kermess, a restaurant in Chicago ZIP 60601. Risk category: 3 (low). Inspection type: license re-inspection.",0
+Kipling Elementary School,school,1 (high),canvass,60620,"Kipling Elementary School, a school in Chicago ZIP 60620. Risk category: 1 (high). Inspection type: canvass.",0
+Orr Academy High School,school,1 (high),canvass re-inspection,60624,"Orr Academy High School, a school in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: canvass re-inspection.",1
+Charles Darwin Modular School,school,1 (high),canvass re-inspection,60647,"Charles Darwin Modular School, a school in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Snakes & Lattes Chicago,restaurant,1 (high),complaint,60647,"Snakes & Lattes Chicago, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: complaint.",0
+Taco Bell,restaurant,1 (high),complaint,60621,"Taco Bell, a restaurant in Chicago ZIP 60621. Risk category: 1 (high). Inspection type: complaint.",0
+Stepping Stones Nursery School,children's services facility,1 (high),license,60625,"Stepping Stones Nursery School, a children's services facility in Chicago ZIP 60625. Risk category: 1 (high). Inspection type: license.",1
+Andersonville Montessori,children's services facility,1 (high),complaint re-inspection,60640,"Andersonville Montessori, a children's services facility in Chicago ZIP 60640. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Diego,restaurant,1 (high),complaint re-inspection,60642,"Diego, a restaurant in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Omakase On Me,restaurant,1 (high),complaint re-inspection,60613,"Omakase On Me, a restaurant in Chicago ZIP 60613. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+"Red Snapper Hyde Park, Inc.",restaurant,1 (high),short form complaint,60615,"Red Snapper Hyde Park, Inc., a restaurant in Chicago ZIP 60615. Risk category: 1 (high). Inspection type: short form complaint.",0
+Boqueria,restaurant,1 (high),complaint re-inspection,60607,"Boqueria, a restaurant in Chicago ZIP 60607. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Nobu,restaurant,1 (high),canvass re-inspection,60607,"Nobu, a restaurant in Chicago ZIP 60607. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+John Marshall High School,school,1 (high),canvass,60624,"John Marshall High School, a school in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: canvass.",0
+Soul Veg City,restaurant,1 (high),complaint,60619,"Soul Veg City, a restaurant in Chicago ZIP 60619. Risk category: 1 (high). Inspection type: complaint.",1
+Chinese #1 Kitchen,restaurant,1 (high),canvass re-inspection,60629,"Chinese #1 Kitchen, a restaurant in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+The Carlyle Club,restaurant,1 (high),license,60654,"The Carlyle Club, a restaurant in Chicago ZIP 60654. Risk category: 1 (high). Inspection type: license.",0
+Columbia Explorers,school,1 (high),canvass,60632,"Columbia Explorers, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",1
+St. Patrick High School,school,1 (high),canvass,60634,"St. Patrick High School, a school in Chicago ZIP 60634. Risk category: 1 (high). Inspection type: canvass.",0
+South Shore International College Prep,school,1 (high),canvass,60649,"South Shore International College Prep, a school in Chicago ZIP 60649. Risk category: 1 (high). Inspection type: canvass.",1
+Good Night John Boy,restaurant,1 (high),canvass re-inspection,60607,"Good Night John Boy, a restaurant in Chicago ZIP 60607. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Carson (New),school,1 (high),canvass,60629,"Carson (New), a school in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: canvass.",0
+Veterans Memorial Campus,school,1 (high),canvass,60632,"Veterans Memorial Campus, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",0
+Pl Pho Inc.,restaurant,1 (high),license re-inspection,60625,"Pl Pho Inc., a restaurant in Chicago ZIP 60625. Risk category: 1 (high). Inspection type: license re-inspection.",0
+2528 Restaurant,restaurant,3 (low),license,60647,"2528 Restaurant, a restaurant in Chicago ZIP 60647. Risk category: 3 (low). Inspection type: license.",1
+Goblin Taco,restaurant,1 (high),license,60630,"Goblin Taco, a restaurant in Chicago ZIP 60630. Risk category: 1 (high). Inspection type: license.",0
+Panda Express #2522,restaurant,1 (high),complaint re-inspection,60601,"Panda Express #2522, a restaurant in Chicago ZIP 60601. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Phase Three Brewing Company,liquor,3 (low),license,60618,"Phase Three Brewing Company, a liquor in Chicago ZIP 60618. Risk category: 3 (low). Inspection type: license.",0
+Pizza By Geneo,restaurant,1 (high),canvass,60629,"Pizza By Geneo, a restaurant in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: canvass.",0
+La Michoacana Frutileta #2,restaurant,1 (high),canvass,60639,"La Michoacana Frutileta #2, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: canvass.",0
+Urban Turban,restaurant,1 (high),complaint re-inspection,60614,"Urban Turban, a restaurant in Chicago ZIP 60614. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Bond Elementary,school,1 (high),canvass,60621,"Bond Elementary, a school in Chicago ZIP 60621. Risk category: 1 (high). Inspection type: canvass.",0
+Park To Shop Supermarket Broadway,grocery store,2 (medium),complaint,60640,"Park To Shop Supermarket Broadway, a grocery store in Chicago ZIP 60640. Risk category: 2 (medium). Inspection type: complaint.",0
+Eggy'S And Goddess And The Baker,restaurant,1 (high),complaint re-inspection,60654,"Eggy'S And Goddess And The Baker, a restaurant in Chicago ZIP 60654. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Orozco Elementary Academy,school,1 (high),canvass,60608,"Orozco Elementary Academy, a school in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass.",1
+Miles Davis Magnet Elementary,school,1 (high),canvass,60636,"Miles Davis Magnet Elementary, a school in Chicago ZIP 60636. Risk category: 1 (high). Inspection type: canvass.",0
+Simon Tacos Inc.,restaurant,1 (high),canvass re-inspection,60641,"Simon Tacos Inc., a restaurant in Chicago ZIP 60641. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Target Store- 2078,restaurant,2 (medium),complaint,60608,"Target Store- 2078, a restaurant in Chicago ZIP 60608. Risk category: 2 (medium). Inspection type: complaint.",0
+Taco City Llc,restaurant,1 (high),complaint,60647,"Taco City Llc, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: complaint.",0
+Kama,restaurant,1 (high),complaint,60622,"Kama, a restaurant in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: complaint.",1
+Michael Byrne Elementary,school,1 (high),canvass,60638,"Michael Byrne Elementary, a school in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+Mozart Elementary School,school,1 (high),canvass re-inspection,60647,"Mozart Elementary School, a school in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Familia Tacos,mobile food preparer,2 (medium),license,60608,"Familia Tacos, a mobile food preparer in Chicago ZIP 60608. Risk category: 2 (medium). Inspection type: license.",1
+"Best Start/Era Thompson, Inc.",daycare above and under 2 years,1 (high),canvass,60643,"Best Start/Era Thompson, Inc., a daycare above and under 2 years in Chicago ZIP 60643. Risk category: 1 (high). Inspection type: canvass.",0
+James Weldon Johnson School,school,1 (high),canvass,60623,"James Weldon Johnson School, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",1
+The Hampton Social And The Basement,restaurant,1 (high),complaint re-inspection,60654,"The Hampton Social And The Basement, a restaurant in Chicago ZIP 60654. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Monarch Catering Company,private school,1 (high),canvass,60642,"Monarch Catering Company, a private school in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: canvass.",0
+A Cup Of Joe Inc.,restaurant,1 (high),canvass,60638,"A Cup Of Joe Inc., a restaurant in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+Lazaro Cardenas Branch,school,1 (high),canvass,60623,"Lazaro Cardenas Branch, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Woodlawn,school,1 (high),canvass,60637,"Woodlawn, a school in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: canvass.",0
+Park To Shop Supermarket,grocery store,1 (high),complaint re-inspection,60616,"Park To Shop Supermarket, a grocery store in Chicago ZIP 60616. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Bonci Roman Style Pizzaria,restaurant,1 (high),canvass re-inspection,60614,"Bonci Roman Style Pizzaria, a restaurant in Chicago ZIP 60614. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Curie Metro. (H/S),school,1 (high),canvass,60632,"Curie Metro. (H/S), a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",1
+Mariano'S #8515,grocery store,1 (high),short form complaint,60640,"Mariano'S #8515, a grocery store in Chicago ZIP 60640. Risk category: 1 (high). Inspection type: short form complaint.",0
+House Of Wah Sun,restaurant,1 (high),complaint,60618,"House Of Wah Sun, a restaurant in Chicago ZIP 60618. Risk category: 1 (high). Inspection type: complaint.",1
+Taqueria Huandacreo,restaurant,1 (high),canvass re-inspection,60632,"Taqueria Huandacreo, a restaurant in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Bobijoa,restaurant,1 (high),complaint re-inspection,60608,"Bobijoa, a restaurant in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Abrah Bakery And Bistro,restaurant,1 (high),canvass re-inspection,60614,"Abrah Bakery And Bistro, a restaurant in Chicago ZIP 60614. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+"L & L Lp Infant, Corp.",daycare (under 2 years),1 (high),canvass re-inspection,60614,"L & L Lp Infant, Corp., a daycare (under 2 years) in Chicago ZIP 60614. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Benny'S Pizza,restaurant,1 (high),complaint re-inspection,60608,"Benny'S Pizza, a restaurant in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+"El Original Chavas Tacos, Inc.",restaurant,1 (high),complaint,60612,"El Original Chavas Tacos, Inc., a restaurant in Chicago ZIP 60612. Risk category: 1 (high). Inspection type: complaint.",1
+Icann Breakfast Buffet,restaurant,1 (high),license,60622,"Icann Breakfast Buffet, a restaurant in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: license.",0
+Bass Elementary School,school,1 (high),canvass,60621,"Bass Elementary School, a school in Chicago ZIP 60621. Risk category: 1 (high). Inspection type: canvass.",0
+Aramark - Billings Kitchen,restaurant,1 (high),short form complaint,60637,"Aramark - Billings Kitchen, a restaurant in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: short form complaint.",0
+Pritzker College Prep,charter school,1 (high),canvass,60639,"Pritzker College Prep, a charter school in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: canvass.",0
+Tepalcates Restaurant Company,restaurant,1 (high),complaint,60618,"Tepalcates Restaurant Company, a restaurant in Chicago ZIP 60618. Risk category: 1 (high). Inspection type: complaint.",0
+Life Time River North At One Chicago,restaurant,1 (high),canvass re-inspection,60610,"Life Time River North At One Chicago, a restaurant in Chicago ZIP 60610. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Pritzker,school,1 (high),canvass,60622,"Pritzker, a school in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: canvass.",0
+Aldridge,school,1 (high),canvass,60827,"Aldridge, a school in Chicago ZIP 60827. Risk category: 1 (high). Inspection type: canvass.",0
+Theodore Herzl Elementary School,school,1 (high),canvass,60623,"Theodore Herzl Elementary School, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Victoria And Dannys Southern Cuisines And Bbq,restaurant,1 (high),canvass,60629,"Victoria And Dannys Southern Cuisines And Bbq, a restaurant in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: canvass.",0
+Jewel Food Store #3454,grocery store,1 (high),complaint,60618,"Jewel Food Store #3454, a grocery store in Chicago ZIP 60618. Risk category: 1 (high). Inspection type: complaint.",1
+Taqueria Los Molcajetes Inc,restaurant,1 (high),canvass,60639,"Taqueria Los Molcajetes Inc, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: canvass.",0
+A Child'S Place Academy 2,children's services facility,1 (high),canvass,60637,"A Child'S Place Academy 2, a children's services facility in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: canvass.",0
+Red Snapper,restaurant,2 (medium),complaint re-inspection,60619,"Red Snapper, a restaurant in Chicago ZIP 60619. Risk category: 2 (medium). Inspection type: complaint re-inspection.",0
+The Goddard School Of Chicago River West,children's services facility,1 (high),license re-inspection,60642,"The Goddard School Of Chicago River West, a children's services facility in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: license re-inspection.",0
+Wingstop,restaurant,2 (medium),canvass,60636,"Wingstop, a restaurant in Chicago ZIP 60636. Risk category: 2 (medium). Inspection type: canvass.",0
+Pak Sweets Inc.,restaurant,1 (high),complaint re-inspection,60659,"Pak Sweets Inc., a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+Millennium Hall Casa Bonita,restaurant,1 (high),canvass,60602,"Millennium Hall Casa Bonita, a restaurant in Chicago ZIP 60602. Risk category: 1 (high). Inspection type: canvass.",0
+Acero Jovita Idar Charter School,school,1 (high),canvass,60632,"Acero Jovita Idar Charter School, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",1
+Cairo Kebab,restaurant,1 (high),canvass re-inspection,60607,"Cairo Kebab, a restaurant in Chicago ZIP 60607. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Guinness Open Gate Brewery,restaurant,1 (high),canvass re-inspection,60642,"Guinness Open Gate Brewery, a restaurant in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Montgomery Place,long term care,1 (high),canvass,60637,"Montgomery Place, a long term care in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: canvass.",1
+Dunkin Donuts/Baskin Robin,restaurant,2 (medium),complaint re-inspection,60630,"Dunkin Donuts/Baskin Robin, a restaurant in Chicago ZIP 60630. Risk category: 2 (medium). Inspection type: complaint re-inspection.",0
+Little Caesar Pizza #1769,restaurant,2 (medium),license,60632,"Little Caesar Pizza #1769, a restaurant in Chicago ZIP 60632. Risk category: 2 (medium). Inspection type: license.",0
+Kermess,restaurant,1 (high),license re-inspection,60601,"Kermess, a restaurant in Chicago ZIP 60601. Risk category: 1 (high). Inspection type: license re-inspection.",1
+Swedish Covenant Hospital,hospital,1 (high),canvass,60625,"Swedish Covenant Hospital, a hospital in Chicago ZIP 60625. Risk category: 1 (high). Inspection type: canvass.",1
+Saigon House,restaurant,1 (high),license re-inspection,60634,"Saigon House, a restaurant in Chicago ZIP 60634. Risk category: 1 (high). Inspection type: license re-inspection.",0
+Taqueria El Asadero #1,restaurant,1 (high),complaint re-inspection,60618,"Taqueria El Asadero #1, a restaurant in Chicago ZIP 60618. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Bundoo Khan,restaurant,1 (high),complaint,60659,"Bundoo Khan, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint.",1
+One Way Fast Food & Grocery Inc.,grocery store,1 (high),complaint re-inspection,60612,"One Way Fast Food & Grocery Inc., a grocery store in Chicago ZIP 60612. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Ruman Chai Shai & Restaurant,restaurant,1 (high),complaint re-inspection,60659,"Ruman Chai Shai & Restaurant, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Restaurante Y Tamaleria La Bendicion Inc,restaurant,1 (high),canvass,60639,"Restaurante Y Tamaleria La Bendicion Inc, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: canvass.",0
+Elizabeth'S Rainbow Kids Academy 2 Llc,children's services facility,1 (high),license re-inspection,60629,"Elizabeth'S Rainbow Kids Academy 2 Llc, a children's services facility in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: license re-inspection.",1
+Morrisons Soul And Smoke Llc,restaurant,1 (high),license,60637,"Morrisons Soul And Smoke Llc, a restaurant in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: license.",0
+Ada S Mckinley,golden diner,1 (high),canvass,60637,"Ada S Mckinley, a golden diner in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: canvass.",0
+Mimi Dao,restaurant,1 (high),license,60615,"Mimi Dao, a restaurant in Chicago ZIP 60615. Risk category: 1 (high). Inspection type: license.",0
+Pepes Restaurant,restaurant,1 (high),short form complaint,60638,"Pepes Restaurant, a restaurant in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: short form complaint.",0
+Gage Park (H/S),school,1 (high),canvass,60629,"Gage Park (H/S), a school in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: canvass.",1
+Potbelly Sandwich Shop,restaurant,1 (high),complaint,60626,"Potbelly Sandwich Shop, a restaurant in Chicago ZIP 60626. Risk category: 1 (high). Inspection type: complaint.",0
+Spinzer Restaurant,restaurant,1 (high),complaint re-inspection,60659,"Spinzer Restaurant, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+British International School Of Chicago Lincoln Pa,children's services facility,1 (high),license,60642,"British International School Of Chicago Lincoln Pa, a children's services facility in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: license.",0
+Cm Chicken,restaurant,1 (high),canvass re-inspection,60614,"Cm Chicken, a restaurant in Chicago ZIP 60614. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Hampton Inn And Homewood Suites Chicagodowntown/Ma,restaurant,1 (high),canvass re-inspection,60611,"Hampton Inn And Homewood Suites Chicagodowntown/Ma, a restaurant in Chicago ZIP 60611. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Saigon House,restaurant,1 (high),license,60634,"Saigon House, a restaurant in Chicago ZIP 60634. Risk category: 1 (high). Inspection type: license.",1
+8A5E,restaurant,1 (high),canvass,60609,"8A5E, a restaurant in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: canvass.",0
+West Town Academy,school,2 (medium),canvass,60612,"West Town Academy, a school in Chicago ZIP 60612. Risk category: 2 (medium). Inspection type: canvass.",0
+Adam Clayton Powell Academy,school,1 (high),canvass re-inspection,60649,"Adam Clayton Powell Academy, a school in Chicago ZIP 60649. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Halal Mandi House,restaurant,1 (high),complaint re-inspection,60659,"Halal Mandi House, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Chicago Pit Stop Bbq,restaurant,1 (high),complaint re-inspection,60636,"Chicago Pit Stop Bbq, a restaurant in Chicago ZIP 60636. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Swedish Covenant Hospital,hospital,1 (high),canvass re-inspection,60625,"Swedish Covenant Hospital, a hospital in Chicago ZIP 60625. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Chicago Arts High School,school,1 (high),canvass,60622,"Chicago Arts High School, a school in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: canvass.",0
+Wasai Bbq,restaurant,3 (low),license,60616,"Wasai Bbq, a restaurant in Chicago ZIP 60616. Risk category: 3 (low). Inspection type: license.",1
+Crab & Grill,restaurant,1 (high),license,60619,"Crab & Grill, a restaurant in Chicago ZIP 60619. Risk category: 1 (high). Inspection type: license.",1
+Taste Of Englewood Incorporated,restaurant,1 (high),canvass,60609,"Taste Of Englewood Incorporated, a restaurant in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: canvass.",0
+Joseph  Gary School/Modular/Annex,school,1 (high),canvass,60623,"Joseph  Gary School/Modular/Annex, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Shadaab Restaurant And Grill,restaurant,1 (high),license,60659,"Shadaab Restaurant And Grill, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: license.",1
+The Westin Michigan Avenue,restaurant,3 (low),license,60611,"The Westin Michigan Avenue, a restaurant in Chicago ZIP 60611. Risk category: 3 (low). Inspection type: license.",0
+Halsted One Stop Food & Tobacco,grocery store,2 (medium),license,60621,"Halsted One Stop Food & Tobacco, a grocery store in Chicago ZIP 60621. Risk category: 2 (medium). Inspection type: license.",0
+Presence Saint Mary Of Nazareth Hospital,hospital,1 (high),canvass,60622,"Presence Saint Mary Of Nazareth Hospital, a hospital in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: canvass.",0
+Willa Cather  Elementary School,school,1 (high),canvass,60612,"Willa Cather  Elementary School, a school in Chicago ZIP 60612. Risk category: 1 (high). Inspection type: canvass.",0
+Superior Nut & Candy  Co.I Inc.,wholesale,3 (low),complaint,60609,"Superior Nut & Candy  Co.I Inc., a wholesale in Chicago ZIP 60609. Risk category: 3 (low). Inspection type: complaint.",0
+Somosmonos Cerveceria,restaurant,2 (medium),license,60609,"Somosmonos Cerveceria, a restaurant in Chicago ZIP 60609. Risk category: 2 (medium). Inspection type: license.",0
+Shinya Ramen House,restaurant,1 (high),canvass re-inspection,60608,"Shinya Ramen House, a restaurant in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Cambria Hotel & Suites,restaurant,1 (high),canvass re-inspection,60601,"Cambria Hotel & Suites, a restaurant in Chicago ZIP 60601. Risk category: 1 (high). Inspection type: canvass re-inspection.",1
+Cafe Istanbul,restaurant,1 (high),complaint re-inspection,60622,"Cafe Istanbul, a restaurant in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Norwegian-Americian Hospital,hospital,1 (high),canvass,60622,"Norwegian-Americian Hospital, a hospital in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: canvass.",0
+Docks,restaurant,2 (medium),complaint,60620,"Docks, a restaurant in Chicago ZIP 60620. Risk category: 2 (medium). Inspection type: complaint.",1
+Small Cheval,restaurant,2 (medium),complaint,60647,"Small Cheval, a restaurant in Chicago ZIP 60647. Risk category: 2 (medium). Inspection type: complaint.",0
+"Saucy Pork Hyde Park, Llc.",restaurant,1 (high),canvass,60615,"Saucy Pork Hyde Park, Llc., a restaurant in Chicago ZIP 60615. Risk category: 1 (high). Inspection type: canvass.",0
+Applebee'S Neighborhood Grill & Bar,restaurant,1 (high),complaint re-inspection,60707,"Applebee'S Neighborhood Grill & Bar, a restaurant in Chicago ZIP 60707. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Euro Homemade Bakery & Deli,"butcher, deli",1 (high),complaint re-inspection,60707,"Euro Homemade Bakery & Deli, a butcher, deli in Chicago ZIP 60707. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Wingstop,restaurant,2 (medium),canvass,60620,"Wingstop, a restaurant in Chicago ZIP 60620. Risk category: 2 (medium). Inspection type: canvass.",1
+A-Mi-Tha Restaurant,restaurant,1 (high),suspected food poisoning,60646,"A-Mi-Tha Restaurant, a restaurant in Chicago ZIP 60646. Risk category: 1 (high). Inspection type: suspected food poisoning.",0
+Chloe Chicago,restaurant,3 (low),license,60606,"Chloe Chicago, a restaurant in Chicago ZIP 60606. Risk category: 3 (low). Inspection type: license.",0
+Pete'S Fresh Supermarket,grocery store,1 (high),complaint,60608,"Pete'S Fresh Supermarket, a grocery store in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: complaint.",1
+Mozart Elementary School,school,1 (high),canvass,60647,"Mozart Elementary School, a school in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: canvass.",1
+Hefferan Elementary,school,1 (high),canvass,60624,"Hefferan Elementary, a school in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: canvass.",1
+Yates Elementary School,school,1 (high),canvass,60647,"Yates Elementary School, a school in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: canvass.",1
+Cristo Rey Jesuit High School,school,1 (high),canvass,60608,"Cristo Rey Jesuit High School, a school in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass.",0
+Horizon Science Academy Belmont Charter School,school,1 (high),canvass,60639,"Horizon Science Academy Belmont Charter School, a school in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: canvass.",0
+Funston (Main Building),school,1 (high),canvass re-inspection,60647,"Funston (Main Building), a school in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Ariel Academy/North Kenwood Oakland School,school,1 (high),canvass,60653,"Ariel Academy/North Kenwood Oakland School, a school in Chicago ZIP 60653. Risk category: 1 (high). Inspection type: canvass.",0
+Charles Hammond Elementary,school,1 (high),canvass re-inspection,60623,"Charles Hammond Elementary, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+"Rays Quick Mart, Inc.",grocery store,3 (low),license re-inspection,60619,"Rays Quick Mart, Inc., a grocery store in Chicago ZIP 60619. Risk category: 3 (low). Inspection type: license re-inspection.",0
+Friends And Neighbors,restaurant,3 (low),license,60647,"Friends And Neighbors, a restaurant in Chicago ZIP 60647. Risk category: 3 (low). Inspection type: license.",0
+Wrigleyville Convenience Store,grocery store,3 (low),license re-inspection,60657,"Wrigleyville Convenience Store, a grocery store in Chicago ZIP 60657. Risk category: 3 (low). Inspection type: license re-inspection.",0
+Ollin Roots Llc,restaurant,2 (medium),license,60608,"Ollin Roots Llc, a restaurant in Chicago ZIP 60608. Risk category: 2 (medium). Inspection type: license.",1
+87Th Quick Stop,grocery store,2 (medium),license,60620,"87Th Quick Stop, a grocery store in Chicago ZIP 60620. Risk category: 2 (medium). Inspection type: license.",0
+Menta Academy Midway Southwest,school,1 (high),canvass,60638,"Menta Academy Midway Southwest, a school in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",1
+Acero Charter Cisneros School,school,1 (high),canvass,60632,"Acero Charter Cisneros School, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",0
+Las Islas Marias,restaurant,1 (high),canvass re-inspection,60707,"Las Islas Marias, a restaurant in Chicago ZIP 60707. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Wingstop,restaurant,2 (medium),canvass re-inspection,60620,"Wingstop, a restaurant in Chicago ZIP 60620. Risk category: 2 (medium). Inspection type: canvass re-inspection.",0
+Pulaski Food Enterprises,grocery store,1 (high),complaint re-inspection,60624,"Pulaski Food Enterprises, a grocery store in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Seafood City Supermarket/Grill City/Crispy Town/No,grocery store,1 (high),complaint re-inspection,60630,"Seafood City Supermarket/Grill City/Crispy Town/No, a grocery store in Chicago ZIP 60630. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+Popeye'S #864,restaurant,1 (high),complaint re-inspection,60617,"Popeye'S #864, a restaurant in Chicago ZIP 60617. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Bibibop Llc,restaurant,1 (high),complaint re-inspection,60618,"Bibibop Llc, a restaurant in Chicago ZIP 60618. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Le Sud,restaurant,1 (high),short form complaint,60618,"Le Sud, a restaurant in Chicago ZIP 60618. Risk category: 1 (high). Inspection type: short form complaint.",0
+Manchamanteles,restaurant,1 (high),complaint re-inspection,60647,"Manchamanteles, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Kidz Creative Concepts Learning Center,children's services facility,1 (high),canvass,60637,"Kidz Creative Concepts Learning Center, a children's services facility in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: canvass.",0
+Curtis Elementary Modular,school,1 (high),canvass,60628,"Curtis Elementary Modular, a school in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: canvass.",0
+Magic Food,grocery store,3 (low),complaint,60639,"Magic Food, a grocery store in Chicago ZIP 60639. Risk category: 3 (low). Inspection type: complaint.",0
+The Goddard School Of Chicago River West,children's services facility,1 (high),license,60642,"The Goddard School Of Chicago River West, a children's services facility in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: license.",1
+Bahia Burger'S 63 Inc,restaurant,1 (high),complaint,60629,"Bahia Burger'S 63 Inc, a restaurant in Chicago ZIP 60629. Risk category: 1 (high). Inspection type: complaint.",1
+Fare,restaurant,1 (high),canvass re-inspection,60606,"Fare, a restaurant in Chicago ZIP 60606. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Chicago Tech Academy (Charter),school,1 (high),canvass,60608,"Chicago Tech Academy (Charter), a school in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass.",1
+Fat Peach Bakery,bakery,2 (medium),license,60609,"Fat Peach Bakery, a bakery in Chicago ZIP 60609. Risk category: 2 (medium). Inspection type: license.",0
+St. Rest Country Kitchen,restaurant,1 (high),complaint,60619,"St. Rest Country Kitchen, a restaurant in Chicago ZIP 60619. Risk category: 1 (high). Inspection type: complaint.",0
+The Reserve,restaurant,2 (medium),license,60661,"The Reserve, a restaurant in Chicago ZIP 60661. Risk category: 2 (medium). Inspection type: license.",0
+Marina Bay Inc.,restaurant,1 (high),license,60616,"Marina Bay Inc., a restaurant in Chicago ZIP 60616. Risk category: 1 (high). Inspection type: license.",1
+Chartwells,charter school,1 (high),canvass,60642,"Chartwells, a charter school in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: canvass.",0
+Nash Elementary,school,1 (high),canvass,60644,"Nash Elementary, a school in Chicago ZIP 60644. Risk category: 1 (high). Inspection type: canvass.",1
+Visitation Catholic School,school,2 (medium),canvass,60609,"Visitation Catholic School, a school in Chicago ZIP 60609. Risk category: 2 (medium). Inspection type: canvass.",0
+The Learning Place,daycare above and under 2 years,1 (high),canvass,60619,"The Learning Place, a daycare above and under 2 years in Chicago ZIP 60619. Risk category: 1 (high). Inspection type: canvass.",0
+Subway,restaurant,1 (high),canvass re-inspection,60647,"Subway, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Bright Beginnings Early Learning Center Llc,children's services facility,1 (high),license,60618,"Bright Beginnings Early Learning Center Llc, a children's services facility in Chicago ZIP 60618. Risk category: 1 (high). Inspection type: license.",0
+Kama,restaurant,1 (high),complaint re-inspection,60622,"Kama, a restaurant in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Restaurant El Ranchito,restaurant,1 (high),complaint re-inspection,60639,"Restaurant El Ranchito, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Gangnam Market,grocery store,1 (high),complaint re-inspection,60642,"Gangnam Market, a grocery store in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Apollo'S 2000,restaurant,1 (high),canvass,60623,"Apollo'S 2000, a restaurant in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Kinzie Elementary,school,1 (high),canvass,60638,"Kinzie Elementary, a school in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+Crossover Grill,restaurant,3 (low),license,60619,"Crossover Grill, a restaurant in Chicago ZIP 60619. Risk category: 3 (low). Inspection type: license.",0
+Nathan'S Chicago Style,restaurant,1 (high),canvass,60615,"Nathan'S Chicago Style, a restaurant in Chicago ZIP 60615. Risk category: 1 (high). Inspection type: canvass.",0
+Jerk Taco Man,restaurant,1 (high),complaint re-inspection,60619,"Jerk Taco Man, a restaurant in Chicago ZIP 60619. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Chloe Chicago,restaurant,3 (low),license,60606,"Chloe Chicago, a restaurant in Chicago ZIP 60606. Risk category: 3 (low). Inspection type: license.",0
+A.P. Deli Inc. Xi,restaurant,1 (high),canvass re-inspection,60649,"A.P. Deli Inc. Xi, a restaurant in Chicago ZIP 60649. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Aramark Healthcare At Swedish Hospital,hospital,1 (high),complaint,60625,"Aramark Healthcare At Swedish Hospital, a hospital in Chicago ZIP 60625. Risk category: 1 (high). Inspection type: complaint.",0
+Giordano'S Pizza,restaurant,1 (high),canvass,60615,"Giordano'S Pizza, a restaurant in Chicago ZIP 60615. Risk category: 1 (high). Inspection type: canvass.",0
+Benny'S Pizza,restaurant,1 (high),complaint,60608,"Benny'S Pizza, a restaurant in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: complaint.",0
+Creative Kids Daycare Center Inc.,children's services facility,1 (high),canvass,60632,"Creative Kids Daycare Center Inc., a children's services facility in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",0
+Viet Fusion,restaurant,1 (high),complaint,60659,"Viet Fusion, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint.",1
+La Michoacana Classic Of Chicago,restaurant,1 (high),license re-inspection,60639,"La Michoacana Classic Of Chicago, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: license re-inspection.",0
+"Children'S Land On Belmont Ave,  Inc.",children's services facility,1 (high),license,60634,"Children'S Land On Belmont Ave,  Inc., a children's services facility in Chicago ZIP 60634. Risk category: 1 (high). Inspection type: license.",0
+Top-Notch Beefburger Inc,restaurant,1 (high),short form complaint,60643,"Top-Notch Beefburger Inc, a restaurant in Chicago ZIP 60643. Risk category: 1 (high). Inspection type: short form complaint.",0
+Fleming Branch,school,1 (high),canvass,60638,"Fleming Branch, a school in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+7-Eleven #16809J,grocery store,2 (medium),license,60634,"7-Eleven #16809J, a grocery store in Chicago ZIP 60634. Risk category: 2 (medium). Inspection type: license.",1
+Nathan Hale Elementary,school,1 (high),canvass,60638,"Nathan Hale Elementary, a school in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+Corliss (H/S),school,1 (high),canvass,60628,"Corliss (H/S), a school in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: canvass.",0
+Randolph Magnet,school,1 (high),canvass,60636,"Randolph Magnet, a school in Chicago ZIP 60636. Risk category: 1 (high). Inspection type: canvass.",0
+Acero Victoria Soto High School,school,1 (high),canvass,60632,"Acero Victoria Soto High School, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",1
+Bacci Cafe And Pizzeria On Milwaukee Ave. Inc.,restaurant,1 (high),complaint re-inspection,60641,"Bacci Cafe And Pizzeria On Milwaukee Ave. Inc., a restaurant in Chicago ZIP 60641. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+Acero Brighton Park Campus,school,1 (high),canvass,60632,"Acero Brighton Park Campus, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",0
+Friends And Neighbors,restaurant,2 (medium),license,60647,"Friends And Neighbors, a restaurant in Chicago ZIP 60647. Risk category: 2 (medium). Inspection type: license.",0
+Ria Ventures Llc,restaurant,3 (low),license,60654,"Ria Ventures Llc, a restaurant in Chicago ZIP 60654. Risk category: 3 (low). Inspection type: license.",0
+The Carlyle Club,restaurant,1 (high),license,60654,"The Carlyle Club, a restaurant in Chicago ZIP 60654. Risk category: 1 (high). Inspection type: license.",0
+St. Nicholas Cathedral,school,1 (high),canvass,60622,"St. Nicholas Cathedral, a school in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: canvass.",0
+Cha Tramue,restaurant,2 (medium),license re-inspection,60647,"Cha Tramue, a restaurant in Chicago ZIP 60647. Risk category: 2 (medium). Inspection type: license re-inspection.",0
+Aldi,grocery store,3 (low),short form complaint,60660,"Aldi, a grocery store in Chicago ZIP 60660. Risk category: 3 (low). Inspection type: short form complaint.",0
+Nando'S Peri-Peri,restaurant,1 (high),canvass re-inspection,60614,"Nando'S Peri-Peri, a restaurant in Chicago ZIP 60614. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Bundoo Khan,restaurant,1 (high),complaint re-inspection,60659,"Bundoo Khan, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+"Icebox Beer, Wine, And Spirits",grocery store,3 (low),license,60618,"Icebox Beer, Wine, And Spirits, a grocery store in Chicago ZIP 60618. Risk category: 3 (low). Inspection type: license.",0
+57Th & Chicago Food Mart Inc.,grocery store,3 (low),license,60651,"57Th & Chicago Food Mart Inc., a grocery store in Chicago ZIP 60651. Risk category: 3 (low). Inspection type: license.",1
+Holy Trinity High School,school,1 (high),canvass,60642,"Holy Trinity High School, a school in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: canvass.",0
+Jerk Taco Man,restaurant,1 (high),short form complaint,60619,"Jerk Taco Man, a restaurant in Chicago ZIP 60619. Risk category: 1 (high). Inspection type: short form complaint.",0
+Urban Corner Inc.,grocery store,3 (low),license,60651,"Urban Corner Inc., a grocery store in Chicago ZIP 60651. Risk category: 3 (low). Inspection type: license.",0
+Van Buren & Ashland Amoco,grocery store,2 (medium),complaint,60612,"Van Buren & Ashland Amoco, a grocery store in Chicago ZIP 60612. Risk category: 2 (medium). Inspection type: complaint.",0
+Officer Donald Marquez Charter School,school,1 (high),canvass,60632,"Officer Donald Marquez Charter School, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",0
+Taylor Elementary School,school,1 (high),canvass re-inspection,60617,"Taylor Elementary School, a school in Chicago ZIP 60617. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Acme Hotel Company/The Berkshire,restaurant,1 (high),canvass re-inspection,60611,"Acme Hotel Company/The Berkshire, a restaurant in Chicago ZIP 60611. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Popeye'S #812,restaurant,1 (high),short form complaint,60618,"Popeye'S #812, a restaurant in Chicago ZIP 60618. Risk category: 1 (high). Inspection type: short form complaint.",0
+Cyrus H Mccormick Elementary School & Mobile Unit,school,1 (high),canvass,60623,"Cyrus H Mccormick Elementary School & Mobile Unit, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+#1 Chop Suey,restaurant,1 (high),complaint re-inspection,60641,"#1 Chop Suey, a restaurant in Chicago ZIP 60641. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Osito'S Tap,restaurant,1 (high),canvass,60623,"Osito'S Tap, a restaurant in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Taco Motora,mobile food preparer,2 (medium),license,60608,"Taco Motora, a mobile food preparer in Chicago ZIP 60608. Risk category: 2 (medium). Inspection type: license.",0
+Meli Cafe On Grand,restaurant,1 (high),canvass re-inspection,60654,"Meli Cafe On Grand, a restaurant in Chicago ZIP 60654. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Mr Zees #2,restaurant,1 (high),complaint,60634,"Mr Zees #2, a restaurant in Chicago ZIP 60634. Risk category: 1 (high). Inspection type: complaint.",0
+Early Morning Delight,restaurant,1 (high),license,60613,"Early Morning Delight, a restaurant in Chicago ZIP 60613. Risk category: 1 (high). Inspection type: license.",0
+Columbia Explorers,school,1 (high),canvass re-inspection,60632,"Columbia Explorers, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Dubois,school,1 (high),canvass,60827,"Dubois, a school in Chicago ZIP 60827. Risk category: 1 (high). Inspection type: canvass.",0
+Legal Prep Charter Academy,school,2 (medium),canvass,60624,"Legal Prep Charter Academy, a school in Chicago ZIP 60624. Risk category: 2 (medium). Inspection type: canvass.",1
+Seven Star Chinese Cuisine Inc.,restaurant,1 (high),complaint,60632,"Seven Star Chinese Cuisine Inc., a restaurant in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: complaint.",1
+La Dulce Bakery Inc,bakery,1 (high),complaint re-inspection,60639,"La Dulce Bakery Inc, a bakery in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Lazaro Cardenas Elementary,school,1 (high),canvass,60623,"Lazaro Cardenas Elementary, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Nick'S Gyros,restaurant,1 (high),complaint,60636,"Nick'S Gyros, a restaurant in Chicago ZIP 60636. Risk category: 1 (high). Inspection type: complaint.",0
+Kennedy Hs,school,1 (high),canvass,60638,"Kennedy Hs, a school in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+Dulce Cafe Cubano Llc,restaurant,1 (high),canvass re-inspection,60632,"Dulce Cafe Cubano Llc, a restaurant in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Triano'S Pizza,restaurant,1 (high),complaint,60638,"Triano'S Pizza, a restaurant in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: complaint.",1
+Buffalo Wild Wings,restaurant,3 (low),license,60614,"Buffalo Wild Wings, a restaurant in Chicago ZIP 60614. Risk category: 3 (low). Inspection type: license.",0
+Hotel Silversmith,restaurant,3 (low),license,60603,"Hotel Silversmith, a restaurant in Chicago ZIP 60603. Risk category: 3 (low). Inspection type: license.",1
+Kentucky Fried Chicken #5288,restaurant,1 (high),complaint,60628,"Kentucky Fried Chicken #5288, a restaurant in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: complaint.",0
+Coleman'S Barbeque 2 Llc,restaurant,1 (high),complaint,60651,"Coleman'S Barbeque 2 Llc, a restaurant in Chicago ZIP 60651. Risk category: 1 (high). Inspection type: complaint.",1
+The Westin Michigan Avenue,restaurant,1 (high),license,60611,"The Westin Michigan Avenue, a restaurant in Chicago ZIP 60611. Risk category: 1 (high). Inspection type: license.",0
+Big 4'S Chop Suey,restaurant,1 (high),canvass,60638,"Big 4'S Chop Suey, a restaurant in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+Subway Sandwiches #22222,restaurant,1 (high),canvass re-inspection,60613,"Subway Sandwiches #22222, a restaurant in Chicago ZIP 60613. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Montgomery Place,long term care,1 (high),canvass re-inspection,60637,"Montgomery Place, a long term care in Chicago ZIP 60637. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Wicker Park Kidz Learning Center Inc.,daycare above and under 2 years,1 (high),license,60642,"Wicker Park Kidz Learning Center Inc., a daycare above and under 2 years in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: license.",0
+Colectivo Coffee,restaurant,1 (high),complaint,60640,"Colectivo Coffee, a restaurant in Chicago ZIP 60640. Risk category: 1 (high). Inspection type: complaint.",0
+South China Kitchen Inc.,restaurant,1 (high),complaint re-inspection,60628,"South China Kitchen Inc., a restaurant in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+El Jacalito,restaurant,1 (high),complaint,60617,"El Jacalito, a restaurant in Chicago ZIP 60617. Risk category: 1 (high). Inspection type: complaint.",0
+Taco Maya,restaurant,1 (high),canvass re-inspection,60654,"Taco Maya, a restaurant in Chicago ZIP 60654. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Belmont Cragin Ecc,school,1 (high),canvass,60639,"Belmont Cragin Ecc, a school in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: canvass.",0
+Little Wok,restaurant,1 (high),canvass,60615,"Little Wok, a restaurant in Chicago ZIP 60615. Risk category: 1 (high). Inspection type: canvass.",0
+Mariano'S #8522,grocery store,1 (high),short form complaint,60640,"Mariano'S #8522, a grocery store in Chicago ZIP 60640. Risk category: 1 (high). Inspection type: short form complaint.",0
+Barbara A. Sizemore Academy,school,1 (high),canvass,60621,"Barbara A. Sizemore Academy, a school in Chicago ZIP 60621. Risk category: 1 (high). Inspection type: canvass.",0
+Anna R Langford Community Academy,school,1 (high),canvass,60636,"Anna R Langford Community Academy, a school in Chicago ZIP 60636. Risk category: 1 (high). Inspection type: canvass.",0
+Collins Academy High School,school,1 (high),canvass,60623,"Collins Academy High School, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Wicker Park Seafood & Sushi,restaurant,1 (high),canvass re-inspection,60666,"Wicker Park Seafood & Sushi, a restaurant in Chicago ZIP 60666. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Del Toro,restaurant,1 (high),canvass re-inspection,60608,"Del Toro, a restaurant in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Ciao Ragazzi,restaurant,1 (high),canvass,60638,"Ciao Ragazzi, a restaurant in Chicago ZIP 60638. Risk category: 1 (high). Inspection type: canvass.",0
+Parkside Community Elementary,school,1 (high),canvass re-inspection,60649,"Parkside Community Elementary, a school in Chicago ZIP 60649. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Cheba Hut,restaurant,1 (high),complaint,60657,"Cheba Hut, a restaurant in Chicago ZIP 60657. Risk category: 1 (high). Inspection type: complaint.",0
+La Michoacana 1,restaurant,1 (high),canvass re-inspection,60609,"La Michoacana 1, a restaurant in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Oakwood '83,restaurant,1 (high),complaint,60613,"Oakwood '83, a restaurant in Chicago ZIP 60613. Risk category: 1 (high). Inspection type: complaint.",0
+Tela,restaurant,1 (high),canvass re-inspection,60654,"Tela, a restaurant in Chicago ZIP 60654. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Adom African Market,grocery store,2 (medium),canvass re-inspection,60653,"Adom African Market, a grocery store in Chicago ZIP 60653. Risk category: 2 (medium). Inspection type: canvass re-inspection.",1
+Curtis Elementary School,school,1 (high),canvass,60628,"Curtis Elementary School, a school in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: canvass.",0
+Grissom,school,1 (high),canvass,60633,"Grissom, a school in Chicago ZIP 60633. Risk category: 1 (high). Inspection type: canvass.",0
+Polaris Charter Academy,school,1 (high),canvass,60624,"Polaris Charter Academy, a school in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: canvass.",1
+Esperanza School,school,1 (high),canvass,60622,"Esperanza School, a school in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: canvass.",1
+Foster Park Elementary School,school,1 (high),canvass,60620,"Foster Park Elementary School, a school in Chicago ZIP 60620. Risk category: 1 (high). Inspection type: canvass.",1
+Wrigleyville Convenience Store,grocery store,3 (low),license,60657,"Wrigleyville Convenience Store, a grocery store in Chicago ZIP 60657. Risk category: 3 (low). Inspection type: license.",1
+Frazier  International,school,1 (high),canvass,60624,"Frazier  International, a school in Chicago ZIP 60624. Risk category: 1 (high). Inspection type: canvass.",1
+Shang Noodle,restaurant,1 (high),license,60647,"Shang Noodle, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: license.",0
+Las Islas Marias,restaurant,1 (high),complaint,60623,"Las Islas Marias, a restaurant in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: complaint.",1
+Fiesta Tapatia,restaurant,1 (high),complaint,60608,"Fiesta Tapatia, a restaurant in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: complaint.",0
+Brown Acad.,school,1 (high),canvass,60628,"Brown Acad., a school in Chicago ZIP 60628. Risk category: 1 (high). Inspection type: canvass.",0
+Ezankaya,restaurant,1 (high),canvass re-inspection,60660,"Ezankaya, a restaurant in Chicago ZIP 60660. Risk category: 1 (high). Inspection type: canvass re-inspection.",1
+Jewel Food Store #3170,grocery store,1 (high),complaint re-inspection,60632,"Jewel Food Store #3170, a grocery store in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+Buffalo Wings And Rings,restaurant,1 (high),complaint re-inspection,60608,"Buffalo Wings And Rings, a restaurant in Chicago ZIP 60608. Risk category: 1 (high). Inspection type: complaint re-inspection.",0
+"Over Rice'N Bread, Corp",restaurant,1 (high),canvass re-inspection,60657,"Over Rice'N Bread, Corp, a restaurant in Chicago ZIP 60657. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Top Butcher,grocery store,1 (high),canvass re-inspection,60707,"Top Butcher, a grocery store in Chicago ZIP 60707. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+La Markeza Restaurant & Coffee,restaurant,1 (high),canvass,60609,"La Markeza Restaurant & Coffee, a restaurant in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: canvass.",0
+United Club,restaurant,1 (high),canvass re-inspection,60666,"United Club, a restaurant in Chicago ZIP 60666. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Brightpath West Loop,children's services facility,1 (high),canvass re-inspection,60607,"Brightpath West Loop, a children's services facility in Chicago ZIP 60607. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Zazas Pizzeria,restaurant,1 (high),canvass,60642,"Zazas Pizzeria, a restaurant in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: canvass.",0
+Pizza Tango Inc,restaurant,1 (high),canvass,60623,"Pizza Tango Inc, a restaurant in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",0
+Logan Square Elementary School,school,1 (high),canvass,60647,"Logan Square Elementary School, a school in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: canvass.",0
+Jimmy Johns,restaurant,1 (high),complaint,60609,"Jimmy Johns, a restaurant in Chicago ZIP 60609. Risk category: 1 (high). Inspection type: complaint.",0
+American Montessori Acamedy-South Loop,daycare above and under 2 years,1 (high),short form complaint,60605,"American Montessori Acamedy-South Loop, a daycare above and under 2 years in Chicago ZIP 60605. Risk category: 1 (high). Inspection type: short form complaint.",1
+The Origin Restaurant And Lounge Chicago,restaurant,1 (high),complaint,60647,"The Origin Restaurant And Lounge Chicago, a restaurant in Chicago ZIP 60647. Risk category: 1 (high). Inspection type: complaint.",1
+The Westin Michigan Avenue,restaurant,3 (low),license,60611,"The Westin Michigan Avenue, a restaurant in Chicago ZIP 60611. Risk category: 3 (low). Inspection type: license.",0
+Southside Occupational Academy.,school,1 (high),canvass,60636,"Southside Occupational Academy., a school in Chicago ZIP 60636. Risk category: 1 (high). Inspection type: canvass.",0
+Bia'S Cafeteria Marianao Ii,restaurant,1 (high),complaint,60634,"Bia'S Cafeteria Marianao Ii, a restaurant in Chicago ZIP 60634. Risk category: 1 (high). Inspection type: complaint.",0
+Zam Zam Middle Eastern Grill,restaurant,1 (high),complaint,60657,"Zam Zam Middle Eastern Grill, a restaurant in Chicago ZIP 60657. Risk category: 1 (high). Inspection type: complaint.",0
+Roti Modern Mediterranean,restaurant,1 (high),complaint,60642,"Roti Modern Mediterranean, a restaurant in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: complaint.",1
+James Weldon Johnson Cpc,school,1 (high),canvass,60623,"James Weldon Johnson Cpc, a school in Chicago ZIP 60623. Risk category: 1 (high). Inspection type: canvass.",1
+Douglass (H/S),school,1 (high),canvass,60644,"Douglass (H/S), a school in Chicago ZIP 60644. Risk category: 1 (high). Inspection type: canvass.",0
+Esperanza School,school,1 (high),canvass re-inspection,60622,"Esperanza School, a school in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+El Gallo Maro 2,restaurant,1 (high),license re-inspection,60646,"El Gallo Maro 2, a restaurant in Chicago ZIP 60646. Risk category: 1 (high). Inspection type: license re-inspection.",0
+Seashell On 111Th Inc,restaurant,2 (medium),complaint re-inspection,60628,"Seashell On 111Th Inc, a restaurant in Chicago ZIP 60628. Risk category: 2 (medium). Inspection type: complaint re-inspection.",0
+Mansueto High School,school,1 (high),canvass,60632,"Mansueto High School, a school in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",0
+Dunkin',restaurant,2 (medium),short form complaint,60608,"Dunkin', a restaurant in Chicago ZIP 60608. Risk category: 2 (medium). Inspection type: short form complaint.",0
+Halal Mandi House,restaurant,1 (high),complaint re-inspection,60659,"Halal Mandi House, a restaurant in Chicago ZIP 60659. Risk category: 1 (high). Inspection type: complaint re-inspection.",1
+Josephinum Academy,school,1 (high),canvass,60622,"Josephinum Academy, a school in Chicago ZIP 60622. Risk category: 1 (high). Inspection type: canvass.",0
+Memories Pub,restaurant,3 (low),short form complaint,60660,"Memories Pub, a restaurant in Chicago ZIP 60660. Risk category: 3 (low). Inspection type: short form complaint.",0
+Delta Sky Club,restaurant,1 (high),canvass re-inspection,60666,"Delta Sky Club, a restaurant in Chicago ZIP 60666. Risk category: 1 (high). Inspection type: canvass re-inspection.",0
+Mount Greenwood Elementary,school,2 (medium),canvass,60655,"Mount Greenwood Elementary, a school in Chicago ZIP 60655. Risk category: 2 (medium). Inspection type: canvass.",0
+Smoothie King,restaurant,2 (medium),complaint,60612,"Smoothie King, a restaurant in Chicago ZIP 60612. Risk category: 2 (medium). Inspection type: complaint.",1
+El Publano,restaurant,1 (high),canvass,60632,"El Publano, a restaurant in Chicago ZIP 60632. Risk category: 1 (high). Inspection type: canvass.",0
+Otis Academy,school,1 (high),canvass,60642,"Otis Academy, a school in Chicago ZIP 60642. Risk category: 1 (high). Inspection type: canvass.",0
+Sun-Sub & Philly'S,restaurant,1 (high),canvass,60639,"Sun-Sub & Philly'S, a restaurant in Chicago ZIP 60639. Risk category: 1 (high). Inspection type: canvass.",0
+"Cb Mini Mart,Corp",grocery store,2 (medium),canvass,60620,"Cb Mini Mart,Corp, a grocery store in Chicago ZIP 60620. Risk category: 2 (medium). Inspection type: canvass.",0

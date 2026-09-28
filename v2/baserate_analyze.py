@@ -19,7 +19,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import OneHotEncoder
 
 from baserate_exp import SEEDS, seed_rate
-from common import MODELS, OUT, TASK_ORDER, load
+from common import MODELS, OUT, PREFIX, TASK_ORDER, load
 
 B = 5000
 EPS = 1e-3
@@ -134,10 +134,13 @@ COMPARISONS = [  # (family, a, b, metric): difference a - b; for Brier/log loss,
 ]
 
 
+POOL = {}  # (family, model) -> list of per-task bootstrap difference vectors (post hoc pooled test)
+
+
 def main(models):
     tests, arms = [], []
     for model in models:
-        path = os.path.join(OUT, f"e1_{model}.csv")
+        path = os.path.join(OUT, f"{PREFIX}_{model}.csv")
         if not os.path.exists(path):
             print(f"{model}: no data")
             continue
@@ -169,6 +172,7 @@ def main(models):
                 per_seed = pa - pb
                 seed_sig = [int(np.percentile(ba[s] - bb[s], 2.5) > 0) - int(np.percentile(ba[s] - bb[s], 97.5) < 0)
                             for s in range(len(per_seed))] if len(per_seed) > 1 else []
+                POOL.setdefault((fam, model), []).append((d, pa.mean() - pb.mean()))
                 tests.append(dict(model=model, provider=PROVIDER.get(model, "?"), cheap=model in CHEAP, task=task,
                                   family=fam, a=a, b=b, metric=met, a_value=pa.mean(), b_value=pb.mean(),
                                   est=pa.mean() - pb.mean(), lo=np.percentile(d, 2.5), hi=np.percentile(d, 97.5),
@@ -183,8 +187,21 @@ def main(models):
     T["holm_all"] = False
     for _, g in T.groupby("family"):
         T.loc[g.index, "holm_all"] = holm(g.p.values)
-    T.to_csv(os.path.join(OUT, "e1_tests.csv"), index=False)
-    pd.DataFrame(arms).to_csv(os.path.join(OUT, "e1_arms.csv"), index=False)
+    T.to_csv(os.path.join(OUT, f"{PREFIX}_tests.csv"), index=False)
+    # POST HOC (not preregistered; added 2026-09-28 after seeing 2 of 9 models): per model, the mean over tasks of the
+    # per-task differences; bootstrap resamples test cases within each task independently. Holm across models.
+    P = []
+    for (fam, model), lst in POOL.items():
+        d = np.mean([v[0] for v in lst], 0)
+        P.append(dict(family=fam, model=model, tasks=len(lst), est=np.mean([v[1] for v in lst]),
+                      lo=np.percentile(d, 2.5), hi=np.percentile(d, 97.5), p=pval(d),
+                      tasks_positive=sum(v[1] > 0 for v in lst)))
+    P = pd.DataFrame(P)
+    P["holm"] = False
+    for _, g in P.groupby("family"):
+        P.loc[g.index, "holm"] = holm(g.p.values)
+    P.to_csv(os.path.join(OUT, f"{PREFIX}_posthoc_pooled.csv"), index=False)
+    pd.DataFrame(arms).to_csv(os.path.join(OUT, f"{PREFIX}_arms.csv"), index=False)
     write_summary(T, pd.DataFrame(arms))
     return T
 
@@ -240,9 +257,9 @@ def write_summary(T, Aa):
     L += ["## Mechanism (exploratory): mean prediction vs stated rate; ranking", "",
           W[["model", "task", "rate", "mean zs", "mean told", "zs_miss", "told_miss", "auroc zs", "auroc told"]]
           .to_markdown(index=False, floatfmt=".3f"), ""]
-    open(os.path.join(OUT, "e1_summary.md"), "w").write("\n".join(L))
+    open(os.path.join(OUT, f"{PREFIX}_summary.md"), "w").write("\n".join(L))
 
 
 if __name__ == "__main__":
     main(sys.argv[1:] or MODELS)
-    print(open(os.path.join(OUT, "e1_summary.md")).read()[:6000])
+    print(open(os.path.join(OUT, f"{PREFIX}_summary.md")).read()[:6000])

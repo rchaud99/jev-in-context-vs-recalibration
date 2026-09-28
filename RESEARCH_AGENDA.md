@@ -116,3 +116,49 @@ Anything not listed above is labelled exploratory in the write-up.
 - `v2/common.py`: clients, ledger, cache.
 - `v2/baserate_exp.py`: data collection.
 - `v2/baserate_analyze.py`: all arms and statistics. Written before any E1 data exists; only bug fixes may change it afterwards, and each fix is logged.
+
+## 3. PREREGISTRATION — E1-R: confirmatory replication on fresh September 2026 data
+Written 2026-09-28, about 19:45, before any model was run on the fresh data. At that point E1 was complete for 7 of 9
+configurations (DeepSeek-logprob and Haiku still running).
+
+**Why.** In E1, the preregistered per-task criterion (≥ 5/8 tasks after Holm) was met by only 2 configurations
+(GPT-4o-mini and Llama-3.3-70B, both logprob). Jev reached 3/8, so the v1 "5/8" did not replicate on the repaired
+data. Two patterns that were *not* the preregistered primary test stood out:
+- (a) told − shift, averaged over tasks, was significantly > 0 for 6 of 7 configurations; Gemini was null.
+- (b) told − const was significantly > 0 for 6 of 7: telling the model the base rate gave probabilities *worse than
+  outputting the base rate itself*. The exception was Gemini, where told beat the constant.
+
+These are post hoc. E1-R tests them on data no model or analysis has touched.
+
+**Data.** `data/v2_fresh/` (`v2/fresh_data.py`): the same sources, templates and leak repairs.
+- Windows: September 2026, after every model's training cutoff. See the script for each task's window.
+- Tasks: nyc311, crimes, hn, github_prs and inspections, the tasks with ≥ 600 fresh rows.
+- Excluded:
+  - shelter (225 rows) and Stack Overflow (347 rows): too few rows;
+  - flights: September BTS data is not published yet.
+- Split: first 300 rows = test; U = next 300 = unlabelled pool.
+- Protocol: identical to E1 (`V2_DATASET=v2_fresh`) — same prompts, seeds (100-label rate estimate), arms and clipping. No wording variants.
+
+**Models.** All 9 E1 configurations, same pinned providers.
+
+**Primary tests.** Per model: the mean over the 5 tasks of the per-task, seed-averaged Brier difference. Bootstrap resamples the 300 test cases within each task (B=5000); p = 2 × the smaller tail; Holm across the 9 configurations.
+- **R1:** Brier(told) − Brier(const) > 0.
+  - Predicted > 0 for: jev, qwen3.7-flash, gpt-4o-mini, llama-3.3-70b, gpt-4o-mini-verbal, deepseek-v4-flash-verbal.
+  - Predicted < 0 for gemini-3.8-flash.
+  - For deepseek-v4-flash and claude-haiku-4.5: predicted to have the sign of their E1 pooled estimate. This is fixed mechanically when their E1 finishes, before their E1-R analysis is looked at.
+- **R2:** Brier(told) − Brier(shift) > 0.
+  - Predicted > 0 for every configuration except gemini-3.8-flash (predicted null: CI includes 0).
+  - deepseek-v4-flash and claude-haiku-4.5: as for R1.
+
+**Criterion for calling the headline claim (R1) robust.**
+- Holm-significant in the predicted direction for ≥ 5 configurations;
+- those configurations span ≥ 3 providers and include ≥ 1 cheap model (jev, qwen or deepseek);
+- the per-seed estimates of the pooled difference have the same sign in all 3 seeds for each of them;
+- no configuration is Holm-significant in the direction opposite to its prediction.
+
+The same criterion applies to R2.
+
+**Secondary (reported, no criterion).**
+- Per-task Holm counts for R1 and R2.
+- Shift − const, Platt(100) − const, LR(100) − const, Platt(100) − LR(100).
+- Everything combined over E1 + E1-R (13 task datasets).
