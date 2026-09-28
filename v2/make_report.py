@@ -64,6 +64,48 @@ def forest(T, family, path, title, xlabel):
     plt.close(fig)
 
 
+def pooled_chart(path, prefixes=("e1", "e1r"), fams=(("told-const", "told − constant"), ("H1 told-shift", "told − code shift"))):
+    """Per model: pooled mean Brier difference over tasks with 95% CI, for each dataset (E1 filled, E1-R open)."""
+    frames = []
+    for pre in prefixes:
+        f = os.path.join(OUT, f"{pre}_posthoc_pooled.csv")
+        if os.path.exists(f):
+            d = pd.read_csv(f)
+            d["data"] = pre
+            frames.append(d)
+    P = pd.concat(frames)
+    models = [m for m in ORDER if m in set(P.model)]
+    fig, axes = plt.subplots(1, len(fams), figsize=(7.2, 0.33 * len(models) + 1.0), sharey=True)
+    for ax, (fam, lab) in zip(np.atleast_1d(axes), fams):
+        for j, pre in enumerate(prefixes):
+            g = P[(P.family == fam) & (P.data == pre)].set_index("model")
+            for i, m in enumerate(models):
+                if m not in g.index:
+                    continue
+                r = g.loc[m]
+                y = len(models) - 1 - i + (0.17 if j == 0 else -0.17)
+                c = BLUE if r.lo > 0 else ORANGE if r.hi < 0 else GRAY
+                ax.plot([r.lo, r.hi], [y, y], color=c, lw=1.6)
+                ax.plot(r.est, y, "o" if j == 0 else "s", ms=4.5, mfc=c if j == 0 else "white", mec=c, mew=1.2)
+        ax.axvline(0, color=MUTED, lw=0.8)
+        ax.set_title(lab, fontsize=8.5, color=INK, loc="left")
+        ax.tick_params(labelsize=7, colors=MUTED)
+        ax.set_xlabel("Δ Brier (> 0: told is worse)", fontsize=7, color=MUTED)
+        for s in ["top", "right", "left"]:
+            ax.spines[s].set_visible(False)
+        ax.grid(axis="x", color="#ecebe6", lw=0.6)
+    ax0 = np.atleast_1d(axes)[0]
+    ax0.set_yticks(range(len(models)))
+    ax0.set_yticklabels(models[::-1], fontsize=7.5)
+    from matplotlib.lines import Line2D
+    h = [Line2D([], [], marker="o", ls="", color=MUTED, label="E1: 8 tasks, June–Aug 2026"),
+         Line2D([], [], marker="s", ls="", mfc="white", mec=MUTED, label="E1-R: 5 fresh tasks, Sept 2026")]
+    fig.legend(handles=h, loc="lower center", ncol=2, fontsize=7, frameon=False)
+    fig.tight_layout(rect=(0, 0.06, 1, 1))
+    fig.savefig(path, dpi=200)
+    plt.close(fig)
+
+
 def verdict_table(T, family, a_name, b_name):
     g = T[T.family == family]
     rows = []

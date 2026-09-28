@@ -172,7 +172,7 @@ def main(models):
                 per_seed = pa - pb
                 seed_sig = [int(np.percentile(ba[s] - bb[s], 2.5) > 0) - int(np.percentile(ba[s] - bb[s], 97.5) < 0)
                             for s in range(len(per_seed))] if len(per_seed) > 1 else []
-                POOL.setdefault((fam, model), []).append((d, pa.mean() - pb.mean()))
+                POOL.setdefault((fam, model), []).append((d, pa.mean() - pb.mean(), per_seed))
                 tests.append(dict(model=model, provider=PROVIDER.get(model, "?"), cheap=model in CHEAP, task=task,
                                   family=fam, a=a, b=b, metric=met, a_value=pa.mean(), b_value=pb.mean(),
                                   est=pa.mean() - pb.mean(), lo=np.percentile(d, 2.5), hi=np.percentile(d, 97.5),
@@ -195,7 +195,9 @@ def main(models):
         d = np.mean([v[0] for v in lst], 0)
         P.append(dict(family=fam, model=model, tasks=len(lst), est=np.mean([v[1] for v in lst]),
                       lo=np.percentile(d, 2.5), hi=np.percentile(d, 97.5), p=pval(d),
-                      tasks_positive=sum(v[1] > 0 for v in lst)))
+                      tasks_positive=sum(v[1] > 0 for v in lst),
+                      per_seed=" ".join(f"{x:+.4f}" for x in np.mean([v[2] for v in lst if len(v[2]) == 3], 0))
+                      if all(len(v[2]) == 3 for v in lst) else ""))
     P = pd.DataFrame(P)
     P["holm"] = False
     for _, g in P.groupby("family"):

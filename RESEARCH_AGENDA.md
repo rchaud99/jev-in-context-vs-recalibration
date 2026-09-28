@@ -162,3 +162,6 @@ The same criterion applies to R2.
 - Per-task Holm counts for R1 and R2.
 - Shift − const, Platt(100) − const, LR(100) − const, Platt(100) − LR(100).
 - Everything combined over E1 + E1-R (13 task datasets).
+
+**Mechanical prediction fix, 19:39 (before any E1-R analysis of this model):** deepseek-v4-flash's E1 pooled estimates
+are told − const +0.073 and told − shift +0.047, both > 0. So its R1 and R2 predictions are > 0.
