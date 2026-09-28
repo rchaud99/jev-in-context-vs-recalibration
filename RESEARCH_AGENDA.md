@@ -168,3 +168,21 @@ are told − const +0.073 and told − shift +0.047, both > 0. So its R1 and R2 
 
 **Mechanical prediction fix, 19:44 (before any E1-R analysis of this model):** claude-haiku-4.5's E1 pooled estimates
 are told − const +0.020 and told − shift +0.013, both > 0. So its R1 and R2 predictions are > 0.
+
+## 4. PREREGISTRATION — E2: boundary check with a stronger logprob model
+Written 2026-09-28, about 19:47, before any E2 data. The only pilot data is 20 cases × 2 tasks (`v2/pilot.py`).
+
+**Why.**
+- In E1/E1-R, the one configuration whose told probabilities beat the constant was also the best ranker (Gemini 3.8 Flash).
+- Across all cells, told − const shrinks as the model's zero-shot AUROC rises (exploratory table in `results/v2/replication_table.md`).
+- Is "telling doesn't beat the constant" about model strength, or about elicitation (Gemini states its probabilities)?
+
+**Model.** deepseek-v4-pro, pinned to StreamLake fp8, first-token logprobs, reasoning off (about $0.045 per 1,000 decisions).
+
+**Data and protocol.** Identical to E1 (8 tasks, wordings included) and E1-R (5 fresh tasks), with the same seeds, arms and statistics.
+
+**Predictions.**
+- **E2a:** told − shift > 0 (pooled) on both datasets. Every logprob configuration showed this.
+- **E2b:** told − const is conditional on ranking. If deepseek-v4-pro's mean zero-shot AUROC over the tasks of a dataset is ≥ 0.70, told − const ≤ 0 on that dataset (the CI includes 0 or lies below it). Otherwise told − const > 0.
+
+This is a single-model check. It is reported as such and cannot by itself establish the boundary.

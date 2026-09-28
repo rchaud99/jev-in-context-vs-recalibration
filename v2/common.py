@@ -201,6 +201,8 @@ LOGPROB_MODELS = {  # name: (OpenRouter id, pinned provider, extra body)
     "llama-3.3-70b": ("meta-llama/llama-3.3-70b-instruct", "parasail/fp8", {}),
     "gpt-4o-mini": ("openai/gpt-4o-mini", "openai", {}),
     "qwen3.7-flash": ("qwen/qwen3.7-flash", "alibaba", {"reasoning": {"enabled": False}}),
+    # E2 (boundary check, added after E1): a stronger, pricier logprob model
+    "deepseek-v4-pro": ("deepseek/deepseek-v4-pro", "streamlake/fp8", {"reasoning": {"enabled": False}}),
 }
 SYSTEM = "You predict outcomes of real-world cases. Answer with just Yes or No."
 
