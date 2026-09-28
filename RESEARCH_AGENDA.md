@@ -166,5 +166,5 @@ The same criterion applies to R2.
 **Mechanical prediction fix, 19:39 (before any E1-R analysis of this model):** deepseek-v4-flash's E1 pooled estimates
 are told − const +0.073 and told − shift +0.047, both > 0. So its R1 and R2 predictions are > 0.
 
-**Mechanical prediction fix, 19:58 (before any E1-R analysis of this model):** claude-haiku-4.5's E1 pooled estimates
+**Mechanical prediction fix, 19:44 (before any E1-R analysis of this model):** claude-haiku-4.5's E1 pooled estimates
 are told − const +0.020 and told − shift +0.013, both > 0. So its R1 and R2 predictions are > 0.
