@@ -118,7 +118,7 @@ Anything not listed above is labelled exploratory in the write-up.
 - `v2/baserate_analyze.py`: all arms and statistics. Written before any E1 data exists; only bug fixes may change it afterwards, and each fix is logged.
 
 ## 3. PREREGISTRATION — E1-R: confirmatory replication on fresh September 2026 data
-Written 2026-09-28, about 19:45, before any model was run on the fresh data. At that point E1 was complete for 7 of 9
+Written 2026-09-28 at 19:23 (commit cfc2884), before any model was run on the fresh data. At that point E1 was complete for 7 of 9
 configurations (DeepSeek-logprob and Haiku still running).
 
 **Why.** In E1, the preregistered per-task criterion (≥ 5/8 tasks after Holm) was met by only 2 configurations
