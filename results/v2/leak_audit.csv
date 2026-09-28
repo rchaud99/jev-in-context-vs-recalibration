@@ -1,0 +1,46 @@
+task,feature,levels,cv_auroc,pure_levels
+flights,airline,11,0.5665393750544757,
+flights,date,30,0.597522443998954,
+flights,dep_time,7,0.6755589209448271,
+flights,destination,42,0.562049213370522,"Fort Lauderdale, FL=0.03(n=35)"
+flights,length,4,0.5441212520700776,
+inspections,business,1333,0.4830910138986742,
+inspections,facility_type,37,0.48862569931968625,
+inspections,risk,3,0.47327060225731626,
+inspections,inspection_type,10,0.5641410864413434,
+inspections,zip,60,0.5830773686365042,"60610=0.00(n=34), 60620=0.00(n=28)"
+shelter,type,3,0.6788014448963227,
+shelter,breed,223,0.6974667774086379,"bat=0.00(n=46), chicken=0.00(n=27)"
+shelter,color,137,0.6643676967579333,agouti=0.00(n=20)
+shelter,sex,5,0.7814397410929087,
+shelter,size,8,0.6366341720128308,
+shelter,age,7,0.6688659926681176,
+shelter,intake_type,6,0.5845574020506358,
+shelter,intake_subtype,13,0.6402473078244931,
+shelter,intake_condition,5,0.6004580636384464,untreatable=0.02(n=92)
+shelter,intake_jurisdiction,12,0.5263077815328217,
+nyc311,agency,13,0.9037556855100713,NYPD=1.00(n=752)
+nyc311,complaint_type,98,0.9146646451519745,"Abandoned Vehicle=1.00(n=20), Blocked Driveway=1.00(n=69), Dirty Condition=1.00(n=29), Illegal Parking=1.00(n=253), Noise - Commercial=1.00(n=26), Noise - Residential=1.00(n=165), Noise - Street/Sidewalk=1.00(n=116), Noise - Vehicle=1.00(n=36)"
+nyc311,descriptor,252,0.9084701465598152,"Banging/Pounding=1.00(n=69), Blocked Crosswalk=1.00(n=20), Blocked Hydrant=1.00(n=69), Blocked Sidewalk=1.00(n=38), Loud Music/Party=1.00(n=213), Loud Talking=1.00(n=34), No Access=1.00(n=47), Partial Access=1.00(n=22), Posted Parking Sign Violation=1.00(n=64), Trash=1.00(n=30), With License Plate=1"
+nyc311,location_type,38,0.8529795682622192,"Residential Building/House=1.00(n=189), Store/Commercial=1.00(n=22), Street/Sidewalk=1.00(n=529)"
+nyc311,borough,6,0.4914879792072774,
+nyc311,channel,4,0.6610771785430655,
+nyc311,weekday,7,0.5409486679662119,
+nyc311,time,7,0.5785936033499386,
+hn,domain,918,0.546989186112692,en.wikipedia.org=0.00(n=23)
+hn,kind,3,0.504208472233515,
+hn,weekday,7,0.4898544597121718,
+hn,time,7,0.5857712009106432,
+github_prs,repo,15,0.7320726266038766,
+github_prs,draft,2,0.5481962786650286,draft=0.00(n=48)
+github_prs,description,5,0.535255425880426,
+stackoverflow,main_tag,376,0.6077483350542419,
+stackoverflow,has_code,2,0.5930365584662061,
+stackoverflow,length,4,0.543864585296452,
+crimes,primary_type,24,0.7607237707818689,narcotics=0.98(n=50)
+crimes,description,132,0.8321113588653847,"burglary from motor vehicle=0.02(n=45), credit card fraud=0.00(n=23), fraud or confidence game=0.00(n=27), harassment by electronic means=0.00(n=20), over $500=0.00(n=91), telephone threat=0.00(n=20), theft from motor vehicle=0.00(n=42), to vehicle=0.02(n=101)"
+crimes,location_description,69,0.5978358339718064,commercial / business office=0.00(n=26)
+crimes,domestic,2,0.5030904387083032,
+crimes,district,23,0.5072356463809743,
+crimes,time,7,0.5599208407917294,
+crimes,weekday,7,0.46346617008922586,
