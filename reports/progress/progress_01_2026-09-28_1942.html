@@ -1,0 +1,103 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Progress report 1</title><style>
+@page { size: Letter; margin: 16mm 16mm 16mm 16mm; }
+body { font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #0b0b0b; font-size: 10pt;
+       line-height: 1.42; background: #fff; }
+h1 { font-size: 16pt; margin: 0 0 2pt 0; } h2 { font-size: 11.5pt; margin: 12pt 0 4pt 0; border-bottom: 1px solid #e3e2dd; padding-bottom: 2pt; }
+h3 { font-size: 10pt; margin: 8pt 0 3pt 0; }
+.sub { color: #52514e; font-size: 9pt; margin-bottom: 8pt; }
+table { border-collapse: collapse; margin: 4pt 0 8pt 0; font-size: 8.6pt; width: 100%; }
+th, td { border-bottom: 1px solid #e3e2dd; padding: 2.5pt 5pt; text-align: left; vertical-align: top; }
+th { background: #f4f3ef; font-weight: 600; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 8pt; }
+.box { background: #f4f7fc; border-left: 3px solid #2a78d6; padding: 6pt 9pt; margin: 6pt 0; }
+.warn { background: #fdf3ee; border-left: 3px solid #eb6834; padding: 6pt 9pt; margin: 6pt 0; }
+img { width: 100%; } ul { margin: 3pt 0 3pt 16pt; padding: 0; } li { margin: 1.5pt 0; }
+.small { font-size: 8.3pt; color: #52514e; } .pb { page-break-before: always; }
+</style></head><body>
+<h1>Progress report 1: base rate in the prompt, or in code?</h1>
+<div class="sub">2026-09-28, 19:45 EDT · autonomous v2 session · Haiku 4.5 still running (rate-limited), so every count below covers 8 of 9 model configurations.</div>
+
+<h2>Where things stand</h2>
+<div class="box"><b>Candidate headline finding.</b> Put a known base rate in an LLM's prompt ("about 22% of cases like these are yes"). For 7 of the 8 configurations tested, the resulting probabilities score <i>worse</i> (higher Brier) than simply predicting that 22% for every case. They also score worse than applying the same number in code as a one-parameter shift of the model's untold scores. The one exception is Gemini 3.8 Flash, the strongest ranker here.
+<ul>
+<li>This pattern emerged post hoc in E1 (8 tasks). It then held in <b>E1-R</b>, a preregistered replication on 5 fresh September-2026 task samples that no model or analysis had touched.</li>
+<li>Every predicted sign was confirmed after Holm correction, and all 3 seeds agree.</li>
+<li>Haiku's replication is still pending.</li>
+</ul></div>
+<p>The originally preregistered E1 primary criterion (told vs shift significant on ≥5/8 tasks per model) was met by only 2 configurations, GPT-4o-mini and Llama-3.3-70B. The v1 claim "5/8 for Jev" did not replicate on the leak-repaired data: Jev reached 3/8.</p>
+
+<h2>What was done since the start of this session</h2>
+<ul>
+<li><b>Validity fixes.</b>
+  <ul>
+  <li>A single-feature leak screen covered every task and feature.</li>
+  <li>Repaired leaks: shelter (<code>sex</code>, <code>intake_condition</code> dropped; alone, <code>sex</code> gave CV AUROC 0.78), GitHub (the <code>draft</code> state at closing), and crimes (police-initiated offence types dropped).</li>
+  </ul></li>
+<li><b>New baselines, trained on the same 100 labels that give the stated rate.</b> A constant, Platt(100), and logistic regression LR(100).</li>
+<li><b>9 model configurations, 7 providers, each pinned to one provider.</b>
+  <ul>
+  <li>First-token logprobs: Jev (native probabilities), Qwen3.7-Flash, DeepSeek-V4-Flash, GPT-4o-mini, Llama-3.3-70B.</li>
+  <li>Stated probabilities: Gemini 3.8 Flash, Claude Haiku 4.5, and GPT-4o-mini and DeepSeek asked the same way (same models, different elicitation).</li>
+  <li>GPT-4o-mini and Llama have 2023 training cutoffs, and E1-R data is from September 2026, after every model's cutoff. That addresses the memorisation concern.</li>
+  </ul></li>
+<li><b>Preregistrations</b> (RESEARCH_AGENDA.md §2 and §3) were committed before each data collection, and every deviation is logged in AUTONOMOUS_LOG.md.</li>
+</ul>
+
+<h2>Results (Brier differences; positive = the first-named arm is worse)</h2>
+<p>Pooled over tasks per model (mean of per-task, seed-averaged differences; bootstrap within task, B=5000). <b>Bold</b> = significant after Holm across models. Each model has 3 seeds; each seed is a different 100-label estimate of the base rate.</p>
+<img src="progress_01_2026-09-28_1942_pooled.png">
+<h3>E1-R (preregistered confirmatory; 5 fresh tasks × 3 seeds × 300 test cases)</h3>
+<table><tr><th>Model</th><th class=n>told − constant</th><th class=n>told − code shift</th><th class=n>code shift − constant</th><th class=n>Platt(100) − code shift</th></tr><tr><td>jev</td><td class=n><b>+0.006 [+0.001, +0.012]</b></td><td class=n><b>+0.010 [+0.005, +0.015]</b></td><td class=n><b>-0.004 [-0.006, -0.001]</b></td><td class=n>+0.000 [-0.003, +0.003]</td></tr><tr><td>qwen3.7-flash</td><td class=n><b>+0.061 [+0.049, +0.073]</b></td><td class=n><b>+0.052 [+0.041, +0.064]</b></td><td class=n><b>+0.009 [+0.003, +0.015]</b></td><td class=n><b>-0.011 [-0.016, -0.006]</b></td></tr><tr><td>deepseek-v4-flash</td><td class=n><b>+0.060 [+0.048, +0.072]</b></td><td class=n><b>+0.039 [+0.025, +0.052]</b></td><td class=n><b>+0.021 [+0.014, +0.029]</b></td><td class=n><b>-0.023 [-0.030, -0.016]</b></td></tr><tr><td>gpt-4o-mini</td><td class=n><b>+0.127 [+0.110, +0.144]</b></td><td class=n><b>+0.098 [+0.081, +0.117]</b></td><td class=n><b>+0.028 [+0.019, +0.038]</b></td><td class=n><b>-0.028 [-0.038, -0.019]</b></td></tr><tr><td>llama-3.3-70b</td><td class=n><b>+0.265 [+0.241, +0.289]</b></td><td class=n><b>+0.232 [+0.209, +0.256]</b></td><td class=n><b>+0.032 [+0.022, +0.042]</b></td><td class=n><b>-0.032 [-0.041, -0.022]</b></td></tr><tr><td>gpt-4o-mini-verbal</td><td class=n><b>+0.048 [+0.037, +0.059]</b></td><td class=n><b>+0.038 [+0.027, +0.050]</b></td><td class=n><b>+0.010 [+0.005, +0.015]</b></td><td class=n><b>-0.009 [-0.014, -0.004]</b></td></tr><tr><td>deepseek-v4-flash-verbal</td><td class=n><b>+0.020 [+0.014, +0.027]</b></td><td class=n><b>+0.010 [+0.004, +0.017]</b></td><td class=n><b>+0.010 [+0.004, +0.016]</b></td><td class=n><b>-0.008 [-0.014, -0.002]</b></td></tr><tr><td>gemini-3.8-flash</td><td class=n><b>-0.012 [-0.019, -0.006]</b></td><td class=n><b>+0.004 [+0.000, +0.008]</b></td><td class=n><b>-0.017 [-0.024, -0.010]</b></td><td class=n>-0.001 [-0.003, +0.001]</td></tr></table>
+<h3>E1 (8 tasks; told − shift was the preregistered primary, the other columns are post hoc)</h3>
+<table><tr><th>Model</th><th class=n>told − constant</th><th class=n>told − code shift</th><th class=n>code shift − constant</th><th class=n>Platt(100) − code shift</th></tr><tr><td>jev</td><td class=n><b>+0.008 [+0.004, +0.012]</b></td><td class=n><b>+0.010 [+0.007, +0.013]</b></td><td class=n>-0.001 [-0.004, +0.001]</td><td class=n>-0.000 [-0.003, +0.002]</td></tr><tr><td>qwen3.7-flash</td><td class=n><b>+0.044 [+0.035, +0.052]</b></td><td class=n><b>+0.032 [+0.024, +0.040]</b></td><td class=n><b>+0.012 [+0.007, +0.018]</b></td><td class=n><b>-0.014 [-0.018, -0.010]</b></td></tr><tr><td>deepseek-v4-flash</td><td class=n><b>+0.073 [+0.063, +0.083]</b></td><td class=n><b>+0.047 [+0.036, +0.057]</b></td><td class=n><b>+0.026 [+0.019, +0.033]</b></td><td class=n><b>-0.026 [-0.032, -0.019]</b></td></tr><tr><td>gpt-4o-mini</td><td class=n><b>+0.141 [+0.128, +0.154]</b></td><td class=n><b>+0.102 [+0.089, +0.115]</b></td><td class=n><b>+0.039 [+0.031, +0.047]</b></td><td class=n><b>-0.036 [-0.044, -0.028]</b></td></tr><tr><td>llama-3.3-70b</td><td class=n><b>+0.276 [+0.258, +0.294]</b></td><td class=n><b>+0.232 [+0.213, +0.250]</b></td><td class=n><b>+0.044 [+0.035, +0.054]</b></td><td class=n><b>-0.041 [-0.049, -0.034]</b></td></tr><tr><td>gpt-4o-mini-verbal</td><td class=n><b>+0.052 [+0.044, +0.059]</b></td><td class=n><b>+0.034 [+0.026, +0.042]</b></td><td class=n><b>+0.018 [+0.012, +0.023]</b></td><td class=n><b>-0.016 [-0.022, -0.011]</b></td></tr><tr><td>deepseek-v4-flash-verbal</td><td class=n><b>+0.023 [+0.017, +0.029]</b></td><td class=n><b>+0.012 [+0.006, +0.017]</b></td><td class=n><b>+0.011 [+0.006, +0.016]</b></td><td class=n><b>-0.011 [-0.014, -0.007]</b></td></tr><tr><td>gemini-3.8-flash</td><td class=n><b>-0.012 [-0.018, -0.007]</b></td><td class=n>-0.001 [-0.004, +0.002]</td><td class=n><b>-0.012 [-0.017, -0.006]</b></td><td class=n>-0.001 [-0.003, +0.000]</td></tr></table>
+<h3>E1 preregistered per-task criterion (Holm across 8 tasks within model)</h3>
+<table><tr><th>Model</th><th>Provider</th><th>Tasks</th><th>shift better (Holm)</th><th>told better (Holm)</th><th>Mean Δ Brier</th></tr><tr><td>jev</td><td>TypeSafe</td><td class=n>8</td><td class=n>3</td><td class=n>0</td><td class=n>+0.0097</td></tr><tr><td>qwen3.7-flash</td><td>Alibaba</td><td class=n>8</td><td class=n>1</td><td class=n>0</td><td class=n>+0.0315</td></tr><tr><td>deepseek-v4-flash</td><td>DeepSeek (StreamLake)</td><td class=n>8</td><td class=n>4</td><td class=n>0</td><td class=n>+0.0467</td></tr><tr><td>gpt-4o-mini</td><td>OpenAI</td><td class=n>8</td><td class=n>5</td><td class=n>0</td><td class=n>+0.1023</td></tr><tr><td>llama-3.3-70b</td><td>Meta (Parasail)</td><td class=n>8</td><td class=n>6</td><td class=n>0</td><td class=n>+0.2320</td></tr><tr><td>gpt-4o-mini-verbal</td><td>OpenAI</td><td class=n>8</td><td class=n>2</td><td class=n>0</td><td class=n>+0.0341</td></tr><tr><td>deepseek-v4-flash-verbal</td><td>DeepSeek (StreamLake)</td><td class=n>8</td><td class=n>3</td><td class=n>0</td><td class=n>+0.0117</td></tr><tr><td>gemini-3.8-flash</td><td>Google</td><td class=n>8</td><td class=n>0</td><td class=n>0</td><td class=n>-0.0007</td></tr></table>
+
+
+<h2>Reading the results</h2>
+<ul>
+<li><b>Mechanism</b> (exploratory, E1).
+  <ul>
+  <li>Telling roughly halves each model's miss of the base rate (mean absolute miss 0.05–0.35 when told, vs 0.11–0.39 zero-shot) but leaves a residual. Llama gets worse when told, because its first-token probabilities are nearly binary.</li>
+  <li>Ranking doesn't change (AUROC told ≈ zero-shot).</li>
+  <li>The code-side shift removes the miss exactly and keeps the ranking.</li>
+  </ul></li>
+<li><b>This is not only an artefact of logprob elicitation.</b> The same two models asked to <i>state</i> probabilities show the same sign, with smaller effects.</li>
+<li><b>Where the finding stops:</b> Gemini 3.8 Flash ranks these tasks best (zero-shot AUROC ≈ 0.70). Told Gemini beats the constant, and told ≈ shift: +0.004 in E1-R, significant but tiny.</li>
+<li><b>Sobering baseline result (post hoc).</b> On the leak-repaired tasks, only Gemini's probabilities clearly beat the constant. For the cheap models, even the best code-side fix (Platt on 100 labels) only matches the constant, and LR(100) beats their shifted scores.</li>
+</ul>
+
+<h2>Survived vs killed</h2>
+<table><tr><th>Survived / new</th><th>Killed or weakened</th></tr>
+<tr><td>
+<ul>
+<li><b>NEW (confirmed in E1-R):</b> telling the base rate scores worse than the constant, for 7/8 configurations from 5 providers.</li>
+<li>Telling scores worse than the code shift for 8/8 in E1-R. Gemini's prediction was a null; it came out a tiny positive.</li>
+<li>Telling beats zero-shot on most configurations. Telling helps, but not enough.</li>
+<li>v1: in-context examples help ranking on 5/8 tasks (not re-run).</li>
+</ul></td><td>
+<ul>
+<li>v1 "shift beats telling on 5/8 for Jev" → 3/8 on repaired data.</li>
+<li>v1 "one sentence fixes most of it": measured against zero-shot, not the constant.</li>
+<li>Shelter, crimes and GitHub v1 AUROCs: inflated by leaks.</li>
+<li>All v1 Opus claims: withdrawn (provider-route confound, contamination unchecked).</li>
+<li>Full list: CLAIMS.md (12 killed claims).</li>
+</ul></td></tr></table>
+
+<h2>What's next</h2>
+<ol>
+<li>Finish Haiku (E1 + E1-R), then the final Holm over all 9 configurations. Send the CONFIRMED/NEW message.</li>
+<li>Red-team the finding:
+  <ul>
+  <li>Does it hold on tasks where the model ranks well (AUROC ≥ 0.65)?</li>
+  <li>Is it the sentence's position or wording? E1 already tested 2 extra wordings.</li>
+  <li>Is it the one-token logprob protocol?</li>
+  </ul></li>
+<li>README rewrite as a neutral guide, DIGEST, website draft.</li>
+</ol>
+
+<h2>API spend (v2 ledger; v1 spent $33.56 before this session)</h2>
+<table><tr><th>Model</th><th class=n>Decisions</th><th class=n>Cost</th></tr><tr><td>claude-haiku-4.5</td><td class=n>15,155</td><td class=n>$1.299</td></tr><tr><td>llama-3.3-70b</td><td class=n>22,900</td><td class=n>$0.624</td></tr><tr><td>gemini-3.8-flash</td><td class=n>23,180</td><td class=n>$0.620</td></tr><tr><td>gpt-4o-mini</td><td class=n>22,764</td><td class=n>$0.463</td></tr><tr><td>gpt-4o-mini-verbal</td><td class=n>30,030</td><td class=n>$0.268</td></tr><tr><td>deepseek-v4-flash</td><td class=n>22,833</td><td class=n>$0.146</td></tr><tr><td>qwen3.7-flash</td><td class=n>22,721</td><td class=n>$0.103</td></tr><tr><td>jev</td><td class=n>23,180</td><td class=n>$0.083</td></tr><tr><td>deepseek-v4-flash-verbal</td><td class=n>23,180</td><td class=n>$0.070</td></tr><tr><th>Total v2</th><th></th><th class=n>$3.68</th></tr></table>
+<p class="small">Hard cap for this session: $30. The OpenRouter account is shared with other agents.</p>
+
+</body></html>

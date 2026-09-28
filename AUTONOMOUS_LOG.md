@@ -73,3 +73,18 @@ Exploratory check on the v1 Gemini cache: told ≈ shift (|Δ| ≤ 0.008). So th
   - Shift beats const on 2/8 (Holm) and told beats const on 2/8.
 - **Post hoc test added before seeing 7 of the 9 configurations:** a per-model mean of Δ over the 8 tasks. The bootstrap resamples test cases within each task, with Holm across models. It is labelled post hoc everywhere.
 - **Qwen complete (8/8):** H1 is significant on 3/8. Post hoc pooled Δ +0.032 [+0.024, +0.040]. **But shift is *worse* than the constant for Qwen** (pooled +0.012): its zero-shot ranking is too weak and its scores too extreme.
+
+## 19:13–19:25 — E1 interim (7/9) → E1-R preregistered and launched
+- **E1 H1 (preregistered per-task criterion):**
+  - Replicates only for GPT-4o-mini (5/8) and Llama-3.3-70B (6/8).
+  - Jev 3/8, Qwen 1/8, GPT-4o-mini-verbal 2/8, DeepSeek-verbal 3/8, Gemini 0/8.
+  - Told was never significantly better than shift in any cell.
+  - **P1 is refuted** for Jev and Qwen (and was not tested as P1 for the verbal configurations). **P2 (Gemini null) is confirmed.**
+- **Post hoc pooled** (mean over 8 tasks; bootstrap within task; Holm over models):
+  - told − shift > 0 for 6/7 (not Gemini);
+  - **told − const > 0 for 6/7**: telling the rate is worse than outputting the rate. Only Gemini's told beats the constant.
+- On the repaired data, only Gemini (and LR(100) on 4/8 tasks) clearly beats the constant. The cheaper models' zero-shot scores carry little signal beyond the base rate here.
+- **Fresh data (`v2/fresh_data.py`, $0):** September 2026 pulls, same templates and repairs.
+  - 5 tasks with ≥600 rows: nyc311, crimes, hn, github_prs, inspections.
+  - Shelter (225 rows) and SO (347) are too small; flights is not published yet.
+- **E1-R preregistered** (RESEARCH_AGENDA §3, commit cfc2884) as a confirmatory test of the two post hoc patterns on untouched, post-cutoff data. Launched for 8 configurations at 19:25; Haiku follows when its E1 run ends (20 rpm limit).

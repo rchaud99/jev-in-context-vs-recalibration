@@ -129,12 +129,33 @@ h3 { font-size: 10pt; margin: 8pt 0 3pt 0; }
 table { border-collapse: collapse; margin: 4pt 0 8pt 0; font-size: 8.6pt; width: 100%; }
 th, td { border-bottom: 1px solid #e3e2dd; padding: 2.5pt 5pt; text-align: left; vertical-align: top; }
 th { background: #f4f3ef; font-weight: 600; }
-td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 8pt; }
 .box { background: #f4f7fc; border-left: 3px solid #2a78d6; padding: 6pt 9pt; margin: 6pt 0; }
 .warn { background: #fdf3ee; border-left: 3px solid #eb6834; padding: 6pt 9pt; margin: 6pt 0; }
 img { width: 100%; } ul { margin: 3pt 0 3pt 16pt; padding: 0; } li { margin: 1.5pt 0; }
 .small { font-size: 8.3pt; color: #52514e; } .pb { page-break-before: always; }
 """
+
+
+def pooled_table(prefix):
+    f = os.path.join(OUT, f"{prefix}_posthoc_pooled.csv")
+    if not os.path.exists(f):
+        return "<p>(not available)</p>"
+    P = pd.read_csv(f)
+    rows = []
+    for m in [m for m in ORDER if m in set(P.model)]:
+        cells = []
+        for fam in ["told-const", "H1 told-shift", "P5 shift-const", "P6 platt-shift"]:
+            r = P[(P.model == m) & (P.family == fam)]
+            if r.empty:
+                cells.append("<td></td>")
+                continue
+            r = r.iloc[0]
+            txt = f"{r.est:+.3f} [{r.lo:+.3f}, {r.hi:+.3f}]"
+            cells.append(f"<td class=n>{'<b>' + txt + '</b>' if r.holm else txt}</td>")
+        rows.append(f"<tr><td>{m}</td>{''.join(cells)}</tr>")
+    return ("<table><tr><th>Model</th><th class=n>told − constant</th><th class=n>told − code shift</th>"
+            "<th class=n>code shift − constant</th><th class=n>Platt(100) − code shift</th></tr>" + "".join(rows) + "</table>")
 
 
 def spend_html():
@@ -153,10 +174,15 @@ def main(nn, notes_path):
     forest(T, "H1 told-shift", png, "Brier(told) − Brier(code shift), per task, 95% paired bootstrap CI (mean of 3 seeds)",
            "Δ Brier (> 0: shifting in code is better)")
     notes = open(notes_path).read()
+    ppng = os.path.join(REP, f"{stem}_pooled.png")
+    pooled_chart(ppng)
     html = f"""<!doctype html><html><head><meta charset="utf-8"><title>Progress report {nn}</title><style>{CSS}</style></head><body>
 {notes.replace('{{H1_TABLE}}', verdict_table(T, 'H1 told-shift', 'told', 'shift'))
       .replace('{{CHART}}', f'<img src="{os.path.basename(png)}">')
       .replace('{{SPEND}}', spend_html())
+      .replace('{{POOLED_CHART}}', f'<img src="{os.path.basename(ppng)}">')
+      .replace('{{POOLED_E1}}', pooled_table('e1'))
+      .replace('{{POOLED_E1R}}', pooled_table('e1r'))
       .replace('{{P5_TABLE}}', verdict_table(T, 'P5 shift-const', 'shift', 'const'))
       .replace('{{P6_TABLE}}', verdict_table(T, 'P6 platt-shift', 'Platt', 'shift'))
       .replace('{{LR_TABLE}}', verdict_table(T, 'LR lr-shift', 'LR', 'shift'))

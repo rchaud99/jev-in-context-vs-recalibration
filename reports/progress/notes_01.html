@@ -1,0 +1,85 @@
+<h1>Progress report 1: base rate in the prompt, or in code?</h1>
+<div class="sub">2026-09-28, 19:45 EDT · autonomous v2 session · Haiku 4.5 still running (rate-limited), so every count below covers 8 of 9 model configurations.</div>
+
+<h2>Where things stand</h2>
+<div class="box"><b>Candidate headline finding.</b> Put a known base rate in an LLM's prompt ("about 22% of cases like these are yes"). For 7 of the 8 configurations tested, the resulting probabilities score <i>worse</i> (higher Brier) than simply predicting that 22% for every case. They also score worse than applying the same number in code as a one-parameter shift of the model's untold scores. The one exception is Gemini 3.8 Flash, the strongest ranker here.
+<ul>
+<li>This pattern emerged post hoc in E1 (8 tasks). It then held in <b>E1-R</b>, a preregistered replication on 5 fresh September-2026 task samples that no model or analysis had touched.</li>
+<li>Every predicted sign was confirmed after Holm correction, and all 3 seeds agree.</li>
+<li>Haiku's replication is still pending.</li>
+</ul></div>
+<p>The originally preregistered E1 primary criterion (told vs shift significant on ≥5/8 tasks per model) was met by only 2 configurations, GPT-4o-mini and Llama-3.3-70B. The v1 claim "5/8 for Jev" did not replicate on the leak-repaired data: Jev reached 3/8.</p>
+
+<h2>What was done since the start of this session</h2>
+<ul>
+<li><b>Validity fixes.</b>
+  <ul>
+  <li>A single-feature leak screen covered every task and feature.</li>
+  <li>Repaired leaks: shelter (<code>sex</code>, <code>intake_condition</code> dropped; alone, <code>sex</code> gave CV AUROC 0.78), GitHub (the <code>draft</code> state at closing), and crimes (police-initiated offence types dropped).</li>
+  </ul></li>
+<li><b>New baselines, trained on the same 100 labels that give the stated rate.</b> A constant, Platt(100), and logistic regression LR(100).</li>
+<li><b>9 model configurations, 7 providers, each pinned to one provider.</b>
+  <ul>
+  <li>First-token logprobs: Jev (native probabilities), Qwen3.7-Flash, DeepSeek-V4-Flash, GPT-4o-mini, Llama-3.3-70B.</li>
+  <li>Stated probabilities: Gemini 3.8 Flash, Claude Haiku 4.5, and GPT-4o-mini and DeepSeek asked the same way (same models, different elicitation).</li>
+  <li>GPT-4o-mini and Llama have 2023 training cutoffs, and E1-R data is from September 2026, after every model's cutoff. That addresses the memorisation concern.</li>
+  </ul></li>
+<li><b>Preregistrations</b> (RESEARCH_AGENDA.md §2 and §3) were committed before each data collection, and every deviation is logged in AUTONOMOUS_LOG.md.</li>
+</ul>
+
+<h2>Results (Brier differences; positive = the first-named arm is worse)</h2>
+<p>Pooled over tasks per model (mean of per-task, seed-averaged differences; bootstrap within task, B=5000). <b>Bold</b> = significant after Holm across models. Each model has 3 seeds; each seed is a different 100-label estimate of the base rate.</p>
+{{POOLED_CHART}}
+<h3>E1-R (preregistered confirmatory; 5 fresh tasks × 3 seeds × 300 test cases)</h3>
+{{POOLED_E1R}}
+<h3>E1 (8 tasks; told − shift was the preregistered primary, the other columns are post hoc)</h3>
+{{POOLED_E1}}
+<h3>E1 preregistered per-task criterion (Holm across 8 tasks within model)</h3>
+{{H1_TABLE}}
+
+
+<h2>Reading the results</h2>
+<ul>
+<li><b>Mechanism</b> (exploratory, E1).
+  <ul>
+  <li>Telling roughly halves each model's miss of the base rate (mean absolute miss 0.05–0.35 when told, vs 0.11–0.39 zero-shot) but leaves a residual. Llama gets worse when told, because its first-token probabilities are nearly binary.</li>
+  <li>Ranking doesn't change (AUROC told ≈ zero-shot).</li>
+  <li>The code-side shift removes the miss exactly and keeps the ranking.</li>
+  </ul></li>
+<li><b>This is not only an artefact of logprob elicitation.</b> The same two models asked to <i>state</i> probabilities show the same sign, with smaller effects.</li>
+<li><b>Where the finding stops:</b> Gemini 3.8 Flash ranks these tasks best (zero-shot AUROC ≈ 0.70). Told Gemini beats the constant, and told ≈ shift: +0.004 in E1-R, significant but tiny.</li>
+<li><b>Sobering baseline result (post hoc).</b> On the leak-repaired tasks, only Gemini's probabilities clearly beat the constant. For the cheap models, even the best code-side fix (Platt on 100 labels) only matches the constant, and LR(100) beats their shifted scores.</li>
+</ul>
+
+<h2>Survived vs killed</h2>
+<table><tr><th>Survived / new</th><th>Killed or weakened</th></tr>
+<tr><td>
+<ul>
+<li><b>NEW (confirmed in E1-R):</b> telling the base rate scores worse than the constant, for 7/8 configurations from 5 providers.</li>
+<li>Telling scores worse than the code shift for 8/8 in E1-R. Gemini's prediction was a null; it came out a tiny positive.</li>
+<li>Telling beats zero-shot on most configurations. Telling helps, but not enough.</li>
+<li>v1: in-context examples help ranking on 5/8 tasks (not re-run).</li>
+</ul></td><td>
+<ul>
+<li>v1 "shift beats telling on 5/8 for Jev" → 3/8 on repaired data.</li>
+<li>v1 "one sentence fixes most of it": measured against zero-shot, not the constant.</li>
+<li>Shelter, crimes and GitHub v1 AUROCs: inflated by leaks.</li>
+<li>All v1 Opus claims: withdrawn (provider-route confound, contamination unchecked).</li>
+<li>Full list: CLAIMS.md (12 killed claims).</li>
+</ul></td></tr></table>
+
+<h2>What's next</h2>
+<ol>
+<li>Finish Haiku (E1 + E1-R), then the final Holm over all 9 configurations. Send the CONFIRMED/NEW message.</li>
+<li>Red-team the finding:
+  <ul>
+  <li>Does it hold on tasks where the model ranks well (AUROC ≥ 0.65)?</li>
+  <li>Is it the sentence's position or wording? E1 already tested 2 extra wordings.</li>
+  <li>Is it the one-token logprob protocol?</li>
+  </ul></li>
+<li>README rewrite as a neutral guide, DIGEST, website draft.</li>
+</ol>
+
+<h2>API spend (v2 ledger; v1 spent $33.56 before this session)</h2>
+{{SPEND}}
+<p class="small">Hard cap for this session: $30. The OpenRouter account is shared with other agents.</p>
