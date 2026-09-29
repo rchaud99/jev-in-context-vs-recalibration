@@ -144,3 +144,16 @@ Exploratory check on the v1 Gemini cache: told ≈ shift (|Δ| ≤ 0.008). So th
 - Sent CONFIRMED (E3) to main. v2 total spend: $7.35.
 - Extensions table: `results/v2/extensions_e2_e3.csv`. README, DIGEST, CLAIMS (V11) and the website draft are updated.
 - Protocol deviation count: GPT-4o-mini-verbal needed the 5-case sub-batch fallback for 5 chunks (`results/v2/verbal_fallbacks.log`).
+
+## 21:21 — final report and wrap-up
+- `reports/progress/progress_02_2026-09-28_2121.pdf` (final, 5 pages) contains:
+  - the replication tables (9 configurations × E1/E1-R, with seeds and task counts);
+  - the extensions (E2, E3);
+  - the chart;
+  - the red-team summary;
+  - the website draft;
+  - survived vs killed claims;
+  - next steps;
+  - spend.
+- Final v2 API spend: $7.35 (cap $30). v1 had spent $33.56 before this session.
+- Nothing was pushed, and no remote was changed.

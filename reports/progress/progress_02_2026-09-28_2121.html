@@ -1,0 +1,184 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Progress report 2</title><style>
+@page { size: Letter; margin: 16mm 16mm 16mm 16mm; }
+body { font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #0b0b0b; font-size: 10pt;
+       line-height: 1.42; background: #fff; }
+h1 { font-size: 16pt; margin: 0 0 2pt 0; } h2 { font-size: 11.5pt; margin: 12pt 0 4pt 0; border-bottom: 1px solid #e3e2dd; padding-bottom: 2pt; }
+h3 { font-size: 10pt; margin: 8pt 0 3pt 0; }
+.sub { color: #52514e; font-size: 9pt; margin-bottom: 8pt; }
+table { border-collapse: collapse; margin: 4pt 0 8pt 0; font-size: 8.6pt; width: 100%; }
+th, td { border-bottom: 1px solid #e3e2dd; padding: 2.5pt 5pt; text-align: left; vertical-align: top; }
+th { background: #f4f3ef; font-weight: 600; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 8pt; }
+.box { background: #f4f7fc; border-left: 3px solid #2a78d6; padding: 6pt 9pt; margin: 6pt 0; }
+.warn { background: #fdf3ee; border-left: 3px solid #eb6834; padding: 6pt 9pt; margin: 6pt 0; }
+img { width: 100%; } ul { margin: 3pt 0 3pt 16pt; padding: 0; } li { margin: 1.5pt 0; }
+.small { font-size: 8.3pt; color: #52514e; } .pb { page-break-before: always; }
+</style></head><body>
+<h1>Progress report 2 (final): put the base rate in code, not in the prompt</h1>
+<div class="sub">2026-09-28, about 21:15 EDT · autonomous v2 session · all preregistered experiments complete (E1, E1-R, E2, E3)</div>
+
+<div class="box"><b>The finding (one sentence).</b> If you know how often the answer is "yes", putting that number in an LLM's prompt gives worse probabilities than applying the same number in code as a one-parameter logit shift. For most models on these tasks, it is even worse than predicting the base rate for every case.
+<ul>
+<li><b>Preregistered replication (E1-R):</b> 5 fresh September 2026 tasks × 3 seeds × 300 cases.
+  <ul>
+  <li>Told − code shift was &gt; 0 for 9 of 9 configurations after Holm.</li>
+  <li>Told − constant was &gt; 0 for 8 of 9. Gemini 3.8 Flash went the other way, as predicted.</li>
+  <li>All seeds agree.</li>
+  </ul></li>
+<li><b>Extensions:</b> a stronger logprob model (E2) and two reasoning models (E3) show the same signs, so reasoning does not rescue "telling".</li>
+</ul></div>
+
+<h2>What was done since report 1</h2>
+<ul>
+<li>Finished Claude Haiku 4.5 on both datasets, then ran the final Holm correction over all 9 configurations.</li>
+<li><b>E2</b> (preregistered §4): DeepSeek-V4-Pro via logprobs, as a boundary check on model strength.</li>
+<li><b>E3</b> (preregistered §5): reasoning models, DeepSeek-V4-Flash with thinking and GPT-5-mini at medium effort.</li>
+<li>Red team:
+  <ul>
+  <li>AUROC-band breakdown;</li>
+  <li>leave-one-task-out;</li>
+  <li>three sentence wordings;</li>
+  <li>told-then-recentred decomposition;</li>
+  <li>stated vs logprob elicitation of the same model.</li>
+  </ul></li>
+<li>Rewrote the README as a neutral guide, and wrote CLAIMS.md, DIGEST.md and WEBSITE_DRAFT.md.</li>
+</ul>
+
+<h2>Replication table (Brier difference; + = telling is worse)</h2>
+<p class="small">Each cell is the mean over tasks of the per-task, seed-averaged difference, with a 95% bootstrap CI (test cases resampled within task, B=5000). <b>Bold</b> = significant after Holm across the 9 configurations. "Seeds" is the sign in each of the 3 seeds. "Tasks" counts tasks that are Holm-significant within the model, in the pooled direction.</p>
+<h3>Told − constant</h3>
+<table><tr><th>Model</th><th class=n>E1: 8 tasks</th><th class=n>seeds</th><th class=n>tasks</th><th class=n>E1-R: 5 fresh tasks</th><th class=n>seeds</th><th class=n>tasks</th></tr><tr><td>jev</td><td class=n><b>+0.008 [+0.004, +0.012]</b></td><td class=n>+++</td><td class=n>1/8</td><td class=n><b>+0.006 [+0.001, +0.012]</b></td><td class=n>+++</td><td class=n>0/5</td></tr><tr><td>qwen3.7-flash</td><td class=n><b>+0.044 [+0.035, +0.052]</b></td><td class=n>+++</td><td class=n>5/8</td><td class=n><b>+0.061 [+0.049, +0.073]</b></td><td class=n>+++</td><td class=n>3/5</td></tr><tr><td>deepseek-v4-flash</td><td class=n><b>+0.073 [+0.063, +0.083]</b></td><td class=n>+++</td><td class=n>7/8</td><td class=n><b>+0.060 [+0.048, +0.072]</b></td><td class=n>+++</td><td class=n>4/5</td></tr><tr><td>gpt-4o-mini</td><td class=n><b>+0.141 [+0.128, +0.154]</b></td><td class=n>+++</td><td class=n>7/8</td><td class=n><b>+0.127 [+0.110, +0.144]</b></td><td class=n>+++</td><td class=n>4/5</td></tr><tr><td>llama-3.3-70b</td><td class=n><b>+0.276 [+0.258, +0.294]</b></td><td class=n>+++</td><td class=n>8/8</td><td class=n><b>+0.265 [+0.241, +0.289]</b></td><td class=n>+++</td><td class=n>5/5</td></tr><tr><td>gpt-4o-mini-verbal</td><td class=n><b>+0.052 [+0.044, +0.059]</b></td><td class=n>+++</td><td class=n>4/8</td><td class=n><b>+0.048 [+0.037, +0.059]</b></td><td class=n>+++</td><td class=n>3/5</td></tr><tr><td>deepseek-v4-flash-verbal</td><td class=n><b>+0.023 [+0.017, +0.029]</b></td><td class=n>+++</td><td class=n>5/8</td><td class=n><b>+0.020 [+0.014, +0.027]</b></td><td class=n>+++</td><td class=n>1/5</td></tr><tr><td>gemini-3.8-flash</td><td class=n><b>-0.012 [-0.018, -0.007]</b></td><td class=n>−−−</td><td class=n>2/8</td><td class=n><b>-0.012 [-0.019, -0.006]</b></td><td class=n>−−−</td><td class=n>1/5</td></tr><tr><td>claude-haiku-4.5</td><td class=n><b>+0.020 [+0.015, +0.026]</b></td><td class=n>+++</td><td class=n>3/8</td><td class=n><b>+0.016 [+0.010, +0.023]</b></td><td class=n>+++</td><td class=n>3/5</td></tr></table>
+<h3>Told − code shift</h3>
+<table><tr><th>Model</th><th class=n>E1: 8 tasks</th><th class=n>seeds</th><th class=n>tasks</th><th class=n>E1-R: 5 fresh tasks</th><th class=n>seeds</th><th class=n>tasks</th></tr><tr><td>jev</td><td class=n><b>+0.010 [+0.007, +0.013]</b></td><td class=n>+++</td><td class=n>3/8</td><td class=n><b>+0.010 [+0.005, +0.015]</b></td><td class=n>+++</td><td class=n>2/5</td></tr><tr><td>qwen3.7-flash</td><td class=n><b>+0.032 [+0.024, +0.040]</b></td><td class=n>+++</td><td class=n>1/8</td><td class=n><b>+0.052 [+0.041, +0.064]</b></td><td class=n>+++</td><td class=n>3/5</td></tr><tr><td>deepseek-v4-flash</td><td class=n><b>+0.047 [+0.036, +0.057]</b></td><td class=n>+++</td><td class=n>4/8</td><td class=n><b>+0.039 [+0.025, +0.052]</b></td><td class=n>+++</td><td class=n>2/5</td></tr><tr><td>gpt-4o-mini</td><td class=n><b>+0.102 [+0.089, +0.115]</b></td><td class=n>+++</td><td class=n>5/8</td><td class=n><b>+0.098 [+0.081, +0.117]</b></td><td class=n>+++</td><td class=n>2/5</td></tr><tr><td>llama-3.3-70b</td><td class=n><b>+0.232 [+0.213, +0.250]</b></td><td class=n>+++</td><td class=n>6/8</td><td class=n><b>+0.232 [+0.209, +0.256]</b></td><td class=n>+++</td><td class=n>5/5</td></tr><tr><td>gpt-4o-mini-verbal</td><td class=n><b>+0.034 [+0.026, +0.042]</b></td><td class=n>+++</td><td class=n>2/8</td><td class=n><b>+0.038 [+0.027, +0.050]</b></td><td class=n>+++</td><td class=n>2/5</td></tr><tr><td>deepseek-v4-flash-verbal</td><td class=n><b>+0.012 [+0.006, +0.017]</b></td><td class=n>+++</td><td class=n>3/8</td><td class=n><b>+0.010 [+0.004, +0.017]</b></td><td class=n>+++</td><td class=n>1/5</td></tr><tr><td>gemini-3.8-flash</td><td class=n>-0.001 [-0.004, +0.002]</td><td class=n>−+−</td><td class=n>0/8</td><td class=n><b>+0.004 [+0.000, +0.008]</b></td><td class=n>+++</td><td class=n>0/5</td></tr><tr><td>claude-haiku-4.5</td><td class=n><b>+0.013 [+0.009, +0.018]</b></td><td class=n>+++</td><td class=n>3/8</td><td class=n><b>+0.010 [+0.005, +0.016]</b></td><td class=n>+++</td><td class=n>3/5</td></tr></table>
+<h3>Extensions (single-model checks; uncorrected CIs; all seeds agree in every row)</h3>
+<table><tr><th>Model</th><th class=n>told − const, E1</th><th class=n>told − const, E1-R</th><th class=n>told − shift, E1</th><th class=n>told − shift, E1-R</th></tr><tr><td>DS-V4-Pro (logprob)</td><td class=n>+0.051 [+0.043, +0.060] +++</td><td class=n>+0.042 [+0.033, +0.051] +++</td><td class=n>+0.030 [+0.022, +0.038] +++</td><td class=n>+0.029 [+0.019, +0.038] +++</td></tr><tr><td>GPT-5-mini think</td><td class=n>+0.033 [+0.026, +0.041] +++</td><td class=n>+0.015 [+0.008, +0.022] +++</td><td class=n>+0.028 [+0.022, +0.034] +++</td><td class=n>+0.009 [+0.003, +0.014] +++</td></tr><tr><td>DS-V4-Flash think</td><td class=n>+0.022 [+0.015, +0.028] +++</td><td class=n>+0.019 [+0.013, +0.026] +++</td><td class=n>+0.007 [+0.002, +0.012] +++</td><td class=n>+0.011 [+0.005, +0.017] +++</td></tr></table>
+<img src="progress_02_2026-09-28_2121_pooled.png">
+
+<h2>What survives the red team, and where it stops</h2>
+<ul>
+<li><b>Code ≥ prompt everywhere.</b>
+  <ul>
+  <li>Across 117 model × task cells, telling was never better after Holm, and the code shift was better in 47.</li>
+  <li>This holds for every AUROC band, all three wordings, both elicitation styles, and any single task dropped.</li>
+  </ul></li>
+<li><b>Mechanism.</b>
+  <ul>
+  <li>Telling moves the average only partway toward the stated rate, or overshoots it. Logprob models went to 0.95–0.97 when told 80–88%.</li>
+  <li>It doesn't change ranking.</li>
+  <li>For the stated-probability models, re-centring the told output recovers almost all the loss. So the harm is mostly the missed average.</li>
+  </ul></li>
+<li><b>Worse than the constant is scoped.</b>
+  <ul>
+  <li>It holds on hard tasks: most models' AUROC here is 0.52–0.63.</li>
+  <li>Gemini (AUROC ≈ 0.70, stated probabilities) beats the constant when told.</li>
+  <li>High AUROC alone isn't sufficient: DeepSeek-V4-Pro ranks NYC 311 at 0.80, and telling it still scored Brier 0.29 against the constant's 0.16.</li>
+  </ul></li>
+<li><b>Failed tests, reported rather than hidden:</b>
+  <ul>
+  <li>The first per-task criterion (2/9 pass).</li>
+  <li>P5 (refuted).</li>
+  <li>The Gemini null prediction in E1-R (a tiny +0.004 instead).</li>
+  </ul></li>
+</ul>
+
+<h2>Draft website write-up (~500 words)</h2>
+<div class="box" style="background:#fafaf7;border-left-color:#8a8984"><h3>Don't tell the model your base rate. Do the math yourself.</h3><p>When you use an LLM to score cases ("will this ticket be resolved this week?", "will this pull request be
+merged?"), its probabilities often run too high or too low. You know the real rate, say 20% of cases are yes. So
+you add a sentence to the prompt: <em>"For context, about 20% of cases like these are yes."</em></p>
+<p>I tested whether that works, against a one-line alternative. Leave the prompt alone, and shift the model's scores
+in code so that their average equals 20% (add the same constant to every score's log-odds). It needs no labelled
+data, only the number you were going to put in the prompt.</p>
+<p><strong>Setup.</strong></p>
+<ul>
+<li><strong>Tasks:</strong> eight prediction tasks from public 2026 records, 300 test cases each:<ul>
+<li>NYC 311 complaints;</li>
+<li>Chicago crime reports and food inspections;</li>
+<li>Hacker News posts;</li>
+<li>GitHub pull requests;</li>
+<li>Stack Overflow questions;</li>
+<li>shelter outcomes;</li>
+<li>flight delays.</li>
+</ul>
+</li>
+<li><strong>Models:</strong> nine setups from seven providers. They include cheap models, and two whose training data ends in 2023,
+    so they can't have memorised these outcomes.</li>
+<li><strong>Seeds:</strong> three different estimates of the base rate, each from 100 labelled cases.</li>
+<li><strong>Scoring:</strong> Brier score, with paired bootstrap confidence intervals, corrected for testing many models at once.</li>
+</ul>
+<p><strong>What I found.</strong></p>
+<ol>
+<li><strong>Doing it in code was never worse than telling the model, and usually better.</strong> Across 117 model-task
+    combinations, the prompt version never won after correction. The code version won 47.</li>
+<li><strong>For eight of the nine setups, telling the model the base rate did worse than ignoring the model and answering
+    "20%" for every case.</strong> The damage ranged from +0.006 Brier to +0.27, where one model's error became nearly three
+    times the constant's.<ul>
+<li>Telling moves the model's average only partway toward the stated number, or past it: several models jumped
+ to about 95% when told 80–88%.</li>
+<li>It doesn't help the model rank cases at all.</li>
+</ul>
+</li>
+<li><strong>The one exception was the model that ranked these tasks best</strong> (Gemini 3.8 Flash). Good ranking alone wasn't
+    enough, though. A stronger DeepSeek model ranked NYC 311 complaints well, yet telling it the rate still left it
+    far worse than the constant.</li>
+</ol>
+<p><strong>How I tried to break it.</strong></p>
+<ul>
+<li><strong>Preregistration.</strong> I wrote down the analysis and predictions and committed them to git before running
+    anything.</li>
+<li><strong>A failed first test.</strong> My first criterion demanded a significant result on at least 5 of 8 tasks for each model.
+    Only 2 of 9 met it.</li>
+<li><strong>A replication on untouched data.</strong> The overall pattern could have been a fluke of those tasks. So I pulled
+    fresh September 2026 data that no model or analysis had seen, and preregistered the test again. It held for all
+    nine setups, in all three seeds.</li>
+<li><strong>Other checks.</strong> It also held:<ul>
+<li>with three wordings of the sentence;</li>
+<li>with probabilities read from the model's internals or stated in text;</li>
+<li>when any one task was dropped;</li>
+<li>for two models allowed to reason before answering.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Honest limits.</strong></p>
+<ul>
+<li>These tasks are hard. Most models ranked them only modestly (AUROC 0.52–0.71).</li>
+<li>On tasks like these, no calibration trick makes a weak model beat the constant. A small logistic regression on
+    100 labelled cases often did better.</li>
+<li>I tested short case descriptions and one prompt template per style, on September 2026 model versions.</li>
+</ul>
+<p><strong>Takeaways.</strong></p>
+<ul>
+<li>Keep the prompt about the case.</li>
+<li>Put the base rate in code.</li>
+<li>Always check the model against the dumbest baseline, predicting the base rate for everyone. It is surprisingly
+    hard to beat.</li>
+</ul>
+<p><em>Code, preregistrations and every result, including the tests that failed:</em> (repo link)</p></div>
+
+<h2>Survived vs killed</h2>
+<table><tr><th>Survived / new</th><th>Killed or failed</th></tr>
+<tr><td><ul>
+<li>Told − constant &gt; 0 for 8/9 configurations (E1-R), plus E2 and both E3 models</li>
+<li>Told − code shift &gt; 0 for 9/9 (E1-R), plus E2 and E3</li>
+<li>Platt(100) beats the shift in 38/117 cells and loses in 2</li>
+<li>v1: in-context examples help ranking on 5/8 tasks (not re-run on repaired data)</li>
+</ul></td><td><ul>
+<li>E1 per-task criterion (≥5/8 tasks per model): only 2/9 pass</li>
+<li>v1 "shift beats telling on 5/8 for Jev" → 3/8</li>
+<li>"Told &lt; constant regardless of ranking skill"</li>
+<li>P5: shift beats the constant when AUROC ≥ 0.65</li>
+<li>v1 shelter, crimes and GitHub numbers (leaks); all v1 Opus claims</li>
+<li>Full list: CLAIMS.md</li>
+</ul></td></tr></table>
+
+<h2>Next 3 experiments</h2>
+<ol>
+<li><b>High-signal tasks</b> (AUROC &gt; 0.75 for most models). Only 5 such cells exist now.</li>
+<li><b>Labelled examples instead of a base rate.</b> In-context k examples vs a code-side fit on the same k.</li>
+<li><b>Rate in the system prompt.</b> Also few-shot formats.</li>
+</ol>
+
+<h2>API spend (v2 ledger)</h2>
+<table><tr><th>Model</th><th class=n>Decisions</th><th class=n>Cost</th></tr><tr><td>claude-haiku-4.5</td><td class=n>23,180</td><td class=n>$1.948</td></tr><tr><td>gpt-5-mini-think</td><td class=n>23,180</td><td class=n>$1.653</td></tr><tr><td>deepseek-v4-pro</td><td class=n>22,737</td><td class=n>$0.908</td></tr><tr><td>llama-3.3-70b</td><td class=n>22,900</td><td class=n>$0.624</td></tr><tr><td>gemini-3.8-flash</td><td class=n>23,180</td><td class=n>$0.620</td></tr><tr><td>gpt-4o-mini</td><td class=n>22,764</td><td class=n>$0.463</td></tr><tr><td>deepseek-v4-flash-think</td><td class=n>23,330</td><td class=n>$0.461</td></tr><tr><td>gpt-4o-mini-verbal</td><td class=n>30,030</td><td class=n>$0.268</td></tr><tr><td>deepseek-v4-flash</td><td class=n>22,833</td><td class=n>$0.146</td></tr><tr><td>qwen3.7-flash</td><td class=n>22,721</td><td class=n>$0.103</td></tr><tr><td>jev</td><td class=n>23,180</td><td class=n>$0.083</td></tr><tr><td>deepseek-v4-flash-verbal</td><td class=n>23,180</td><td class=n>$0.070</td></tr><tr><th>Total v2</th><th></th><th class=n>$7.35</th></tr></table>
+<p class="small">Cap: $30 for this session. v1 had spent $33.56 before it.</p>
+
+</body></html>
