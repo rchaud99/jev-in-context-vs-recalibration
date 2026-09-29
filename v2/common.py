@@ -260,6 +260,9 @@ VERBAL_MODELS = {
     # the same two models as their logprob configurations, asked to state probabilities instead
     "gpt-4o-mini-verbal": ("openai/gpt-4o-mini", "openai", {}),
     "deepseek-v4-flash-verbal": ("deepseek/deepseek-v4-flash", "streamlake/fp8", {"reasoning": {"enabled": False}}),
+    # E3 (added after E1-R): reasoning allowed before stating probabilities
+    "deepseek-v4-flash-think": ("deepseek/deepseek-v4-flash", "streamlake/fp8", {"reasoning": {"effort": "medium"}}),
+    "gpt-5-mini-think": ("openai/gpt-5-mini", "openai/flex", {"reasoning": {"effort": "medium"}}),
 }
 SCHEMA = {"type": "object", "properties": {"probabilities": {"type": "array", "items": {"type": "number"}}},
           "required": ["probabilities"], "additionalProperties": False}

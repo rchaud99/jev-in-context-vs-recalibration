@@ -28,7 +28,7 @@ CHEAP = {"jev", "qwen3.7-flash", "deepseek-v4-flash"}
 PROVIDER = {"jev": "TypeSafe", "qwen3.7-flash": "Alibaba", "deepseek-v4-flash": "DeepSeek (StreamLake)",
             "gpt-4o-mini": "OpenAI", "llama-3.3-70b": "Meta (Parasail)", "gemini-3.8-flash": "Google",
             "claude-haiku-4.5": "Anthropic", "gpt-4o-mini-verbal": "OpenAI",
-            "deepseek-v4-flash-verbal": "DeepSeek (StreamLake)", "deepseek-v4-pro": "DeepSeek (StreamLake)"}
+            "deepseek-v4-flash-verbal": "DeepSeek (StreamLake)", "deepseek-v4-pro": "DeepSeek (StreamLake)", "deepseek-v4-flash-think": "DeepSeek (StreamLake)", "gpt-5-mini-think": "OpenAI"}
 
 
 def logit(p):

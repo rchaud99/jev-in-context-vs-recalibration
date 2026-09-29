@@ -186,3 +186,22 @@ Written 2026-09-28, about 19:47, before any E2 data. The only pilot data is 20 c
 - **E2b:** told − const is conditional on ranking. If deepseek-v4-pro's mean zero-shot AUROC over the tasks of a dataset is ≥ 0.70, told − const ≤ 0 on that dataset (the CI includes 0 or lies below it). Otherwise told − const > 0.
 
 This is a single-model check. It is reported as such and cannot by itself establish the boundary.
+
+## 5. PREREGISTRATION — E3: does letting the model reason rescue "telling"?
+Written 2026-09-28 at about 20:40, before any E3 data. The only pilot data is 20 cases × 2 tasks.
+
+**Why.** The obvious objection to E1/E1-R is that most configurations answered without reasoning. A reasoning model
+might use a stated base rate properly.
+
+**Configurations.** Both state their probabilities (25 cases per request, JSON) after reasoning at effort "medium":
+- deepseek-v4-flash-think: StreamLake, reasoning on. It is the same model as deepseek-v4-flash-verbal, so the two form a paired think / no-think contrast.
+- gpt-5-mini-think: OpenAI flex.
+
+**Data and protocol.** E1 (8 tasks, wordings included) and E1-R (5 fresh tasks), with arms, seeds and statistics identical to E1/E1-R.
+
+**Predictions.**
+- **E3a:** told − shift > 0 (pooled) for both configurations, on both datasets.
+- **E3b:** told − const > 0 for both, on both datasets.
+- **E3c (exploratory, no prediction):** told − shift for deepseek-v4-flash-think vs deepseek-v4-flash-verbal.
+
+If E3a or E3b fails, the write-up will say that reasoning rescues telling for that model.

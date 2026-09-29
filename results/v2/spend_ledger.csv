@@ -118888,3 +118888,11 @@ ts,experiment,model,usd,n_cases
 1790641489,e1:inspections,deepseek-v4-pro,0.00003391,1
 1790641489,e1:inspections,deepseek-v4-pro,0.00003136,1
 1790641502,e1:inspections,deepseek-v4-pro,0.00003471,1
+1790641644,pilot,deepseek-v4-flash-think,0.00031482,20
+1790641647,pilot,deepseek-v4-flash-think,0.00012095,20
+1790641659,pilot,gpt-5-mini-think,0.00162412,20
+1790641671,pilot,gpt-5-mini-think,0.00146462,20
+1790641679,pilot,deepseek-v4-flash-think,0.00032137,20
+1790641689,pilot,deepseek-v4-flash-think,0.00036825,20
+1790641703,pilot,gpt-5-mini-think,0.00182175,20
+1790641715,pilot,gpt-5-mini-think,0.00165087,20
