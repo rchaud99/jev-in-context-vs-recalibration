@@ -22,12 +22,13 @@ from baserate_exp import SEEDS, seed_rate
 from common import MODELS, OUT, PREFIX, TASK_ORDER, load
 
 B = 5000
+TAG = os.environ.get("E_TAG", "")  # e.g. "_e2" for the E2 analysis that adds deepseek-v4-pro
 EPS = 1e-3
 CHEAP = {"jev", "qwen3.7-flash", "deepseek-v4-flash"}
 PROVIDER = {"jev": "TypeSafe", "qwen3.7-flash": "Alibaba", "deepseek-v4-flash": "DeepSeek (StreamLake)",
             "gpt-4o-mini": "OpenAI", "llama-3.3-70b": "Meta (Parasail)", "gemini-3.8-flash": "Google",
             "claude-haiku-4.5": "Anthropic", "gpt-4o-mini-verbal": "OpenAI",
-            "deepseek-v4-flash-verbal": "DeepSeek (StreamLake)"}
+            "deepseek-v4-flash-verbal": "DeepSeek (StreamLake)", "deepseek-v4-pro": "DeepSeek (StreamLake)"}
 
 
 def logit(p):
@@ -187,7 +188,7 @@ def main(models):
     T["holm_all"] = False
     for _, g in T.groupby("family"):
         T.loc[g.index, "holm_all"] = holm(g.p.values)
-    T.to_csv(os.path.join(OUT, f"{PREFIX}_tests.csv"), index=False)
+    T.to_csv(os.path.join(OUT, f"{PREFIX}{TAG}_tests.csv"), index=False)
     # POST HOC (not preregistered; added 2026-09-28 after seeing 2 of 9 models): per model, the mean over tasks of the
     # per-task differences; bootstrap resamples test cases within each task independently. Holm across models.
     P = []
@@ -202,8 +203,8 @@ def main(models):
     P["holm"] = False
     for _, g in P.groupby("family"):
         P.loc[g.index, "holm"] = holm(g.p.values)
-    P.to_csv(os.path.join(OUT, f"{PREFIX}_posthoc_pooled.csv"), index=False)
-    pd.DataFrame(arms).to_csv(os.path.join(OUT, f"{PREFIX}_arms.csv"), index=False)
+    P.to_csv(os.path.join(OUT, f"{PREFIX}{TAG}_posthoc_pooled.csv"), index=False)
+    pd.DataFrame(arms).to_csv(os.path.join(OUT, f"{PREFIX}{TAG}_arms.csv"), index=False)
     write_summary(T, pd.DataFrame(arms))
     return T
 
@@ -259,9 +260,9 @@ def write_summary(T, Aa):
     L += ["## Mechanism (exploratory): mean prediction vs stated rate; ranking", "",
           W[["model", "task", "rate", "mean zs", "mean told", "zs_miss", "told_miss", "auroc zs", "auroc told"]]
           .to_markdown(index=False, floatfmt=".3f"), ""]
-    open(os.path.join(OUT, f"{PREFIX}_summary.md"), "w").write("\n".join(L))
+    open(os.path.join(OUT, f"{PREFIX}{TAG}_summary.md"), "w").write("\n".join(L))
 
 
 if __name__ == "__main__":
     main(sys.argv[1:] or MODELS)
-    print(open(os.path.join(OUT, f"{PREFIX}_summary.md")).read()[:6000])
+    print(open(os.path.join(OUT, f"{PREFIX}{TAG}_summary.md")).read()[:6000])

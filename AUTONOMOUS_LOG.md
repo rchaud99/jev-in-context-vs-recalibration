@@ -88,3 +88,19 @@ Exploratory check on the v1 Gemini cache: told ≈ shift (|Δ| ≤ 0.008). So th
   - 5 tasks with ≥600 rows: nyc311, crimes, hn, github_prs, inspections.
   - Shelter (225 rows) and SO (347) are too small; flights is not published yet.
 - **E1-R preregistered** (RESEARCH_AGENDA §3, commit cfc2884) as a confirmatory test of the two post hoc patterns on untouched, post-cutoff data. Launched for 8 configurations at 19:25; Haiku follows when its E1 run ends (20 rpm limit).
+
+## 19:25–20:05 — E1 and E1-R complete for all 9 configurations
+- **E1 (8 tasks):**
+  - The preregistered per-task H1 criterion was met by 2/9 configurations (GPT-4o-mini, Llama). Haiku reached 3/8.
+  - P3 (seeds): 27/27 significant cells have the same sign in all seeds.
+  - P4 (wording): every configuration keeps its sign under both alternative wordings (seed 0; `told_w1/w2`). w2 ("Important calibration information…") is usually the worst.
+- **E1-R (preregistered confirmatory, 5 fresh tasks):**
+  - **R1 (told − const) is confirmed for all 9 configurations** in the predicted direction after Holm (8 positive; Gemini negative), and all seeds agree. The weakest is Jev, +0.006 [+0.001, +0.012], p=0.025, which just passes Holm as the largest p.
+  - **R2 (told − shift) is > 0 for 9/9.** Gemini was predicted null and came out +0.004 [+0.000, +0.008], so that prediction was wrong, in the direction of the general claim.
+- Messages sent to main: REFUTED (v1 Jev 5/8), NEW (R1/R2), and a correction (the "0 of 117 cells" count holds after Holm; before correction, 3 cells favour told).
+- **Red team so far:**
+  - **AUROC moderation.** told − const shrinks with the model's zero-shot AUROC. At AUROC > 0.75 (5 cells: Gemini nyc311 and crimes, Jev nyc311), told beats or ties the constant. told − shift stays > 0 in every band. So "worse than the constant" is a claim about the typical hard, low-signal task, while "code beats prompt" is general.
+  - **Leave-one-task-out (E1-R):** every configuration keeps its sign whichever task is dropped.
+  - **Elicitation:** the stated-probability versions of GPT-4o-mini and DeepSeek show the same sign as their logprob versions, with smaller effects. So the result is not only a one-token-logprob artefact.
+- **E2 preregistered** (RESEARCH_AGENDA §4) and launched: deepseek-v4-pro (logprob), a boundary check at about $1.1.
+- Spend so far: about $4.4.
