@@ -104,3 +104,25 @@ Exploratory check on the v1 Gemini cache: told ≈ shift (|Δ| ≤ 0.008). So th
   - **Elicitation:** the stated-probability versions of GPT-4o-mini and DeepSeek show the same sign as their logprob versions, with smaller effects. So the result is not only a one-token-logprob artefact.
 - **E2 preregistered** (RESEARCH_AGENDA §4) and launched: deepseek-v4-pro (logprob), a boundary check at about $1.1.
 - Spend so far: about $4.4.
+
+## 20:05–20:35 — E2 boundary check; write-ups
+- **E2 (DeepSeek-V4-Pro, logprob, preregistered §4), about $0.91:**
+  - Mean zero-shot AUROC is 0.59 (E1) and 0.61 (E1-R), so E2b predicts told − const > 0. **Confirmed:** +0.051 and +0.042 [+0.033, +0.051].
+  - **E2a (told − shift > 0) confirmed:** +0.030 and +0.029 [+0.019, +0.038]. All seeds agree.
+  - Notable exploratory counterexample: on NYC 311 the model ranks well (AUROC 0.80), yet told scores Brier 0.29 against the constant's 0.16. Told it barely moves its mean (0.57 against a stated 0.76). So "ranks well ⇒ telling is fine" is false. The only escapee is a strong model that states its probabilities (Gemini), and that rests on n=1.
+  - Analysis files for E2 are tagged `_e2`. They include 10 models, so their Holm family differs from the 9-configuration primary files.
+- **Red-team numbers checked before they went into the README:**
+  - AUROC bands with Haiku included: 95 cells ≤ 0.65 → 61 significantly worse, 1 better.
+  - Platt vs shift: 38 better, 2 worse (Holm).
+  - NYC 311 told means: 0.95–0.97 for the logprob GPT-4o-mini, DeepSeek and Llama.
+- **P5 refuted:**
+  - 64% (E1) / 73% (E1-R) of cells with AUROC ≥ 0.65 have shift < const, against a predicted ≥ 70%.
+  - Shift is significantly worse than the constant at AUROC up to 0.70.
+- **P4 holds for 8/9.** Jev fails in the direction of the claim: the wording "Important calibration information…" makes telling worse.
+- Wrote:
+  - README (neutral guide; one table, one chart; no vendor criticism);
+  - WEBSITE_DRAFT.md;
+  - DIGEST.md;
+  - CLAIMS.md verdicts V1–V10.
+- The v1 README is archived in `docs/`, with two evaluative vendor passages removed. The numbers are unchanged.
+- v2 spend total: $5.23. Scan: no API key in any committed file.

@@ -5,7 +5,7 @@ is a "yes" (will this complaint close within a week, will this PR be merged). Yo
 answer is yes, say 20%. Should you tell the model that number in its prompt, or leave the prompt alone and apply the
 number to its scores in code?
 
-**Answer, from 9 model configurations × 13 task datasets × 3 seeds.**
+**Answer, from 9 model configurations × 13 task datasets × 3 seeds** (plus a 10th model as a boundary check).
 - **Applying the number in code was at least as good as telling the model in every configuration, and better in 8 of 9.** The code fix is one line of arithmetic: shift the model's log-odds so its average prediction equals the base rate.
 - **For 8 of the 9 configurations, telling the model the number did worse than ignoring the model and predicting 20% for every case.**
 - **The exception was the model that ranked these tasks best (Gemini 3.8 Flash).** Where a model ranks well, telling it the rate beats the constant, but it still doesn't beat doing it in code.
@@ -84,9 +84,12 @@ than "always say 20%". Full tables, per-task counts and seeds are in
 - It doesn't improve ranking: AUROC is about the same told and zero-shot.
 - The code shift sets the average exactly and keeps whatever ranking the model has.
 
-**Whether telling beats the constant depends on ranking skill.**
-- In the 5 cells where a model's zero-shot AUROC exceeded 0.75 (Gemini on NYC 311 and crimes, Jev on NYC 311), telling beat or tied the constant.
+**Whether telling beats the constant depends on ranking skill, but ranking skill alone isn't enough.**
+- In the 5 cells where one of the 9 configurations had zero-shot AUROC above 0.75 (Gemini on NYC 311 and crimes, Jev on NYC 311), telling beat or tied the constant.
 - In the 95 cells at or below 0.65, telling was significantly worse than the constant in 61 (57 after Holm within model) and better in 1.
+- A preregistered boundary check with a stronger logprob model (DeepSeek-V4-Pro, E2) found a counterexample. On NYC 311 it ranks well (AUROC 0.80), yet when told the rate its average stayed at 0.57 against a stated 0.76, and its Brier was 0.29 against the constant's 0.16.
+- Across all tasks, E2 matched the other logprob models: told − constant +0.042 [+0.033, +0.051] and told − shift +0.029 [+0.019, +0.038] on the fresh data, with all seeds agreeing.
+- So the one model that escaped is best described as "a strong model stating its own probabilities", on the evidence of a single model.
 
 ### What didn't hold up
 **My first preregistered test failed its own bar.**

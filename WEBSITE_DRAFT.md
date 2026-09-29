@@ -29,8 +29,10 @@ log-odds. It needs no labelled data, only the number you were going to put in th
    answering "20%" for every case.** The damage ranged from small (+0.006 Brier) to large (+0.27 Brier, leaving an error nearly three times the
    constant's error). Telling moves the model's average only partway toward the stated number, and sometimes past
    it: several models jumped to around 95% when told 80–88%. It doesn't help the model rank cases at all.
-3. **The one exception was the model that ranked these tasks best** (Gemini 3.8 Flash). When a model can genuinely
-   tell cases apart, telling it the base rate beats the constant. It still doesn't beat doing the math in code.
+3. **The one exception was the model that ranked these tasks best** (Gemini 3.8 Flash, which states its
+   probabilities in text). Good ranking alone wasn't enough, though. A tenth, stronger model read through
+   log-probabilities ranked NYC 311 complaints well, yet telling it the rate still left it far worse than the
+   constant.
 
 **How I tried to break it.**
 - **Preregistration:** before running anything, I wrote down the analysis and predictions and committed them to
