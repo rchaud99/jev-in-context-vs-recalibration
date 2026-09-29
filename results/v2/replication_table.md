@@ -14,7 +14,7 @@ Brier-score differences (positive = the first-named arm is worse), pooled per mo
 | gpt-4o-mini-verbal | stated | 0.009 | **+0.052 [+0.044, +0.059]** | +++ | 4/8 | **+0.048 [+0.037, +0.059]** | +++ | 3/5 |
 | deepseek-v4-flash-verbal | stated | 0.003 | **+0.023 [+0.017, +0.029]** | +++ | 5/8 | **+0.020 [+0.014, +0.027]** | +++ | 1/5 |
 | gemini-3.8-flash | stated | 0.027 | **-0.012 [-0.018, -0.007]** | −−− | 2/8 | **-0.012 [-0.019, -0.006]** | −−− | 1/5 |
-| claude-haiku-4.5 | stated | 0.085 | – |  |  | – |  |  |
+| claude-haiku-4.5 | stated | 0.084 | **+0.020 [+0.015, +0.026]** | +++ | 3/8 | **+0.016 [+0.010, +0.023]** | +++ | 3/5 |
 
 ## Told the base rate − same number applied in code (label-free logit shift)
 
@@ -28,7 +28,7 @@ Brier-score differences (positive = the first-named arm is worse), pooled per mo
 | gpt-4o-mini-verbal | stated | 0.009 | **+0.034 [+0.026, +0.042]** | +++ | 2/8 | **+0.038 [+0.027, +0.050]** | +++ | 2/5 |
 | deepseek-v4-flash-verbal | stated | 0.003 | **+0.012 [+0.006, +0.017]** | +++ | 3/8 | **+0.010 [+0.004, +0.017]** | +++ | 1/5 |
 | gemini-3.8-flash | stated | 0.027 | -0.001 [-0.004, +0.002] | −+− | 0/8 | **+0.004 [+0.000, +0.008]** | +++ | 0/5 |
-| claude-haiku-4.5 | stated | 0.085 | – |  |  | – |  |  |
+| claude-haiku-4.5 | stated | 0.084 | **+0.013 [+0.009, +0.018]** | +++ | 3/8 | **+0.010 [+0.005, +0.016]** | +++ | 3/5 |
 
 ## Code shift − constant
 
@@ -42,7 +42,7 @@ Brier-score differences (positive = the first-named arm is worse), pooled per mo
 | gpt-4o-mini-verbal | stated | 0.009 | **+0.018 [+0.012, +0.023]** | +++ | 3/8 | **+0.010 [+0.005, +0.015]** | +++ | 1/5 |
 | deepseek-v4-flash-verbal | stated | 0.003 | **+0.011 [+0.006, +0.016]** | +++ | 2/8 | **+0.010 [+0.004, +0.016]** | +++ | 1/5 |
 | gemini-3.8-flash | stated | 0.027 | **-0.012 [-0.017, -0.006]** | −−− | 2/8 | **-0.017 [-0.024, -0.010]** | −−− | 1/5 |
-| claude-haiku-4.5 | stated | 0.085 | – |  |  | – |  |  |
+| claude-haiku-4.5 | stated | 0.084 | **+0.007 [+0.003, +0.011]** | +++ | 2/8 | **+0.006 [+0.002, +0.010]** | +++ | 1/5 |
 
 ## Platt on 100 labels − code shift
 
@@ -56,7 +56,7 @@ Brier-score differences (positive = the first-named arm is worse), pooled per mo
 | gpt-4o-mini-verbal | stated | 0.009 | **-0.016 [-0.022, -0.011]** | −−− | 3/8 | **-0.009 [-0.014, -0.004]** | −−− | 0/5 |
 | deepseek-v4-flash-verbal | stated | 0.003 | **-0.011 [-0.014, -0.007]** | −−− | 3/8 | **-0.008 [-0.014, -0.002]** | −−− | 0/5 |
 | gemini-3.8-flash | stated | 0.027 | -0.001 [-0.003, +0.000] | −−− | 0/8 | -0.001 [-0.003, +0.001] | −−− | 0/5 |
-| claude-haiku-4.5 | stated | 0.085 | – |  |  | – |  |  |
+| claude-haiku-4.5 | stated | 0.084 | **-0.007 [-0.010, -0.003]** | −−− | 2/8 | **-0.005 [-0.008, -0.002]** | −−− | 1/5 |
 
 ## Logistic regression on the same 100 labels − code shift
 
@@ -70,21 +70,21 @@ Brier-score differences (positive = the first-named arm is worse), pooled per mo
 | gpt-4o-mini-verbal | stated | 0.009 | **-0.025 [-0.032, -0.017]** | −−− | 4/8 | **-0.024 [-0.032, -0.016]** | −−− | 3/5 |
 | deepseek-v4-flash-verbal | stated | 0.003 | **-0.018 [-0.025, -0.011]** | −−− | 2/8 | **-0.024 [-0.033, -0.016]** | −−− | 3/5 |
 | gemini-3.8-flash | stated | 0.027 | +0.005 [-0.002, +0.011] | +++ | 0/8 | +0.002 [-0.005, +0.009] | −++ | 0/5 |
-| claude-haiku-4.5 | stated | 0.085 | – |  |  | – |  |  |
+| claude-haiku-4.5 | stated | 0.084 | **-0.014 [-0.020, -0.008]** | −−− | 1/8 | **-0.020 [-0.027, -0.013]** | −−− | 3/5 |
 
 ## Exploratory: effect by the model's zero-shot AUROC on the task (all model × task cells, E1 + E1-R)
 
 | Comparison | AUROC band | cells | mean Δ | median Δ | CI > 0 | CI < 0 |
 |---|---|---|---|---|---|---|
-| told-const | (0.0, 0.55] | 34 | +0.0912 | +0.0494 | 31 | 0 |
-| told-const | (0.55, 0.65] | 49 | +0.0864 | +0.0119 | 24 | 1 |
-| told-const | (0.65, 0.75] | 16 | +0.0310 | +0.0088 | 7 | 1 |
+| told-const | (0.0, 0.55] | 39 | +0.0815 | +0.0465 | 33 | 0 |
+| told-const | (0.55, 0.65] | 56 | +0.0785 | +0.0149 | 28 | 1 |
+| told-const | (0.65, 0.75] | 17 | +0.0296 | +0.0075 | 7 | 1 |
 | told-const | (0.75, 1.0] | 5 | -0.0235 | -0.0074 | 0 | 2 |
-| H1 told-shift | (0.0, 0.55] | 34 | +0.0597 | +0.0169 | 16 | 0 |
-| H1 told-shift | (0.55, 0.65] | 49 | +0.0753 | +0.0087 | 23 | 2 |
-| H1 told-shift | (0.65, 0.75] | 16 | +0.0259 | +0.0188 | 9 | 1 |
+| H1 told-shift | (0.0, 0.55] | 39 | +0.0523 | +0.0124 | 17 | 0 |
+| H1 told-shift | (0.55, 0.65] | 56 | +0.0684 | +0.0094 | 27 | 2 |
+| H1 told-shift | (0.65, 0.75] | 17 | +0.0249 | +0.0171 | 10 | 1 |
 | H1 told-shift | (0.75, 1.0] | 5 | +0.0054 | +0.0042 | 2 | 0 |
-| P5 shift-const | (0.0, 0.55] | 34 | +0.0315 | +0.0252 | 27 | 0 |
-| P5 shift-const | (0.55, 0.65] | 49 | +0.0111 | +0.0018 | 12 | 1 |
-| P5 shift-const | (0.65, 0.75] | 16 | +0.0051 | -0.0016 | 4 | 1 |
+| P5 shift-const | (0.0, 0.55] | 39 | +0.0292 | +0.0227 | 30 | 0 |
+| P5 shift-const | (0.55, 0.65] | 56 | +0.0101 | +0.0021 | 12 | 1 |
+| P5 shift-const | (0.65, 0.75] | 17 | +0.0047 | -0.0011 | 4 | 1 |
 | P5 shift-const | (0.75, 1.0] | 5 | -0.0289 | -0.0167 | 0 | 4 |

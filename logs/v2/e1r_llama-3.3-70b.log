@@ -1,0 +1,7 @@
+/Users/raghavchaudhary/Desktop/jev_npc/v2/baserate_exp.py:65: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  done = pd.concat([done, pd.DataFrame(rows, columns=done.columns)], ignore_index=True)
+llama-3.3-70b nyc311: done  (v2 ledger $2.526)
+llama-3.3-70b crimes: done  (v2 ledger $2.798)
+llama-3.3-70b hn: done  (v2 ledger $3.083)
+llama-3.3-70b github_prs: done  (v2 ledger $3.239)
+llama-3.3-70b inspections: done  (v2 ledger $3.344)

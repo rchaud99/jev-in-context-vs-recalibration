@@ -1,0 +1,10 @@
+/Users/raghavchaudhary/Desktop/jev_npc/v2/baserate_exp.py:65: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  done = pd.concat([done, pd.DataFrame(rows, columns=done.columns)], ignore_index=True)
+deepseek-v4-flash-verbal nyc311: done  (v2 ledger $0.445)
+deepseek-v4-flash-verbal crimes: done  (v2 ledger $0.562)
+deepseek-v4-flash-verbal shelter: done  (v2 ledger $0.749)
+deepseek-v4-flash-verbal flights: done  (v2 ledger $0.986)
+deepseek-v4-flash-verbal stackoverflow: done  (v2 ledger $1.073)
+deepseek-v4-flash-verbal hn: done  (v2 ledger $1.210)
+deepseek-v4-flash-verbal github_prs: done  (v2 ledger $1.277)
+deepseek-v4-flash-verbal inspections: done  (v2 ledger $1.356)

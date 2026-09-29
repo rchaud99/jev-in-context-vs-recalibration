@@ -28,5 +28,15 @@ leak-repaired data (RESEARCH_AGENDA.md).
 | S4 | Plausible LLM edge on free text (Stack Overflow: 0.74 vs 0.66 for tuned TF-IDF + LR) | Survives for one task only (HN not significant at large k). Untested as a controlled contrast. |
 | S5 | Shifting the scores to the base rate in code beats telling the model the base rate | v1 exploratory: 5/8 for one model. **v2 preregistered re-test (E1): see below.** |
 
-## v2 (E1) verdicts
-To be filled in from results/v2/e1_summary.md once all 9 configurations are complete.
+## v2 verdicts (preregistered; RESEARCH_AGENDA.md)
+| # | Claim | Verdict | Evidence |
+|---|---|---|---|
+| V1 | **Telling an LLM the base rate in its prompt gives worse Brier than predicting that rate as a constant** (E1-R R1) | **Confirmed**: 8/9 configurations in the predicted (+) direction, and Gemini in its predicted (−) direction. All are Holm-significant and all 3 seeds agree. It also held post hoc in E1 (8 tasks). | results/v2/replication_table.md |
+| V2 | **Applying the same number in code (a label-free logit shift) beats telling the model** (E1-R R2) | **Confirmed**: 9/9 > 0 after Holm (Gemini was predicted null; +0.004). Across 117 cells, told is never better after Holm; shift is better in 47. | same |
+| V3 | E1 primary: shift beats told on ≥ 5/8 tasks per model | **Failed** for 7/9 configurations (only GPT-4o-mini and Llama pass) | results/v2/e1_summary.md |
+| V4 | v1 S5 at its stated strength ("5/8 tasks for Jev") | **Refuted**: 3/8 on the repaired data. The direction holds when pooled. | same |
+| V5 | P2: Gemini null on told vs shift | Confirmed in E1; in E1-R a tiny positive (+0.004 [+0.000, +0.008]) | same |
+| V6 | P5: among cells with zero-shot AUROC ≥ 0.65, shift < constant in ≥ 70%, and shift is significantly worse than the constant only where AUROC < 0.6 | **Refuted**: 64% (E1) / 73% (E1-R). Shift is significantly worse than the constant even at AUROC 0.64–0.70 (Llama, Qwen and DeepSeek-verbal on crimes; Llama on NYC 311), because logprob scores are too extreme for a 1-parameter fix. | e1_summary.md / e1r_summary.md, P5 |
+| V7 | P6: Platt(100) beats shift for logprob models | Confirmed (38/117 cells better, 2 worse) | replication_table.md |
+| V8 | "Told < constant" holds regardless of the model's ranking skill | **Killed**: at zero-shot AUROC > 0.75, told beats or ties the constant (5 cells). The claim is scoped to low-signal tasks. | replication_table.md (AUROC bands) |
+| V9 | P4: with wordings w1 and w2, significant-task counts stay within ±2 of w0 | Holds for 8/9. Jev fails in the direction of the claim (w0 2, w1 4, w2 5 tasks where shift is better): the "Important calibration information…" wording makes telling worse. The sign never flips. | e1_tests.csv, P4 |
