@@ -105,7 +105,7 @@ Exploratory check on the v1 Gemini cache: told ≈ shift (|Δ| ≤ 0.008). So th
 - **E2 preregistered** (RESEARCH_AGENDA §4) and launched: deepseek-v4-pro (logprob), a boundary check at about $1.1.
 - Spend so far: about $4.4.
 
-## 20:05–20:35 — E2 boundary check; write-ups
+## 20:00–20:27 — E2 boundary check; write-ups
 - **E2 (DeepSeek-V4-Pro, logprob, preregistered §4), about $0.91:**
   - Mean zero-shot AUROC is 0.59 (E1) and 0.61 (E1-R), so E2b predicts told − const > 0. **Confirmed:** +0.051 and +0.042 [+0.033, +0.051].
   - **E2a (told − shift > 0) confirmed:** +0.030 and +0.029 [+0.019, +0.038]. All seeds agree.
@@ -126,3 +126,7 @@ Exploratory check on the v1 Gemini cache: told ≈ shift (|Δ| ≤ 0.008). So th
   - CLAIMS.md verdicts V1–V10.
 - The v1 README is archived in `docs/`, with two evaluative vendor passages removed. The numbers are unchanged.
 - v2 spend total: $5.23. Scan: no API key in any committed file.
+
+## 20:28 — E3 (reasoning models) preregistered (§5) and launched
+- The obvious objection: most configurations answered without reasoning. Pilot costs: deepseek-v4-flash-think $0.014/1k decisions, gpt-5-mini-think $0.082/1k.
+- E3 runs on E1 and E1-R, with an estimated cost of about $2.4.
