@@ -188,7 +188,7 @@ Written 2026-09-28, about 19:47, before any E2 data. The only pilot data is 20 c
 This is a single-model check. It is reported as such and cannot by itself establish the boundary.
 
 ## 5. PREREGISTRATION — E3: does letting the model reason rescue "telling"?
-Written 2026-09-28 at about 20:40, before any E3 data. The only pilot data is 20 cases × 2 tasks.
+Written 2026-09-28 at 20:28, before any E3 data. The only pilot data is 20 cases × 2 tasks.
 
 **Why.** The obvious objection to E1/E1-R is that most configurations answered without reasoning. A reasoning model
 might use a stated base rate properly.
