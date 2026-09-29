@@ -42,6 +42,8 @@ log-odds. It needs no labelled data, only the number you were going to put in th
 - **Fresh data:** the overall pattern I then saw could have been a fluke of those tasks. So I pulled fresh
   September 2026 data that no model or analysis had touched, and preregistered the test again. It held for all
   nine setups, in all three seeds.
+- **Reasoning:** letting two models reason before answering (GPT-5-mini, and DeepSeek with thinking on) didn't
+  change the picture.
 - **Other checks:** the result also held with three different wordings of the sentence, with probabilities read
   from the model's internals or stated in text, and when I dropped any one task.
 

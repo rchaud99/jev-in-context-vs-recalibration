@@ -17,7 +17,10 @@ on these tasks, telling them is even worse than predicting the base rate for eve
    - E2 was preregistered with a stronger logprob model, DeepSeek-V4-Pro.
    - It confirmed told − constant +0.042 [+0.033, +0.051] and told − shift +0.029 [+0.019, +0.038] on the fresh data.
    - On NYC 311, at AUROC 0.80, telling was still far worse than the constant (Brier 0.29 vs 0.16).
-4. **With about 100 labels, Platt scaling is the safest fix** (better than the shift in 38/117 cells, worse in 2). Logistic regression on those 100 labels beats the cheap models' shifted scores.
+4. **Reasoning doesn't rescue telling** (E3, preregistered).
+   - GPT-5-mini at medium effort: told − shift +0.028 / +0.009, told − constant +0.033 / +0.015 (E1 / E1-R).
+   - DeepSeek-V4-Flash with thinking behaves like its non-thinking twin.
+5. **With about 100 labels, Platt scaling is the safest fix** (better than the shift in 38/117 cells, worse in 2). Logistic regression on those 100 labels beats the cheap models' shifted scores.
 
 **Killed or failed (full list: CLAIMS.md)**
 - My own E1 primary criterion (≥ 5/8 tasks per model) passed for only 2/9.
@@ -28,22 +31,23 @@ on these tasks, telling them is even worse than predicting the base rate for eve
 - P5 ("the shift beats the constant when AUROC ≥ 0.65") is refuted.
 - The v1 "Jev is better" is false in general.
 
-**Experiments run (all API, about $5.2 of the $30 cap; ledger: results/v2/spend_ledger.csv)**
+**Experiments run (all API, about $7.35 of the $30 cap; ledger: results/v2/spend_ledger.csv)**
 - Leak screen and repairs.
 - Pilot.
 - E1: 9 configurations × 8 tasks × 3 seeds + 2 wordings.
 - E1-R: 9 × 5 fresh tasks × 3 seeds.
 - E2: a DeepSeek-V4-Pro boundary check.
+- E3: two reasoning models.
 
 **Résumé bullet.** Designed and preregistered a 9-model, 7-provider LLM calibration study on 13 public-record
 datasets. Stating a base rate in the prompt gave worse probabilities than predicting the base rate itself (8/9
 models). A one-line code-side logit shift was never worse (0/117 cells after Holm). The result was confirmed on a
 fresh post-cutoff replication set. Along the way I found and repaired 3 label leaks and retracted 12 earlier claims.
-Cost: about $5 of API calls.
+Cost: about $7 of API calls.
 
 **Next 3 experiments**
 1. **High-signal tasks** (AUROC > 0.75 for most models, e.g. richer free-text inputs). Does "code beats prompt" persist where models rank well? Only 5 such cells exist now.
 2. **Labelled examples instead of a base rate.** k in-context examples vs a zero-shot + shift/Platt fit on the same k, same 9 configurations. Does "put it in code" extend to examples?
-3. **Placement and reasoning.** The rate in the system prompt, and reasoning models allowed to think. Can any prompt make the model use the number as well as arithmetic does?
+3. **Placement and format.** The rate in the system prompt, or conveyed via a few labelled examples. Can any prompt make the model use the number as well as arithmetic does? (Reasoning is already tested in E3; it didn't help.)
 
 **Website draft:** WEBSITE_DRAFT.md · **Replication table:** results/v2/replication_table.md · **PDFs:** reports/progress/

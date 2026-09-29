@@ -130,3 +130,17 @@ Exploratory check on the v1 Gemini cache: told ≈ shift (|Δ| ≤ 0.008). So th
 ## 20:28 — E3 (reasoning models) preregistered (§5) and launched
 - The obvious objection: most configurations answered without reasoning. Pilot costs: deepseek-v4-flash-think $0.014/1k decisions, gpt-5-mini-think $0.082/1k.
 - E3 runs on E1 and E1-R, with an estimated cost of about $2.4.
+
+## 20:28–21:20 — E3 (reasoning) complete
+- GPT-5-mini-think:
+  - told − const +0.033 [+0.026, +0.041] (E1) and +0.015 [+0.008, +0.023] (E1-R);
+  - told − shift +0.028 and +0.009 [+0.003, +0.014].
+- DeepSeek-V4-Flash-think:
+  - told − const +0.022 and +0.019;
+  - told − shift +0.007 [+0.002, +0.012] and +0.011 [+0.006, +0.017].
+- All seeds agree. **E3a and E3b are confirmed** for both configurations on both datasets.
+- E3c (exploratory): DeepSeek with thinking ≈ without (E1-R told − shift +0.011 vs +0.010).
+- Cost: GPT-5-mini-think $1.65 (about 2× the pilot estimate: more reasoning tokens per 25-case request); DeepSeek-think $0.46.
+- Sent CONFIRMED (E3) to main. v2 total spend: $7.35.
+- Extensions table: `results/v2/extensions_e2_e3.csv`. README, DIGEST, CLAIMS (V11) and the website draft are updated.
+- Protocol deviation count: GPT-4o-mini-verbal needed the 5-case sub-batch fallback for 5 chunks (`results/v2/verbal_fallbacks.log`).

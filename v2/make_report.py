@@ -158,6 +158,31 @@ def pooled_table(prefix):
             "<th class=n>code shift − constant</th><th class=n>Platt(100) − code shift</th></tr>" + "".join(rows) + "</table>")
 
 
+def repl_table_html(fam, extra_tag=""):
+    """models x {E1, E1-R}: pooled est [CI] (bold = Holm), seed signs, Holm-significant tasks in that direction."""
+    P = {p: pd.read_csv(os.path.join(OUT, f"{p}{extra_tag}_posthoc_pooled.csv")) for p in ["e1", "e1r"]}
+    T = {p: pd.read_csv(os.path.join(OUT, f"{p}{extra_tag}_tests.csv")) for p in ["e1", "e1r"]}
+    models = [m for m in ORDER + ["deepseek-v4-pro", "deepseek-v4-flash-think", "gpt-5-mini-think"] if m in set(P["e1r"].model)]
+    rows = []
+    for m in models:
+        cells = []
+        for p in ["e1", "e1r"]:
+            r = P[p][(P[p].model == m) & (P[p].family == fam)]
+            if r.empty:
+                cells += ["<td>–</td>"] * 3
+                continue
+            r = r.iloc[0]
+            txt = f"{r.est:+.3f} [{r.lo:+.3f}, {r.hi:+.3f}]"
+            seeds = "".join("+" if float(x) > 0 else "−" for x in str(r.per_seed).split()) if isinstance(r.per_seed, str) else ""
+            t = T[p][(T[p].model == m) & (T[p].family == fam)]
+            nd = int((t.holm_model & (np.sign(t.est) == np.sign(r.est))).sum())
+            cells += [f"<td class=n>{'<b>' + txt + '</b>' if r.holm else txt}</td>", f"<td class=n>{seeds}</td>",
+                      f"<td class=n>{nd}/{len(t)}</td>"]
+        rows.append(f"<tr><td>{m}</td>{''.join(cells)}</tr>")
+    return ("<table><tr><th>Model</th><th class=n>E1: 8 tasks</th><th class=n>seeds</th><th class=n>tasks</th>"
+            "<th class=n>E1-R: 5 fresh tasks</th><th class=n>seeds</th><th class=n>tasks</th></tr>" + "".join(rows) + "</table>")
+
+
 def spend_html():
     L = pd.read_csv(os.path.join(OUT, "spend_ledger.csv"))
     g = L.groupby("model").agg(usd=("usd", "sum"), n=("n_cases", "sum")).sort_values("usd", ascending=False)
@@ -183,6 +208,8 @@ def main(nn, notes_path):
       .replace('{{POOLED_CHART}}', f'<img src="{os.path.basename(ppng)}">')
       .replace('{{POOLED_E1}}', pooled_table('e1'))
       .replace('{{POOLED_E1R}}', pooled_table('e1r'))
+      .replace('{{REPL_TOLDCONST}}', repl_table_html('told-const', os.environ.get('REPL_TAG', '')))
+      .replace('{{REPL_TOLDSHIFT}}', repl_table_html('H1 told-shift', os.environ.get('REPL_TAG', '')))
       .replace('{{P5_TABLE}}', verdict_table(T, 'P5 shift-const', 'shift', 'const'))
       .replace('{{P6_TABLE}}', verdict_table(T, 'P6 platt-shift', 'Platt', 'shift'))
       .replace('{{LR_TABLE}}', verdict_table(T, 'LR lr-shift', 'LR', 'shift'))
