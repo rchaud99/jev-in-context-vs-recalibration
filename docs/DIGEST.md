@@ -1,3 +1,5 @@
+> **Note added 2026-09-30:** the repository was reorganised after this was written; the text below is unchanged apart from this note and one correction marked [corrected]. `v2/` is now `src/v2/`, the top-level v1 scripts are in `src/v1/`, top-level `results/*` files are in `results/v1/`, and Markdown documents other than README.md and CLAIMS.md are in `docs/`. The original layout is on the `old` branch.
+
 # DIGEST (2026-09-28)
 
 **One finding, preregistered and replicated.** If you know a task's base rate, putting it in the LLM's prompt gives
@@ -42,7 +44,7 @@ on these tasks, telling them is even worse than predicting the base rate for eve
 **Résumé bullet.** Designed and preregistered a 9-model, 7-provider LLM calibration study on 13 public-record
 datasets. Stating a base rate in the prompt gave worse probabilities than predicting the base rate itself (8/9
 models). A one-line code-side logit shift was never worse (0/117 cells after Holm). The result was confirmed on a
-fresh post-cutoff replication set. Along the way I found and repaired 3 label leaks and retracted 12 earlier claims.
+fresh post-cutoff replication set. Along the way I found and repaired 3 label leaks and withdrew 11 earlier claims [corrected 2026-09-30: CLAIMS.md lists 12 entries, but K12 is an editorial removal, not a withdrawn finding].
 Cost: about $7 of API calls.
 
 **Next 3 experiments**
