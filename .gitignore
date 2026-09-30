@@ -12,7 +12,7 @@ venv/
 *.sqlite-wal
 *.sqlite-shm
 
-# Bulk raw downloads (rebuilt by prepare_data.py)
+# Bulk raw downloads (rebuilt by src/v1/prepare_data.py)
 data/raw/
 *.zip
 
@@ -20,5 +20,19 @@ data/raw/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Model weights
+*.safetensors
+*.gguf
+*.ckpt
+*.pt
+
+# Notes and PDFs from other projects that sometimes sit in this folder (not part of this study)
+/*.pdf
+Freehand_*
+freehand_*
+outreach_*
+Stale_Weights_*
+story_bank.md
 
 # Files over ~20 MB are kept out of the repo; none remain after the rules above.

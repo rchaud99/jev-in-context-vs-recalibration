@@ -1,0 +1,11 @@
+# Analysis (everything under "Reproduce" in README.md; no API calls). Versions used on 2026-09-30.
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.13.1
+scikit-learn==1.5.1
+matplotlib==3.9.2
+tabulate==0.9.0
+# Data collection only (src/v2/baserate_exp.py, src/v2/fresh_data.py; needs OPENROUTER_API_KEY for model calls)
+requests==2.32.3
+# v1 scripts additionally used python-dotenv, google-genai, anthropic, sentence-transformers,
+# TabPFN 2.0.9 (.venv_tabpfn2) and mlx-lm (.venv_mlx); see docs/v1/.
